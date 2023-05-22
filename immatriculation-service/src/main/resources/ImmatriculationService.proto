@@ -1,0 +1,27 @@
+syntax ="proto3";
+option java_package="ma.enset.immatriculationservice.web.grpc.stub";
+
+service ImmatriculationGrpcService{
+  rpc getVehiculeByMatricule(Matricule) returns (Vehicule);
+}
+
+message Matricule{
+  string matricule = 1;
+}
+
+message Vehicule{
+  int64 id = 1;
+  string matricule = 2;
+  string marque = 3;
+  int32 puissanceFiscale = 4;
+  int32 modele = 5;
+  Proprietaire proprietaire = 6;
+}
+
+message Proprietaire {
+  int64 id = 1;
+  string nom = 2;
+  string dateDeNaissance = 3;
+  string email = 4;
+  repeated Vehicule vehicules = 5;
+}

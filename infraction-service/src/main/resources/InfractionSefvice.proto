@@ -1,0 +1,23 @@
+syntax ="proto3";
+option java_package="ma.infractionservice.web.grpc.stub";
+
+service InfractionGrpcService {
+  rpc saveInfraction(InfractionRequest) returns (InfractionResponse);
+}
+
+message InfractionRequest{
+  double montant = 1;
+  string date = 2;
+  int64 nuneroRadar = 3;
+  string matriculeVehicule = 4;
+  double vitesseMax = 5;
+}
+
+message InfractionResponse{
+  int64 id = 1;
+  string date = 2;
+  int64 nuneroRadar = 3;
+  string matriculeVehicule = 4;
+  double vitesseMax = 5;
+  double montant = 6;
+}

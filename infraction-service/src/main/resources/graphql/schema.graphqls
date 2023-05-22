@@ -1,0 +1,28 @@
+type Query{
+    infractions: [Infraction],
+    infractionById(id: Float) : Infraction,
+
+}
+
+type Mutation {
+    saveInfraction(Infraction :InfractionRequest): Infraction,
+    updateInfraction(id: Float, Infraction :InfractionRequest) : Infraction,
+    deleteInfraction(id: Float) : Infraction,
+}
+
+type Infraction{
+    id : Float,
+    date : Float,
+    nuneroRadar : Float,
+    matriculeVehicule : String,
+    vitesseMax : Float,
+    montant : Float
+}
+
+input InfractionRequest{
+    date : Float,
+    nuneroRadar : Float,
+    matriculeVehicule : String,
+    vitesseMax : Float,
+    montant : Float
+}
