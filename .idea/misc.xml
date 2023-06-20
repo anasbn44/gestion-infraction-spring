@@ -9,7 +9,14 @@
         <option value="$PROJECT_DIR$/radar-service/pom.xml" />
         <option value="$PROJECT_DIR$/gateway/pom.xml" />
         <option value="$PROJECT_DIR$/eureka-server/pom.xml" />
+        <option value="$PROJECT_DIR$/radar-demo/pom.xml" />
+        <option value="$PROJECT_DIR$/immatriculation-micro-service/pom.xml" />
       </list>
+    </option>
+    <option name="ignoredFiles">
+      <set>
+        <option value="$PROJECT_DIR$/immatriculation-micro-service/pom.xml" />
+      </set>
     </option>
   </component>
   <component name="ProjectRootManager">

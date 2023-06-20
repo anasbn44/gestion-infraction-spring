@@ -1,10 +1,15 @@
 package ma.enset.immatriculationservice.web;
 
+import lombok.AllArgsConstructor;
+import ma.enset.immatriculationservice.dto.ProprietaireRequestDto;
 import ma.enset.immatriculationservice.dto.ProprietaireResponseDto;
+import ma.enset.immatriculationservice.dto.VehiculeRequestDto;
 import ma.enset.immatriculationservice.entities.Proprietaire;
 import ma.enset.immatriculationservice.entities.Vehicule;
 import ma.enset.immatriculationservice.repositories.PropretaireRepository;
 import ma.enset.immatriculationservice.repositories.VehiculeRepository;
+import ma.enset.immatriculationservice.services.ProprietaireService;
+import ma.enset.immatriculationservice.services.VehiculeService;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 
@@ -12,65 +17,57 @@ import javax.print.attribute.standard.PrinterMessageFromOperator;
 import java.util.List;
 
 @RestController
-@RequestMapping("/api")
+@AllArgsConstructor
 public class ImmatraculationRestControler {
-    private PropretaireRepository propretaireRepository;
-    private VehiculeRepository vehiculeRepository;
+    private ProprietaireService proprietaireService;
+    private VehiculeService vehiculeService;
 
-    ImmatraculationRestControler(VehiculeRepository vehiculeRepository, PropretaireRepository propretaireRepository){
-        this.propretaireRepository = propretaireRepository;
-        this.vehiculeRepository = vehiculeRepository;
-    }
 
     @GetMapping("/proprietaires")
     public List<Proprietaire> prorietaires(){
 
-        return propretaireRepository.findAll();
+        return proprietaireService.getAllProprietaires();
     }
     @GetMapping("/proprietaires/{id}")
     public Proprietaire prorietaireById(@PathVariable Long id){
-        Proprietaire proprietaire = propretaireRepository.findById(id).get();
-        return proprietaire;
+        return proprietaireService.getProprietaireById(id);
     }
     @PostMapping("/proprietaires")
-    public Proprietaire saveProprietaire(@RequestBody Proprietaire proprietaire){
-        return propretaireRepository.save(proprietaire);
+    public Proprietaire saveProprietaire(@RequestBody ProprietaireRequestDto proprietaire){
+        return proprietaireService.saveProprietaire(proprietaire);
     }
     @PutMapping("/proprietaires/{id}")
-    public Proprietaire updateProprietaire(@RequestBody Proprietaire proprietaire, @PathVariable Long id){
-        return propretaireRepository.save(proprietaire);
+    public Proprietaire updateProprietaire(@RequestBody ProprietaireRequestDto proprietaire, @PathVariable Long id){
+        return proprietaireService.updateProprietaire(id, proprietaire);
     }
     @DeleteMapping("/proprietaires/{id}")
     public void deleteProprietaire(@PathVariable Long id){
-        propretaireRepository.deleteById(id);
+        proprietaireService.deleteProprietaire(id);
     }
 
     @GetMapping("/vehicules")
     public List<Vehicule> vehiculeList(){
-
-        return vehiculeRepository.findAll();
+        return vehiculeService.getAllVehicules();
     }
     @GetMapping("/vehicules/{id}")
     public Vehicule vehiculeById(@PathVariable Long id){
-        Vehicule vehicule = vehiculeRepository.findById(id).get();
-        return vehicule;
+        return vehiculeService.getVehiculeById(id);
     }
     @PostMapping("/vehicules")
-    public Vehicule saveVehicule(@RequestBody Vehicule vehicule){
-        return vehiculeRepository.save(vehicule);
+    public Vehicule saveVehicule(@RequestBody VehiculeRequestDto vehicule){
+        return vehiculeService.saveVehicule(vehicule);
     }
     @PutMapping("/vehicules/{id}")
-    public Vehicule updateVehicule(@RequestBody Vehicule vehicule, @PathVariable Long id){
-        return vehiculeRepository.save(vehicule);
+    public Vehicule updateVehicule(@RequestBody VehiculeRequestDto vehicule, @PathVariable Long id){
+        return vehiculeService.updateVehicule(id, vehicule);
     }
     @DeleteMapping("/vehicules/{id}")
     public void deleteVehucule(@PathVariable Long id){
-        vehiculeRepository.deleteById(id);
+        vehiculeService.deleteVehicule(id);
     }
 
     @GetMapping("/vehicules/{matricule}")
     public Vehicule getVehiculeByMatricule(@PathVariable(name = "matricule") String matricule){
-        Vehicule vehicule = vehiculeRepository.findAll().stream().filter(v -> v.getMatricule().equals(matricule)).findAny().orElse(null);
-        return vehicule;
+        return vehiculeService.getVehiculeByMatricule(matricule);
     }
 }

@@ -9,18 +9,24 @@
         <outputRelativeToContentRoot value="true" />
         <module name="radar-service" />
         <module name="immatriculation-service" />
+        <module name="radar-demo" />
         <module name="eureka-server" />
         <module name="gateway" />
         <module name="infraction-service" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="immatriculation-micro-service" target="17" />
+    </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
       <module name="eureka-server" options="-parameters" />
       <module name="gateway" options="-parameters" />
+      <module name="immatriculation-micro-service" options="-parameters" />
       <module name="immatriculation-service" options="-parameters" />
       <module name="infraction-service" options="-parameters" />
+      <module name="radar-demo" options="-parameters" />
       <module name="radar-service" options="-parameters" />
     </option>
   </component>

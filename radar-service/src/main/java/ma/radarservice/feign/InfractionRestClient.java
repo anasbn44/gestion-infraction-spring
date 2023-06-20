@@ -6,7 +6,6 @@ import org.springframework.stereotype.Component;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 
-@Component
 @FeignClient(name = "INFRACTION-SERVICE")
 public interface InfractionRestClient {
     @PostMapping("/infractions")
