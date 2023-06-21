@@ -22,7 +22,7 @@ public class VehiculeMapper {
         return modelMapper.map(vehicule, Vehicule.class);
     }
     public ImmatriculationService.Vehicule fromGrpc(Vehicule vehicule){
-        return modelMapper.map(vehicule, ImmatriculationService.Vehicule.class);
+        return modelMapper.map(vehicule, ImmatriculationService.Vehicule.Builder.class).build();
     }
 
 }

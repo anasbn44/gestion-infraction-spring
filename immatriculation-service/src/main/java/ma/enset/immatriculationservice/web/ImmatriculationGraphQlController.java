@@ -1,9 +1,14 @@
 package ma.enset.immatriculationservice.web;
 
+import lombok.AllArgsConstructor;
+import ma.enset.immatriculationservice.dto.ProprietaireRequestDto;
+import ma.enset.immatriculationservice.dto.VehiculeRequestDto;
 import ma.enset.immatriculationservice.entities.Proprietaire;
 import ma.enset.immatriculationservice.entities.Vehicule;
 import ma.enset.immatriculationservice.repositories.PropretaireRepository;
 import ma.enset.immatriculationservice.repositories.VehiculeRepository;
+import ma.enset.immatriculationservice.services.ProprietaireService;
+import ma.enset.immatriculationservice.services.VehiculeService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.graphql.data.method.annotation.Argument;
 import org.springframework.graphql.data.method.annotation.MutationMapping;
@@ -13,75 +18,62 @@ import org.springframework.stereotype.Controller;
 import java.util.List;
 
 @Controller
+@AllArgsConstructor
 public class ImmatriculationGraphQlController {
-    @Autowired
-    private PropretaireRepository propretaireRepository;
-    @Autowired
-    private VehiculeRepository vehiculeRepository;
+    private ProprietaireService proprietaireService;
+    private VehiculeService vehiculeService;
 
     @QueryMapping
     public List<Proprietaire> prorietaires(){
-        return propretaireRepository.findAll();
+        return proprietaireService.getAllProprietaires();
     }
 
     @QueryMapping
     public Proprietaire proprietaireById(@Argument Long id){
-        return propretaireRepository.findById(id).get();
+        return proprietaireService.getProprietaireById(id);
     }
 
     @MutationMapping
-    public Proprietaire saveProprietaire(@Argument Proprietaire proprietaire){
-        return propretaireRepository.save(proprietaire);
+    public Proprietaire saveProprietaire(@Argument ProprietaireRequestDto proprietaire){
+        return proprietaireService.saveProprietaire(proprietaire);
     }
 
     @MutationMapping
-    public Proprietaire updateProprietaire(@Argument Long id,@Argument Proprietaire proprietaire){
-        Proprietaire proprietaire1 = propretaireRepository.findById(id).orElseThrow();
-        if(proprietaire.getNom() != null)
-            proprietaire1.setNom(proprietaire.getNom());
-        if(proprietaire.getEmail() != null)
-            proprietaire1.setEmail(proprietaire.getEmail());
-        if(proprietaire.getDateDeNaissance() != null)
-            proprietaire1.setDateDeNaissance(proprietaire.getDateDeNaissance());
-
-        return propretaireRepository.save(proprietaire1);
+    public Proprietaire updateProprietaire(@Argument Long id,@Argument ProprietaireRequestDto proprietaire){
+        return proprietaireService.updateProprietaire(id, proprietaire);
     }
 
     @MutationMapping
     public void deleteProprietaire(@Argument Long id){
-        propretaireRepository.deleteById(id);
+        proprietaireService.deleteProprietaire(id);
     }
 
     @QueryMapping
     public List<Vehicule> vehicules(){
-        return vehiculeRepository.findAll();
+        return vehiculeService.getAllVehicules();
     }
 
     @QueryMapping
     public Vehicule vehiculesById(@Argument Long id){
-        return vehiculeRepository.findById(id).get();
+        return vehiculeService.getVehiculeById(id);
     }
 
     @MutationMapping
-    public Vehicule saveVehicule(@Argument Vehicule vehicule){
-        return vehiculeRepository.save(vehicule);
+    public Vehicule saveVehicule(@Argument VehiculeRequestDto vehicule){
+        return vehiculeService.saveVehicule(vehicule);
     }
 
     @MutationMapping
-    public Vehicule updateVehicule(@Argument Long id, @Argument Vehicule vehiculeUp){
-        Vehicule vehicule = vehiculeRepository.findById(id).orElseThrow();
-        if(vehiculeUp.getMatricule() != null)
-            vehicule.setMatricule(vehiculeUp.getMatricule());
-        if(vehiculeUp.getModele() != 0)
-            vehicule.setModele(vehiculeUp.getModele());
-        if(vehiculeUp.getPuissanceFiscale() != 0)
-            vehicule.setPuissanceFiscale(vehiculeUp.getPuissanceFiscale());
-
-        return vehiculeRepository.save(vehicule);
+    public Vehicule updateVehicule(@Argument Long id, @Argument VehiculeRequestDto vehicule){
+        return vehiculeService.updateVehicule(id, vehicule);
     }
 
     @MutationMapping
     public void deleteVehicule(@Argument Long id){
-        vehiculeRepository.deleteById(id);
+        vehiculeService.deleteVehicule(id);
+    }
+    @QueryMapping
+    public Vehicule getVehiculeByMatricule(@Argument String matricule){
+        return vehiculeService.getVehiculeByMatricule(matricule);
     }
 }

@@ -2,10 +2,11 @@ type Query{
     prorietaires: [Proprietaire],
     proprietaireById(id: Float) : Proprietaire,
     vehicules : [Vehicule],
-    vehiculesById(id : Float) : Vehicule
+    vehiculesById(id : Float) : Vehicule,
+    getVehiculeByMatricule(matricule : String) : Vehicule
 }
 
-type Mutation {
+type Mutation{
     saveVehicule(vehicule :VehiculeRequest): Vehicule,
     updateVehicule(id: Float, vehicule :VehiculeRequest) : Vehicule,
     deleteVehicule(id: Float) : Vehicule,

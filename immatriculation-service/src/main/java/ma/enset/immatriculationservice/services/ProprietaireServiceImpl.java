@@ -3,11 +3,13 @@ package ma.enset.immatriculationservice.services;
 import lombok.AllArgsConstructor;
 import ma.enset.immatriculationservice.dto.ProprietaireRequestDto;
 import ma.enset.immatriculationservice.entities.Proprietaire;
+import ma.enset.immatriculationservice.entities.Vehicule;
 import ma.enset.immatriculationservice.mappers.ProprietaireMapper;
 import ma.enset.immatriculationservice.repositories.PropretaireRepository;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
+import java.util.ArrayList;
 import java.util.List;
 
 @Service
@@ -53,5 +55,20 @@ public class ProprietaireServiceImpl implements ProprietaireService {
     @Override
     public void deleteProprietaire(Long id) {
         propretaireRepository.deleteById(id);
+    }
+
+    @Override
+    public Proprietaire addVehicule(Long id, Vehicule vehicule) {
+        Proprietaire proprietaire = getProprietaireById(id);
+        List<Vehicule> vehicules = proprietaire.getVehicules();
+        if (vehicule == null){
+            List<Vehicule> vehiculeList = new ArrayList<>();
+            vehiculeList.add(vehicule);
+            proprietaire.setVehicules(vehiculeList);
+        }else {
+            vehicules.add(vehicule);
+            proprietaire.setVehicules(vehicules);
+        }
+        return proprietaire;
     }
 }

@@ -2,18 +2,13 @@ package ma.enset.immatriculationservice.web;
 
 import lombok.AllArgsConstructor;
 import ma.enset.immatriculationservice.dto.ProprietaireRequestDto;
-import ma.enset.immatriculationservice.dto.ProprietaireResponseDto;
 import ma.enset.immatriculationservice.dto.VehiculeRequestDto;
 import ma.enset.immatriculationservice.entities.Proprietaire;
 import ma.enset.immatriculationservice.entities.Vehicule;
-import ma.enset.immatriculationservice.repositories.PropretaireRepository;
-import ma.enset.immatriculationservice.repositories.VehiculeRepository;
 import ma.enset.immatriculationservice.services.ProprietaireService;
 import ma.enset.immatriculationservice.services.VehiculeService;
-import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 
-import javax.print.attribute.standard.PrinterMessageFromOperator;
 import java.util.List;
 
 @RestController
@@ -44,6 +39,11 @@ public class ImmatraculationRestControler {
     public void deleteProprietaire(@PathVariable Long id){
         proprietaireService.deleteProprietaire(id);
     }
+
+//    @GetMapping("/proprietaires/{id}")
+//    public Proprietaire addVehiculeToProprietaire(@PathVariable Long id, @RequestBody Vehicule vehicule){
+//        return proprietaireService.addVehicule(id, vehicule);
+//    }
 
     @GetMapping("/vehicules")
     public List<Vehicule> vehiculeList(){
