@@ -40,10 +40,10 @@ public class ImmatraculationRestControler {
         proprietaireService.deleteProprietaire(id);
     }
 
-//    @GetMapping("/proprietaires/{id}")
-//    public Proprietaire addVehiculeToProprietaire(@PathVariable Long id, @RequestBody Vehicule vehicule){
-//        return proprietaireService.addVehicule(id, vehicule);
-//    }
+    @PutMapping("/proprietaires/vehicule/{id}")
+    public Proprietaire addVehiculeToProprietaire(@PathVariable Long id, @RequestBody Vehicule vehicule){
+        return proprietaireService.addVehicule(id, vehicule);
+    }
 
     @GetMapping("/vehicules")
     public List<Vehicule> vehiculeList(){
@@ -66,7 +66,7 @@ public class ImmatraculationRestControler {
         vehiculeService.deleteVehicule(id);
     }
 
-    @GetMapping("/vehicules/{matricule}")
+    @GetMapping("/vehicules/matricule/{matricule}")
     public Vehicule getVehiculeByMatricule(@PathVariable(name = "matricule") String matricule){
         return vehiculeService.getVehiculeByMatricule(matricule);
     }

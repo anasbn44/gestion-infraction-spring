@@ -16,6 +16,7 @@ type Infraction{
     nuneroRadar : Float,
     matriculeVehicule : String,
     vitesseMax : Float,
+    vitesseVehicule : Float,
     montant : Float
 }
 
@@ -24,5 +25,6 @@ input InfractionRequest{
     nuneroRadar : Float,
     matriculeVehicule : String,
     vitesseMax : Float,
+    vitesseVehicule : Float,
     montant : Float
 }

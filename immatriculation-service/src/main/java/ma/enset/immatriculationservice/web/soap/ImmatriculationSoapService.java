@@ -11,7 +11,7 @@ import org.springframework.stereotype.Component;
 import java.util.List;
 
 @Component
-@WebService
+@WebService(name = "immatriculationService")
 @AllArgsConstructor
 public class ImmatriculationSoapService {
     private VehiculeService vehiculeService;

@@ -2,15 +2,27 @@ syntax ="proto3";
 option java_package="ma.infractionservice.web.grpc.stub";
 
 service InfractionGrpcService {
+  rpc getAllInfractions(voidInfractioRequest) returns (InfrationsListResponse);
+  rpc getInfractionById (InfractionIdRequest) returns (InfractionResponse);
   rpc saveInfraction(InfractionRequest) returns (InfractionResponse);
+  rpc deleteInfraction(InfractionIdRequest) returns (voidInfractioRequest);
 }
+message voidInfractioRequest{
 
+}
+message InfrationsListResponse{
+  repeated InfractionResponse infraction = 1;
+}
+message InfractionIdRequest{
+  int64 id = 1;
+}
 message InfractionRequest{
-  double montant = 1;
-  string date = 2;
-  int64 nuneroRadar = 3;
-  string matriculeVehicule = 4;
-  double vitesseMax = 5;
+  string date = 1;
+  int64 nuneroRadar = 2;
+  string matriculeVehicule = 3;
+  double vitesseMax = 4;
+  double vitesseVehicule = 5;
+  double montant = 6;
 }
 
 message InfractionResponse{
@@ -19,5 +31,6 @@ message InfractionResponse{
   int64 nuneroRadar = 3;
   string matriculeVehicule = 4;
   double vitesseMax = 5;
-  double montant = 6;
+  double vitesseVehicule = 6;
+  double montant = 7;
 }

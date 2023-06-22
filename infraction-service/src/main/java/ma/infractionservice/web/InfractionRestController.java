@@ -1,40 +1,36 @@
 package ma.infractionservice.web;
 
+import lombok.AllArgsConstructor;
+import ma.infractionservice.dto.InfractionRequest;
 import ma.infractionservice.entities.Infraction;
-import ma.infractionservice.repositories.InfractionRepository;
+import ma.infractionservice.services.InfractionService;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
 @RestController
-@RequestMapping("/api")
+@AllArgsConstructor
 public class InfractionRestController {
-    private InfractionRepository infractionRepository;
-
-    public InfractionRestController(InfractionRepository infractionRepository) {
-        this.infractionRepository = infractionRepository;
-    }
+    private InfractionService infractionService;
 
     @GetMapping("/infractions")
     public List<Infraction> infractions(){
-
-        return infractionRepository.findAll();
+        return infractionService.getAllInfractions();
     }
     @GetMapping("/infractions/{id}")
     public Infraction infractionById(@PathVariable Long id){
-        Infraction infraction = infractionRepository.findById(id).get();
-        return infraction;
+        return infractionService.getInfractionById(id);
     }
     @PostMapping("/infractions")
-    public Infraction saveInfraction(@RequestBody Infraction infraction){
-        return infractionRepository.save(infraction);
+    public Infraction saveInfraction(@RequestBody InfractionRequest infraction){
+        return infractionService.saveInfraction(infraction);
     }
     @PutMapping("/infractions/{id}")
-    public Infraction updateInfraction(@RequestBody Infraction infraction, @PathVariable Long id){
-        return infractionRepository.save(infraction);
+    public Infraction updateInfraction(@RequestBody InfractionRequest infraction, @PathVariable Long id){
+        return infractionService.updateInfraction(id, infraction);
     }
     @DeleteMapping("/infractions/{id}")
     public void deleteInfraction(@PathVariable Long id){
-        infractionRepository.deleteById(id);
+        infractionService.deleteInfraction(id);
     }
 }

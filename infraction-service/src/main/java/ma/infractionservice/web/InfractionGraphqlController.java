@@ -1,7 +1,10 @@
 package ma.infractionservice.web;
 
+import lombok.AllArgsConstructor;
+import ma.infractionservice.dto.InfractionRequest;
 import ma.infractionservice.entities.Infraction;
 import ma.infractionservice.repositories.InfractionRepository;
+import ma.infractionservice.services.InfractionService;
 import org.springframework.graphql.data.method.annotation.Argument;
 import org.springframework.graphql.data.method.annotation.MutationMapping;
 import org.springframework.graphql.data.method.annotation.QueryMapping;
@@ -10,46 +13,32 @@ import org.springframework.stereotype.Controller;
 import java.util.List;
 
 @Controller
+@AllArgsConstructor
 public class InfractionGraphqlController {
-    private InfractionRepository infractionRepository;
-
-    public InfractionGraphqlController(InfractionRepository infractionRepository) {
-        this.infractionRepository = infractionRepository;
-    }
+    private InfractionService infractionService;
 
     @QueryMapping
     public List<Infraction> infractions(){
-        return infractionRepository.findAll();
+        return infractionService.getAllInfractions();
     }
 
     @QueryMapping
     public Infraction infractionById(@Argument Long id){
-        return infractionRepository.findById(id).get();
+        return infractionService.getInfractionById(id);
     }
 
     @MutationMapping
-    public Infraction saveInfraction(@Argument Infraction infraction){
-        return infractionRepository.save(infraction);
+    public Infraction saveInfraction(@Argument InfractionRequest infraction){
+        return infractionService.saveInfraction(infraction);
     }
 
     @MutationMapping
-    public Infraction updateInfraction(@Argument Long id,@Argument Infraction infraction){
-        Infraction infraction1 = infractionRepository.findById(id).orElseThrow();
-        if(infraction.getDate() != null)
-            infraction1.setDate(infraction.getDate());
-        if(infraction.getMontant() != 0)
-            infraction1.setMontant(infraction.getMontant());
-        if(infraction.getVitesseMax() != 0)
-            infraction1.setVitesseMax(infraction.getVitesseMax());
-        if(infraction.getNuneroRadar() != 0)
-            infraction1.setNuneroRadar(infraction.getNuneroRadar());
-        if(infraction.getMatriculeVehicule() != null)
-            infraction1.setMatriculeVehicule(infraction.getMatriculeVehicule());
-        return infractionRepository.save(infraction1);
+    public Infraction updateInfraction(@Argument Long id,@Argument InfractionRequest infraction){
+        return infractionService.updateInfraction(id, infraction);
     }
 
     @MutationMapping
     public void deleteInfraction(@Argument Long id){
-        infractionRepository.deleteById(id);
+        infractionService.deleteInfraction(id);
     }
 }

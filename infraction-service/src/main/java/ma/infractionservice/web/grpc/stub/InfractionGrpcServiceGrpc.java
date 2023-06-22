@@ -27,6 +27,70 @@ public final class InfractionGrpcServiceGrpc {
   public static final String SERVICE_NAME = "InfractionGrpcService";
 
   // Static method descriptors that strictly reflect the proto.
+  private static volatile io.grpc.MethodDescriptor<ma.infractionservice.web.grpc.stub.InfractionSefvice.voidInfractioRequest,
+      ma.infractionservice.web.grpc.stub.InfractionSefvice.InfrationsListResponse> getGetAllInfractionsMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "getAllInfractions",
+      requestType = ma.infractionservice.web.grpc.stub.InfractionSefvice.voidInfractioRequest.class,
+      responseType = ma.infractionservice.web.grpc.stub.InfractionSefvice.InfrationsListResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<ma.infractionservice.web.grpc.stub.InfractionSefvice.voidInfractioRequest,
+      ma.infractionservice.web.grpc.stub.InfractionSefvice.InfrationsListResponse> getGetAllInfractionsMethod() {
+    io.grpc.MethodDescriptor<ma.infractionservice.web.grpc.stub.InfractionSefvice.voidInfractioRequest, ma.infractionservice.web.grpc.stub.InfractionSefvice.InfrationsListResponse> getGetAllInfractionsMethod;
+    if ((getGetAllInfractionsMethod = InfractionGrpcServiceGrpc.getGetAllInfractionsMethod) == null) {
+      synchronized (InfractionGrpcServiceGrpc.class) {
+        if ((getGetAllInfractionsMethod = InfractionGrpcServiceGrpc.getGetAllInfractionsMethod) == null) {
+          InfractionGrpcServiceGrpc.getGetAllInfractionsMethod = getGetAllInfractionsMethod = 
+              io.grpc.MethodDescriptor.<ma.infractionservice.web.grpc.stub.InfractionSefvice.voidInfractioRequest, ma.infractionservice.web.grpc.stub.InfractionSefvice.InfrationsListResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(
+                  "InfractionGrpcService", "getAllInfractions"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  ma.infractionservice.web.grpc.stub.InfractionSefvice.voidInfractioRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  ma.infractionservice.web.grpc.stub.InfractionSefvice.InfrationsListResponse.getDefaultInstance()))
+                  .setSchemaDescriptor(new InfractionGrpcServiceMethodDescriptorSupplier("getAllInfractions"))
+                  .build();
+          }
+        }
+     }
+     return getGetAllInfractionsMethod;
+  }
+
+  private static volatile io.grpc.MethodDescriptor<ma.infractionservice.web.grpc.stub.InfractionSefvice.InfractionIdRequest,
+      ma.infractionservice.web.grpc.stub.InfractionSefvice.InfractionResponse> getGetInfractionByIdMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "getInfractionById",
+      requestType = ma.infractionservice.web.grpc.stub.InfractionSefvice.InfractionIdRequest.class,
+      responseType = ma.infractionservice.web.grpc.stub.InfractionSefvice.InfractionResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<ma.infractionservice.web.grpc.stub.InfractionSefvice.InfractionIdRequest,
+      ma.infractionservice.web.grpc.stub.InfractionSefvice.InfractionResponse> getGetInfractionByIdMethod() {
+    io.grpc.MethodDescriptor<ma.infractionservice.web.grpc.stub.InfractionSefvice.InfractionIdRequest, ma.infractionservice.web.grpc.stub.InfractionSefvice.InfractionResponse> getGetInfractionByIdMethod;
+    if ((getGetInfractionByIdMethod = InfractionGrpcServiceGrpc.getGetInfractionByIdMethod) == null) {
+      synchronized (InfractionGrpcServiceGrpc.class) {
+        if ((getGetInfractionByIdMethod = InfractionGrpcServiceGrpc.getGetInfractionByIdMethod) == null) {
+          InfractionGrpcServiceGrpc.getGetInfractionByIdMethod = getGetInfractionByIdMethod = 
+              io.grpc.MethodDescriptor.<ma.infractionservice.web.grpc.stub.InfractionSefvice.InfractionIdRequest, ma.infractionservice.web.grpc.stub.InfractionSefvice.InfractionResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(
+                  "InfractionGrpcService", "getInfractionById"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  ma.infractionservice.web.grpc.stub.InfractionSefvice.InfractionIdRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  ma.infractionservice.web.grpc.stub.InfractionSefvice.InfractionResponse.getDefaultInstance()))
+                  .setSchemaDescriptor(new InfractionGrpcServiceMethodDescriptorSupplier("getInfractionById"))
+                  .build();
+          }
+        }
+     }
+     return getGetInfractionByIdMethod;
+  }
+
   private static volatile io.grpc.MethodDescriptor<ma.infractionservice.web.grpc.stub.InfractionSefvice.InfractionRequest,
       ma.infractionservice.web.grpc.stub.InfractionSefvice.InfractionResponse> getSaveInfractionMethod;
 
@@ -59,6 +123,38 @@ public final class InfractionGrpcServiceGrpc {
      return getSaveInfractionMethod;
   }
 
+  private static volatile io.grpc.MethodDescriptor<ma.infractionservice.web.grpc.stub.InfractionSefvice.InfractionIdRequest,
+      ma.infractionservice.web.grpc.stub.InfractionSefvice.voidInfractioRequest> getDeleteInfractionMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "deleteInfraction",
+      requestType = ma.infractionservice.web.grpc.stub.InfractionSefvice.InfractionIdRequest.class,
+      responseType = ma.infractionservice.web.grpc.stub.InfractionSefvice.voidInfractioRequest.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<ma.infractionservice.web.grpc.stub.InfractionSefvice.InfractionIdRequest,
+      ma.infractionservice.web.grpc.stub.InfractionSefvice.voidInfractioRequest> getDeleteInfractionMethod() {
+    io.grpc.MethodDescriptor<ma.infractionservice.web.grpc.stub.InfractionSefvice.InfractionIdRequest, ma.infractionservice.web.grpc.stub.InfractionSefvice.voidInfractioRequest> getDeleteInfractionMethod;
+    if ((getDeleteInfractionMethod = InfractionGrpcServiceGrpc.getDeleteInfractionMethod) == null) {
+      synchronized (InfractionGrpcServiceGrpc.class) {
+        if ((getDeleteInfractionMethod = InfractionGrpcServiceGrpc.getDeleteInfractionMethod) == null) {
+          InfractionGrpcServiceGrpc.getDeleteInfractionMethod = getDeleteInfractionMethod = 
+              io.grpc.MethodDescriptor.<ma.infractionservice.web.grpc.stub.InfractionSefvice.InfractionIdRequest, ma.infractionservice.web.grpc.stub.InfractionSefvice.voidInfractioRequest>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(
+                  "InfractionGrpcService", "deleteInfraction"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  ma.infractionservice.web.grpc.stub.InfractionSefvice.InfractionIdRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  ma.infractionservice.web.grpc.stub.InfractionSefvice.voidInfractioRequest.getDefaultInstance()))
+                  .setSchemaDescriptor(new InfractionGrpcServiceMethodDescriptorSupplier("deleteInfraction"))
+                  .build();
+          }
+        }
+     }
+     return getDeleteInfractionMethod;
+  }
+
   /**
    * Creates a new async stub that supports all call types for the service
    */
@@ -88,13 +184,48 @@ public final class InfractionGrpcServiceGrpc {
 
     /**
      */
+    public void getAllInfractions(ma.infractionservice.web.grpc.stub.InfractionSefvice.voidInfractioRequest request,
+        io.grpc.stub.StreamObserver<ma.infractionservice.web.grpc.stub.InfractionSefvice.InfrationsListResponse> responseObserver) {
+      asyncUnimplementedUnaryCall(getGetAllInfractionsMethod(), responseObserver);
+    }
+
+    /**
+     */
+    public void getInfractionById(ma.infractionservice.web.grpc.stub.InfractionSefvice.InfractionIdRequest request,
+        io.grpc.stub.StreamObserver<ma.infractionservice.web.grpc.stub.InfractionSefvice.InfractionResponse> responseObserver) {
+      asyncUnimplementedUnaryCall(getGetInfractionByIdMethod(), responseObserver);
+    }
+
+    /**
+     */
     public void saveInfraction(ma.infractionservice.web.grpc.stub.InfractionSefvice.InfractionRequest request,
         io.grpc.stub.StreamObserver<ma.infractionservice.web.grpc.stub.InfractionSefvice.InfractionResponse> responseObserver) {
       asyncUnimplementedUnaryCall(getSaveInfractionMethod(), responseObserver);
     }
 
+    /**
+     */
+    public void deleteInfraction(ma.infractionservice.web.grpc.stub.InfractionSefvice.InfractionIdRequest request,
+        io.grpc.stub.StreamObserver<ma.infractionservice.web.grpc.stub.InfractionSefvice.voidInfractioRequest> responseObserver) {
+      asyncUnimplementedUnaryCall(getDeleteInfractionMethod(), responseObserver);
+    }
+
     @java.lang.Override public final io.grpc.ServerServiceDefinition bindService() {
       return io.grpc.ServerServiceDefinition.builder(getServiceDescriptor())
+          .addMethod(
+            getGetAllInfractionsMethod(),
+            asyncUnaryCall(
+              new MethodHandlers<
+                ma.infractionservice.web.grpc.stub.InfractionSefvice.voidInfractioRequest,
+                ma.infractionservice.web.grpc.stub.InfractionSefvice.InfrationsListResponse>(
+                  this, METHODID_GET_ALL_INFRACTIONS)))
+          .addMethod(
+            getGetInfractionByIdMethod(),
+            asyncUnaryCall(
+              new MethodHandlers<
+                ma.infractionservice.web.grpc.stub.InfractionSefvice.InfractionIdRequest,
+                ma.infractionservice.web.grpc.stub.InfractionSefvice.InfractionResponse>(
+                  this, METHODID_GET_INFRACTION_BY_ID)))
           .addMethod(
             getSaveInfractionMethod(),
             asyncUnaryCall(
@@ -102,6 +233,13 @@ public final class InfractionGrpcServiceGrpc {
                 ma.infractionservice.web.grpc.stub.InfractionSefvice.InfractionRequest,
                 ma.infractionservice.web.grpc.stub.InfractionSefvice.InfractionResponse>(
                   this, METHODID_SAVE_INFRACTION)))
+          .addMethod(
+            getDeleteInfractionMethod(),
+            asyncUnaryCall(
+              new MethodHandlers<
+                ma.infractionservice.web.grpc.stub.InfractionSefvice.InfractionIdRequest,
+                ma.infractionservice.web.grpc.stub.InfractionSefvice.voidInfractioRequest>(
+                  this, METHODID_DELETE_INFRACTION)))
           .build();
     }
   }
@@ -126,10 +264,34 @@ public final class InfractionGrpcServiceGrpc {
 
     /**
      */
+    public void getAllInfractions(ma.infractionservice.web.grpc.stub.InfractionSefvice.voidInfractioRequest request,
+        io.grpc.stub.StreamObserver<ma.infractionservice.web.grpc.stub.InfractionSefvice.InfrationsListResponse> responseObserver) {
+      asyncUnaryCall(
+          getChannel().newCall(getGetAllInfractionsMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     */
+    public void getInfractionById(ma.infractionservice.web.grpc.stub.InfractionSefvice.InfractionIdRequest request,
+        io.grpc.stub.StreamObserver<ma.infractionservice.web.grpc.stub.InfractionSefvice.InfractionResponse> responseObserver) {
+      asyncUnaryCall(
+          getChannel().newCall(getGetInfractionByIdMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     */
     public void saveInfraction(ma.infractionservice.web.grpc.stub.InfractionSefvice.InfractionRequest request,
         io.grpc.stub.StreamObserver<ma.infractionservice.web.grpc.stub.InfractionSefvice.InfractionResponse> responseObserver) {
       asyncUnaryCall(
           getChannel().newCall(getSaveInfractionMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     */
+    public void deleteInfraction(ma.infractionservice.web.grpc.stub.InfractionSefvice.InfractionIdRequest request,
+        io.grpc.stub.StreamObserver<ma.infractionservice.web.grpc.stub.InfractionSefvice.voidInfractioRequest> responseObserver) {
+      asyncUnaryCall(
+          getChannel().newCall(getDeleteInfractionMethod(), getCallOptions()), request, responseObserver);
     }
   }
 
@@ -153,9 +315,30 @@ public final class InfractionGrpcServiceGrpc {
 
     /**
      */
+    public ma.infractionservice.web.grpc.stub.InfractionSefvice.InfrationsListResponse getAllInfractions(ma.infractionservice.web.grpc.stub.InfractionSefvice.voidInfractioRequest request) {
+      return blockingUnaryCall(
+          getChannel(), getGetAllInfractionsMethod(), getCallOptions(), request);
+    }
+
+    /**
+     */
+    public ma.infractionservice.web.grpc.stub.InfractionSefvice.InfractionResponse getInfractionById(ma.infractionservice.web.grpc.stub.InfractionSefvice.InfractionIdRequest request) {
+      return blockingUnaryCall(
+          getChannel(), getGetInfractionByIdMethod(), getCallOptions(), request);
+    }
+
+    /**
+     */
     public ma.infractionservice.web.grpc.stub.InfractionSefvice.InfractionResponse saveInfraction(ma.infractionservice.web.grpc.stub.InfractionSefvice.InfractionRequest request) {
       return blockingUnaryCall(
           getChannel(), getSaveInfractionMethod(), getCallOptions(), request);
+    }
+
+    /**
+     */
+    public ma.infractionservice.web.grpc.stub.InfractionSefvice.voidInfractioRequest deleteInfraction(ma.infractionservice.web.grpc.stub.InfractionSefvice.InfractionIdRequest request) {
+      return blockingUnaryCall(
+          getChannel(), getDeleteInfractionMethod(), getCallOptions(), request);
     }
   }
 
@@ -179,14 +362,41 @@ public final class InfractionGrpcServiceGrpc {
 
     /**
      */
+    public com.google.common.util.concurrent.ListenableFuture<ma.infractionservice.web.grpc.stub.InfractionSefvice.InfrationsListResponse> getAllInfractions(
+        ma.infractionservice.web.grpc.stub.InfractionSefvice.voidInfractioRequest request) {
+      return futureUnaryCall(
+          getChannel().newCall(getGetAllInfractionsMethod(), getCallOptions()), request);
+    }
+
+    /**
+     */
+    public com.google.common.util.concurrent.ListenableFuture<ma.infractionservice.web.grpc.stub.InfractionSefvice.InfractionResponse> getInfractionById(
+        ma.infractionservice.web.grpc.stub.InfractionSefvice.InfractionIdRequest request) {
+      return futureUnaryCall(
+          getChannel().newCall(getGetInfractionByIdMethod(), getCallOptions()), request);
+    }
+
+    /**
+     */
     public com.google.common.util.concurrent.ListenableFuture<ma.infractionservice.web.grpc.stub.InfractionSefvice.InfractionResponse> saveInfraction(
         ma.infractionservice.web.grpc.stub.InfractionSefvice.InfractionRequest request) {
       return futureUnaryCall(
           getChannel().newCall(getSaveInfractionMethod(), getCallOptions()), request);
     }
+
+    /**
+     */
+    public com.google.common.util.concurrent.ListenableFuture<ma.infractionservice.web.grpc.stub.InfractionSefvice.voidInfractioRequest> deleteInfraction(
+        ma.infractionservice.web.grpc.stub.InfractionSefvice.InfractionIdRequest request) {
+      return futureUnaryCall(
+          getChannel().newCall(getDeleteInfractionMethod(), getCallOptions()), request);
+    }
   }
 
-  private static final int METHODID_SAVE_INFRACTION = 0;
+  private static final int METHODID_GET_ALL_INFRACTIONS = 0;
+  private static final int METHODID_GET_INFRACTION_BY_ID = 1;
+  private static final int METHODID_SAVE_INFRACTION = 2;
+  private static final int METHODID_DELETE_INFRACTION = 3;
 
   private static final class MethodHandlers<Req, Resp> implements
       io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
@@ -205,9 +415,21 @@ public final class InfractionGrpcServiceGrpc {
     @java.lang.SuppressWarnings("unchecked")
     public void invoke(Req request, io.grpc.stub.StreamObserver<Resp> responseObserver) {
       switch (methodId) {
+        case METHODID_GET_ALL_INFRACTIONS:
+          serviceImpl.getAllInfractions((ma.infractionservice.web.grpc.stub.InfractionSefvice.voidInfractioRequest) request,
+              (io.grpc.stub.StreamObserver<ma.infractionservice.web.grpc.stub.InfractionSefvice.InfrationsListResponse>) responseObserver);
+          break;
+        case METHODID_GET_INFRACTION_BY_ID:
+          serviceImpl.getInfractionById((ma.infractionservice.web.grpc.stub.InfractionSefvice.InfractionIdRequest) request,
+              (io.grpc.stub.StreamObserver<ma.infractionservice.web.grpc.stub.InfractionSefvice.InfractionResponse>) responseObserver);
+          break;
         case METHODID_SAVE_INFRACTION:
           serviceImpl.saveInfraction((ma.infractionservice.web.grpc.stub.InfractionSefvice.InfractionRequest) request,
               (io.grpc.stub.StreamObserver<ma.infractionservice.web.grpc.stub.InfractionSefvice.InfractionResponse>) responseObserver);
+          break;
+        case METHODID_DELETE_INFRACTION:
+          serviceImpl.deleteInfraction((ma.infractionservice.web.grpc.stub.InfractionSefvice.InfractionIdRequest) request,
+              (io.grpc.stub.StreamObserver<ma.infractionservice.web.grpc.stub.InfractionSefvice.voidInfractioRequest>) responseObserver);
           break;
         default:
           throw new AssertionError();
@@ -270,7 +492,10 @@ public final class InfractionGrpcServiceGrpc {
         if (result == null) {
           serviceDescriptor = result = io.grpc.ServiceDescriptor.newBuilder(SERVICE_NAME)
               .setSchemaDescriptor(new InfractionGrpcServiceFileDescriptorSupplier())
+              .addMethod(getGetAllInfractionsMethod())
+              .addMethod(getGetInfractionByIdMethod())
               .addMethod(getSaveInfractionMethod())
+              .addMethod(getDeleteInfractionMethod())
               .build();
         }
       }
