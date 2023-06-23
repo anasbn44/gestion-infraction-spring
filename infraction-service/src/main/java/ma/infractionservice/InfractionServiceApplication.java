@@ -35,7 +35,7 @@ public class InfractionServiceApplication {
                     .build();
             infractionRepository.save(infraction1);
             infractionRepository.save(infraction2);
-            infractionRepository.findAll().forEach(infraction -> System.out.printf(infraction.toString()));
+            //infractionRepository.findAll().forEach(infraction -> System.out.printf(infraction.toString()));
         };
     }
 

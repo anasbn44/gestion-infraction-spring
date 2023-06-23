@@ -17,12 +17,10 @@ message InfractionIdRequest{
   int64 id = 1;
 }
 message InfractionRequest{
-  string date = 1;
-  int64 nuneroRadar = 2;
-  string matriculeVehicule = 3;
-  double vitesseMax = 4;
-  double vitesseVehicule = 5;
-  double montant = 6;
+  int64 nuneroRadar = 1;
+  string matriculeVehicule = 2;
+  double vitesseMax = 3;
+  double vitesseVehicule = 4;
 }
 
 message InfractionResponse{

@@ -13,6 +13,7 @@ import java.util.List;
 
 @RestController
 @AllArgsConstructor
+@RequestMapping("/immatriculation")
 public class ImmatraculationRestControler {
     private ProprietaireService proprietaireService;
     private VehiculeService vehiculeService;

@@ -8,6 +8,7 @@ import ma.infractionservice.repositories.InfractionRepository;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
+import java.util.Date;
 import java.util.List;
 @Service
 @Transactional
@@ -29,16 +30,15 @@ public class InfractionServiceImpl implements InfractionService{
 
     @Override
     public Infraction saveInfraction(InfractionRequest infractionRequest) {
-        return infractionRepository.save(infractionMappers.fromRequest(infractionRequest));
+        Infraction infraction = infractionMappers.fromRequest(infractionRequest);
+        infraction.setDate(new Date());
+        infraction.setMontant(calculMontant(infractionRequest.getVitesseMax(), infraction.getVitesseVehicule()));
+        return infractionRepository.save(infraction);
     }
 
     @Override
     public Infraction updateInfraction(Long id, InfractionRequest infractionRequest) {
         Infraction infraction = infractionRepository.findById(id).orElseThrow();
-        if(infraction.getDate().equals(infractionRequest.getDate()))
-            infraction.setDate(infractionRequest.getDate());
-        if(infraction.getMontant() != infractionRequest.getMontant())
-            infraction.setMontant(infractionRequest.getMontant());
         if(infraction.getVitesseMax() != infraction.getVitesseMax())
             infraction.setVitesseMax(infractionRequest.getVitesseMax());
         if(infraction.getNuneroRadar() != infractionRequest.getNuneroRadar())
@@ -51,5 +51,17 @@ public class InfractionServiceImpl implements InfractionService{
     @Override
     public void deleteInfraction(Long id) {
         infractionRepository.deleteById(id);
+    }
+
+    private double calculMontant(double vitesseMax, double vitesseVehicule){
+        double montant;
+        double diff = vitesseVehicule - vitesseMax;
+        if (diff <= 20)
+            montant = 150;
+        else if (diff <= 30)
+            montant = 300;
+        else
+            montant = 500;
+        return montant;
     }
 }
