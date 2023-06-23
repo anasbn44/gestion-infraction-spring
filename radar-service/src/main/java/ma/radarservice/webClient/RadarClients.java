@@ -1,4 +1,4 @@
-package ma.radarservice.web;
+package ma.radarservice.webClient;
 
 import lombok.AllArgsConstructor;
 import ma.radarservice.dto.InfractionRequest;

@@ -21,10 +21,8 @@ type Infraction{
 }
 
 input InfractionRequest{
-    date : Float,
     nuneroRadar : Float,
     matriculeVehicule : String,
     vitesseMax : Float,
     vitesseVehicule : Float,
-    montant : Float
 }
