@@ -1,0 +1,39 @@
+syntax = "proto3";
+option java_package="ma.radarservice.web.grpc.stub";
+
+service RadarGrpcService{
+  rpc getAllRadars(EmptyRadar) returns (RadarsList);
+  rpc getRadarById(RadarIdRequest) returns (RadarResponse);
+  rpc saveRadar(RadarRequest) returns (RadarResponse);
+  rpc updateRadar(UpdateRadarRequest) returns (RadarResponse);
+  rpc deleteRadar(RadarIdRequest) returns (EmptyRadar);
+}
+
+message EmptyRadar{}
+
+message RadarRequest{
+  double vitesseMax = 1;
+  double vitesseVehicule = 2;
+  int32 longitude = 3;
+  int32 latitude = 4;
+}
+
+message RadarIdRequest{
+  int64 id = 1;
+}
+message UpdateRadarRequest{
+  int64 id = 1;
+  RadarRequest radarRequest = 2;
+}
+
+message RadarResponse{
+  int64 id = 1;
+  double vitesseMax = 2;
+  double vitesseVehicule = 3;
+  int32 longitude = 4;
+  int32 latitude = 5;
+}
+
+message RadarsList {
+  repeated RadarResponse radarsList = 1;
+}
