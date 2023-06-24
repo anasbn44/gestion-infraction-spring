@@ -7,6 +7,7 @@ import org.modelmapper.ModelMapper;
 import org.springframework.stereotype.Component;
 
 import java.util.List;
+import java.util.stream.Collectors;
 
 @Component
 public class InfractionMappers {
@@ -28,6 +29,12 @@ public class InfractionMappers {
     }
 
     public InfractionSefvice.InfrationsListResponse grpcAllResponse(List<Infraction> infractions){
-        return modelMapper.map(infractions, InfractionSefvice.InfrationsListResponse.Builder.class).build();
+        List<InfractionSefvice.InfractionResponse> infractionResponses =
+                infractions.stream().map(this::from).collect(Collectors.toList());
+        InfractionSefvice.InfrationsListResponse infrationsListResponse =
+                InfractionSefvice.InfrationsListResponse.newBuilder()
+                .addAllInfraction(infractionResponses)
+                .build();
+        return infrationsListResponse;
     }
 }

@@ -1,0 +1,230 @@
+<?xml version='1.0' encoding='UTF-8'?><wsdl:definitions xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:tns="http://soap.web.infractionservice.ma/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:ns1="http://schemas.xmlsoap.org/soap/http" name="InfractionSoapServiceService" targetNamespace="http://soap.web.infractionservice.ma/">
+  <wsdl:types>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://soap.web.infractionservice.ma/" elementFormDefault="unqualified" targetNamespace="http://soap.web.infractionservice.ma/" version="1.0">
+
+  <xs:element name="deleteInfraction" type="tns:deleteInfraction"/>
+
+  <xs:element name="deleteInfractionResponse" type="tns:deleteInfractionResponse"/>
+
+  <xs:element name="infractionById" type="tns:infractionById"/>
+
+  <xs:element name="infractionByIdResponse" type="tns:infractionByIdResponse"/>
+
+  <xs:element name="infractions" type="tns:infractions"/>
+
+  <xs:element name="infractionsResponse" type="tns:infractionsResponse"/>
+
+  <xs:element name="saveInfraction" type="tns:saveInfraction"/>
+
+  <xs:element name="saveInfractionResponse" type="tns:saveInfractionResponse"/>
+
+  <xs:element name="updateInfraction" type="tns:updateInfraction"/>
+
+  <xs:element name="updateInfractionResponse" type="tns:updateInfractionResponse"/>
+
+  <xs:complexType name="updateInfraction">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="id" type="xs:long"/>
+      <xs:element minOccurs="0" name="infraction" type="tns:infractionRequest"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="infractionRequest">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="matriculeVehicule" type="xs:string"/>
+      <xs:element minOccurs="0" name="nuneroRadar" type="xs:long"/>
+      <xs:element name="vitesseMax" type="xs:double"/>
+      <xs:element name="vitesseVehicule" type="xs:double"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="updateInfractionResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="tns:infraction"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="infraction">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="date" type="xs:dateTime"/>
+      <xs:element minOccurs="0" name="id" type="xs:long"/>
+      <xs:element minOccurs="0" name="matriculeVehicule" type="xs:string"/>
+      <xs:element name="montant" type="xs:double"/>
+      <xs:element minOccurs="0" name="nuneroRadar" type="xs:long"/>
+      <xs:element name="vitesseMax" type="xs:double"/>
+      <xs:element name="vitesseVehicule" type="xs:double"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="infractions">
+    <xs:sequence/>
+  </xs:complexType>
+
+  <xs:complexType name="infractionsResponse">
+    <xs:sequence>
+      <xs:element maxOccurs="unbounded" minOccurs="0" name="return" type="tns:infraction"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="deleteInfraction">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="id" type="xs:long"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="deleteInfractionResponse">
+    <xs:sequence/>
+  </xs:complexType>
+
+  <xs:complexType name="infractionById">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="id" type="xs:long"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="infractionByIdResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="tns:infraction"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="saveInfraction">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="infraction" type="tns:infractionRequest"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="saveInfractionResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="tns:infraction"/>
+    </xs:sequence>
+  </xs:complexType>
+
+</xs:schema>
+  </wsdl:types>
+  <wsdl:message name="deleteInfractionResponse">
+    <wsdl:part element="tns:deleteInfractionResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="infractions">
+    <wsdl:part element="tns:infractions" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="deleteInfraction">
+    <wsdl:part element="tns:deleteInfraction" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="infractionByIdResponse">
+    <wsdl:part element="tns:infractionByIdResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="saveInfraction">
+    <wsdl:part element="tns:saveInfraction" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="updateInfraction">
+    <wsdl:part element="tns:updateInfraction" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="infractionsResponse">
+    <wsdl:part element="tns:infractionsResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="saveInfractionResponse">
+    <wsdl:part element="tns:saveInfractionResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="updateInfractionResponse">
+    <wsdl:part element="tns:updateInfractionResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="infractionById">
+    <wsdl:part element="tns:infractionById" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:portType name="InfractionService">
+    <wsdl:operation name="updateInfraction">
+      <wsdl:input message="tns:updateInfraction" name="updateInfraction">
+    </wsdl:input>
+      <wsdl:output message="tns:updateInfractionResponse" name="updateInfractionResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="infractions">
+      <wsdl:input message="tns:infractions" name="infractions">
+    </wsdl:input>
+      <wsdl:output message="tns:infractionsResponse" name="infractionsResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="deleteInfraction">
+      <wsdl:input message="tns:deleteInfraction" name="deleteInfraction">
+    </wsdl:input>
+      <wsdl:output message="tns:deleteInfractionResponse" name="deleteInfractionResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="infractionById">
+      <wsdl:input message="tns:infractionById" name="infractionById">
+    </wsdl:input>
+      <wsdl:output message="tns:infractionByIdResponse" name="infractionByIdResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="saveInfraction">
+      <wsdl:input message="tns:saveInfraction" name="saveInfraction">
+    </wsdl:input>
+      <wsdl:output message="tns:saveInfractionResponse" name="saveInfractionResponse">
+    </wsdl:output>
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="InfractionSoapServiceServiceSoapBinding" type="tns:InfractionService">
+    <soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+    <wsdl:operation name="updateInfraction">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="updateInfraction">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="updateInfractionResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="infractions">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="infractions">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="infractionsResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="deleteInfraction">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="deleteInfraction">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="deleteInfractionResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="infractionById">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="infractionById">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="infractionByIdResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="saveInfraction">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="saveInfraction">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="saveInfractionResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="InfractionSoapServiceService">
+    <wsdl:port binding="tns:InfractionSoapServiceServiceSoapBinding" name="InfractionServicePort">
+      <soap:address location="http://localhost:1998/services/infractionService"/>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

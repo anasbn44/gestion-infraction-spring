@@ -1,0 +1,114 @@
+<?xml version='1.0' encoding='UTF-8'?><wsdl:definitions xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:tns="http://soap.web.immatriculationservice.enset.ma/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:ns1="http://schemas.xmlsoap.org/soap/http" name="ImmatriculationSoapServiceService" targetNamespace="http://soap.web.immatriculationservice.enset.ma/">
+  <wsdl:types>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://soap.web.immatriculationservice.enset.ma/" elementFormDefault="unqualified" targetNamespace="http://soap.web.immatriculationservice.enset.ma/" version="1.0">
+
+  <xs:element name="vehiculeByMatricule" type="tns:vehiculeByMatricule"/>
+
+  <xs:element name="vehiculeByMatriculeResponse" type="tns:vehiculeByMatriculeResponse"/>
+
+  <xs:element name="vehiculeList" type="tns:vehiculeList"/>
+
+  <xs:element name="vehiculeListResponse" type="tns:vehiculeListResponse"/>
+
+  <xs:complexType name="vehiculeByMatricule">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="matricule" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="vehiculeByMatriculeResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="tns:vehicule"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="vehicule">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="id" type="xs:long"/>
+      <xs:element minOccurs="0" name="marque" type="xs:string"/>
+      <xs:element minOccurs="0" name="matricule" type="xs:string"/>
+      <xs:element name="modele" type="xs:int"/>
+      <xs:element minOccurs="0" name="proprietaire" type="tns:proprietaire"/>
+      <xs:element name="puissanceFiscale" type="xs:int"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="proprietaire">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="dateDeNaissance" type="xs:dateTime"/>
+      <xs:element minOccurs="0" name="email" type="xs:string"/>
+      <xs:element minOccurs="0" name="id" type="xs:long"/>
+      <xs:element minOccurs="0" name="nom" type="xs:string"/>
+      <xs:element maxOccurs="unbounded" minOccurs="0" name="vehicules" nillable="true" type="tns:vehicule"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="vehiculeList">
+    <xs:sequence/>
+  </xs:complexType>
+
+  <xs:complexType name="vehiculeListResponse">
+    <xs:sequence>
+      <xs:element maxOccurs="unbounded" minOccurs="0" name="return" type="tns:vehicule"/>
+    </xs:sequence>
+  </xs:complexType>
+
+</xs:schema>
+  </wsdl:types>
+  <wsdl:message name="vehiculeByMatricule">
+    <wsdl:part element="tns:vehiculeByMatricule" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="vehiculeByMatriculeResponse">
+    <wsdl:part element="tns:vehiculeByMatriculeResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="vehiculeListResponse">
+    <wsdl:part element="tns:vehiculeListResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="vehiculeList">
+    <wsdl:part element="tns:vehiculeList" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:portType name="ImmatriculationService">
+    <wsdl:operation name="vehiculeByMatricule">
+      <wsdl:input message="tns:vehiculeByMatricule" name="vehiculeByMatricule">
+    </wsdl:input>
+      <wsdl:output message="tns:vehiculeByMatriculeResponse" name="vehiculeByMatriculeResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="vehiculeList">
+      <wsdl:input message="tns:vehiculeList" name="vehiculeList">
+    </wsdl:input>
+      <wsdl:output message="tns:vehiculeListResponse" name="vehiculeListResponse">
+    </wsdl:output>
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="ImmatriculationSoapServiceServiceSoapBinding" type="tns:ImmatriculationService">
+    <soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+    <wsdl:operation name="vehiculeByMatricule">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="vehiculeByMatricule">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="vehiculeByMatriculeResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="vehiculeList">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="vehiculeList">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="vehiculeListResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="ImmatriculationSoapServiceService">
+    <wsdl:port binding="tns:ImmatriculationSoapServiceServiceSoapBinding" name="ImmatriculationServicePort">
+      <soap:address location="http://localhost:1997/services/immatriculationService"/>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>
