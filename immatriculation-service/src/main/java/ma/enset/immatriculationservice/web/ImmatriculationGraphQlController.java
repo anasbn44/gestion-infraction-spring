@@ -3,6 +3,7 @@ package ma.enset.immatriculationservice.web;
 import lombok.AllArgsConstructor;
 import ma.enset.immatriculationservice.dto.ProprietaireRequestDto;
 import ma.enset.immatriculationservice.dto.VehiculeRequestDto;
+import ma.enset.immatriculationservice.dto.VehiculeResponseDto;
 import ma.enset.immatriculationservice.entities.Proprietaire;
 import ma.enset.immatriculationservice.entities.Vehicule;
 import ma.enset.immatriculationservice.repositories.PropretaireRepository;
@@ -73,7 +74,7 @@ public class ImmatriculationGraphQlController {
         vehiculeService.deleteVehicule(id);
     }
     @QueryMapping
-    public Vehicule getVehiculeByMatricule(@Argument String matricule){
+    public VehiculeResponseDto getVehiculeByMatricule(@Argument String matricule){
         return vehiculeService.getVehiculeByMatricule(matricule);
     }
 }

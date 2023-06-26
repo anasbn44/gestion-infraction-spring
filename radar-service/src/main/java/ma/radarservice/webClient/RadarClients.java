@@ -1,7 +1,10 @@
 package ma.radarservice.webClient;
 
 import lombok.AllArgsConstructor;
+import ma.enset.immatriculationservice.web.grpc.stub.ImmatriculationGrpcServiceGrpc;
 import ma.enset.immatriculationservice.web.soap.ImmatriculationService;
+import ma.infractionservice.web.grpc.stub.InfractionGrpcServiceGrpc;
+import ma.infractionservice.web.grpc.stub.InfractionSefvice;
 import ma.infractionservice.web.soap.InfractionService;
 import ma.radarservice.dto.InfractionRequest;
 import ma.radarservice.entities.Infraction;
@@ -9,6 +12,8 @@ import ma.radarservice.entities.Vehicule;
 import ma.radarservice.feign.InfractionRestClient;
 import ma.radarservice.feign.VehiculeRestClient;
 import ma.radarservice.mappers.RadarMapper;
+import net.devh.boot.grpc.client.inject.GrpcClient;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.graphql.client.GraphQlClient;
 import org.springframework.graphql.client.HttpGraphQlClient;
 import org.springframework.web.bind.annotation.*;
@@ -18,13 +23,23 @@ import java.util.List;
 
 @RestController
 @RequestMapping("/radar-client")
-@AllArgsConstructor
+
 public class RadarClients {
+    @Autowired
     private RadarMapper radarMapper;
+    @Autowired
     private VehiculeRestClient vehiculeRestClient;
+    @Autowired
     private InfractionRestClient infractionRestClient;
+    @Autowired
     private InfractionService infractionSoapService;
+    @Autowired
     private ImmatriculationService immatriculationSoapService;
+    @GrpcClient(value = "infracionSevice")
+    private InfractionGrpcServiceGrpc.InfractionGrpcServiceBlockingStub infractionGrpcService;
+    @GrpcClient(value = "immatriculationService")
+    private ImmatriculationGrpcServiceGrpc.ImmatriculationGrpcServiceBlockingStub immatriculationGrpcService;
+
 
     @GetMapping("/vehicule/{matricule}")
     public Vehicule getVehiculeByMatricule(@PathVariable(name = "matricule") String matricule){
@@ -54,9 +69,15 @@ public class RadarClients {
         return radarMapper.fromSoapToVehicule(immatriculationSoapService.vehiculeByMatricule(matricule));
     }
 
-    @GetMapping("/soap/vehicules")
-    public List<ma.enset.immatriculationservice.web.soap.Vehicule> getVehiculeSoap(){
-        return immatriculationSoapService.vehiculeList();
+    @GetMapping("/grpc/vehicule/{matricule}")
+    public Vehicule getVehiculeByMatriculeGrpc(@PathVariable(name = "matricule") String matricule){
+        ma.enset.immatriculationservice.web.grpc.stub.ImmatriculationService.Matricule request =
+                ma.enset.immatriculationservice.web.grpc.stub.ImmatriculationService.Matricule.newBuilder()
+                        .setMatricule(matricule)
+                        .build();
+        ma.enset.immatriculationservice.web.grpc.stub.ImmatriculationService.Vehicule response =
+                immatriculationGrpcService.getVehiculeByMatricule(request);
+        return radarMapper.fromGrpcToVehicule(response);
     }
 
     @PostMapping("/infraction")
@@ -92,4 +113,17 @@ public class RadarClients {
     public Infraction getInfractionById(@PathVariable Long id){
         return radarMapper.fromSoapToInfraction(infractionSoapService.infractionById(id));
     }
+    @PostMapping("/grpc/infraction")
+    public Infraction saveInfractionGrpc(@RequestBody InfractionRequest infractionRequest){
+        InfractionSefvice.InfractionResponse response = infractionGrpcService.saveInfraction(radarMapper.fromInfractionRequestToGrpc(infractionRequest));
+        return radarMapper.fromGrpcToInfraction(response);
+    }
+
+    @GetMapping("grpc/infractions/{id}")
+    public Infraction getInfractionByIdGrpc(@PathVariable Long id){
+        InfractionSefvice.InfractionIdRequest request = InfractionSefvice.InfractionIdRequest.newBuilder().setId(id).build();
+        InfractionSefvice.InfractionResponse response = infractionGrpcService.getInfractionById(request);
+        return radarMapper.fromGrpcToInfraction(response);
+    }
+
 }

@@ -69,6 +69,14 @@ public class ObjectFactory {
     }
 
     /**
+     * Create an instance of {@link VehiculeResponseDto }
+     * 
+     */
+    public VehiculeResponseDto createVehiculeResponseDto() {
+        return new VehiculeResponseDto();
+    }
+
+    /**
      * Create an instance of {@link Vehicule }
      * 
      */

@@ -2,6 +2,7 @@ package ma.enset.immatriculationservice.services;
 
 import lombok.AllArgsConstructor;
 import ma.enset.immatriculationservice.dto.VehiculeRequestDto;
+import ma.enset.immatriculationservice.dto.VehiculeResponseDto;
 import ma.enset.immatriculationservice.entities.Vehicule;
 import ma.enset.immatriculationservice.mappers.VehiculeMapper;
 import ma.enset.immatriculationservice.repositories.VehiculeRepository;
@@ -59,9 +60,9 @@ public class VehiculeServiceImpl implements VehiculeService {
     }
 
     @Override
-    public Vehicule getVehiculeByMatricule(String matricule){
+    public VehiculeResponseDto getVehiculeByMatricule(String matricule){
         Vehicule vehicule = vehiculeRepository.findAll().stream().filter(v -> v.getMatricule().equals(matricule)).findAny().orElse(null);
         if (vehicule == null) throw new RuntimeException(String.format("Matricule %s not found", matricule));
-        return vehicule;
+        return mappers.toResponse(vehicule);
     }
 }

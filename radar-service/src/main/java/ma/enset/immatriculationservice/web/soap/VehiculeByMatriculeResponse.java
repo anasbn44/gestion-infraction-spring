@@ -17,7 +17,7 @@ import jakarta.xml.bind.annotation.XmlType;
  *   &lt;complexContent&gt;
  *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
  *       &lt;sequence&gt;
- *         &lt;element name="return" type="{http://soap.web.immatriculationservice.enset.ma/}vehicule" minOccurs="0"/&gt;
+ *         &lt;element name="return" type="{http://soap.web.immatriculationservice.enset.ma/}vehiculeResponseDto" minOccurs="0"/&gt;
  *       &lt;/sequence&gt;
  *     &lt;/restriction&gt;
  *   &lt;/complexContent&gt;
@@ -33,17 +33,17 @@ import jakarta.xml.bind.annotation.XmlType;
 public class VehiculeByMatriculeResponse {
 
     @XmlElement(name = "return")
-    protected Vehicule _return;
+    protected VehiculeResponseDto _return;
 
     /**
      * Gets the value of the return property.
      * 
      * @return
      *     possible object is
-     *     {@link Vehicule }
+     *     {@link VehiculeResponseDto }
      *     
      */
-    public Vehicule getReturn() {
+    public VehiculeResponseDto getReturn() {
         return _return;
     }
 
@@ -52,10 +52,10 @@ public class VehiculeByMatriculeResponse {
      * 
      * @param value
      *     allowed object is
-     *     {@link Vehicule }
+     *     {@link VehiculeResponseDto }
      *     
      */
-    public void setReturn(Vehicule value) {
+    public void setReturn(VehiculeResponseDto value) {
         this._return = value;
     }
 

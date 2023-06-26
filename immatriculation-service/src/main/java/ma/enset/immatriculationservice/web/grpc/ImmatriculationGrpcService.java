@@ -17,7 +17,7 @@ public class ImmatriculationGrpcService extends ImmatriculationGrpcServiceGrpc.I
 
     @Override
     public void getVehiculeByMatricule(ImmatriculationService.Matricule request, StreamObserver<ImmatriculationService.Vehicule> responseObserver) {
-        ImmatriculationService.Vehicule vehiculeGrpc = vehiculeMapper.fromGrpc(vehiculeService.getVehiculeByMatricule(request.getMatricule()));
+        ImmatriculationService.Vehicule vehiculeGrpc = vehiculeMapper.fromResponseToGrpc(vehiculeService.getVehiculeByMatricule(request.getMatricule()));
 
         responseObserver.onNext(vehiculeGrpc);
         responseObserver.onCompleted();

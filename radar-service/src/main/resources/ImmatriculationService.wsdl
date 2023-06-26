@@ -18,7 +18,27 @@
 
   <xs:complexType name="vehiculeByMatriculeResponse">
     <xs:sequence>
-      <xs:element minOccurs="0" name="return" type="tns:vehicule"/>
+      <xs:element minOccurs="0" name="return" type="tns:vehiculeResponseDto"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="vehiculeResponseDto">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="id" type="xs:long"/>
+      <xs:element minOccurs="0" name="marque" type="xs:string"/>
+      <xs:element minOccurs="0" name="matricule" type="xs:string"/>
+      <xs:element name="modele" type="xs:int"/>
+      <xs:element name="puissanceFiscale" type="xs:int"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="vehiculeList">
+    <xs:sequence/>
+  </xs:complexType>
+
+  <xs:complexType name="vehiculeListResponse">
+    <xs:sequence>
+      <xs:element maxOccurs="unbounded" minOccurs="0" name="return" type="tns:vehicule"/>
     </xs:sequence>
   </xs:complexType>
 
@@ -40,16 +60,6 @@
       <xs:element minOccurs="0" name="id" type="xs:long"/>
       <xs:element minOccurs="0" name="nom" type="xs:string"/>
       <xs:element maxOccurs="unbounded" minOccurs="0" name="vehicules" nillable="true" type="tns:vehicule"/>
-    </xs:sequence>
-  </xs:complexType>
-
-  <xs:complexType name="vehiculeList">
-    <xs:sequence/>
-  </xs:complexType>
-
-  <xs:complexType name="vehiculeListResponse">
-    <xs:sequence>
-      <xs:element maxOccurs="unbounded" minOccurs="0" name="return" type="tns:vehicule"/>
     </xs:sequence>
   </xs:complexType>
 

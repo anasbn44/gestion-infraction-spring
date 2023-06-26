@@ -3,6 +3,7 @@ package ma.enset.immatriculationservice.web;
 import lombok.AllArgsConstructor;
 import ma.enset.immatriculationservice.dto.ProprietaireRequestDto;
 import ma.enset.immatriculationservice.dto.VehiculeRequestDto;
+import ma.enset.immatriculationservice.dto.VehiculeResponseDto;
 import ma.enset.immatriculationservice.entities.Proprietaire;
 import ma.enset.immatriculationservice.entities.Vehicule;
 import ma.enset.immatriculationservice.services.ProprietaireService;
@@ -68,7 +69,7 @@ public class ImmatraculationRestControler {
     }
 
     @GetMapping("/vehicules/matricule/{matricule}")
-    public Vehicule getVehiculeByMatricule(@PathVariable(name = "matricule") String matricule){
+    public VehiculeResponseDto getVehiculeByMatricule(@PathVariable(name = "matricule") String matricule){
         return vehiculeService.getVehiculeByMatricule(matricule);
     }
 }

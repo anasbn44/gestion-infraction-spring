@@ -1,6 +1,8 @@
 package ma.radarservice.mappers;
 
 import lombok.AllArgsConstructor;
+import ma.enset.immatriculationservice.web.grpc.stub.ImmatriculationService;
+import ma.infractionservice.web.grpc.stub.InfractionSefvice;
 import ma.infractionservice.web.soap.InfractionRequest;
 import ma.radarservice.dto.RadarRequest;
 import ma.radarservice.entities.Infraction;
@@ -46,7 +48,19 @@ public class RadarMapper {
         return modelMapper.map(infraction, Infraction.class);
     }
 
-    public Vehicule fromSoapToVehicule(ma.enset.immatriculationservice.web.soap.Vehicule vehicule){
+    public Vehicule fromSoapToVehicule(ma.enset.immatriculationservice.web.soap.VehiculeResponseDto vehicule){
         return modelMapper.map(vehicule, Vehicule.class);
+    }
+
+    public Vehicule fromGrpcToVehicule(ImmatriculationService.Vehicule vehicule){
+        return modelMapper.map(vehicule, Vehicule.class);
+    }
+
+    public Infraction fromGrpcToInfraction(InfractionSefvice.InfractionResponse infraction){
+        return modelMapper.map(infraction, Infraction.class);
+    }
+
+    public InfractionSefvice.InfractionRequest fromInfractionRequestToGrpc(ma.radarservice.dto.InfractionRequest infractionRequest){
+        return modelMapper.map(infractionRequest, InfractionSefvice.InfractionRequest.Builder.class).build();
     }
 }

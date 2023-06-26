@@ -24,5 +24,11 @@ public class VehiculeMapper {
     public ImmatriculationService.Vehicule fromGrpc(Vehicule vehicule){
         return modelMapper.map(vehicule, ImmatriculationService.Vehicule.Builder.class).build();
     }
+    public ImmatriculationService.Vehicule fromResponseToGrpc(VehiculeResponseDto vehicule){
+        return modelMapper.map(vehicule, ImmatriculationService.Vehicule.Builder.class).build();
+    }
+    public VehiculeResponseDto toResponse (Vehicule vehicule){
+        return modelMapper.map(vehicule, VehiculeResponseDto.class);
+    }
 
 }

@@ -3,7 +3,7 @@ type Query{
     proprietaireById(id: Float) : Proprietaire,
     vehicules : [Vehicule],
     vehiculesById(id : Float) : Vehicule,
-    getVehiculeByMatricule(matricule : String) : Vehicule
+    getVehiculeByMatricule(matricule : String) : VehiculeResponse
 }
 
 type Mutation{
@@ -30,6 +30,14 @@ type Vehicule{
     marque : String,
     puissanceFiscale : Int,
     proprietaire :Proprietaire
+}
+
+type VehiculeResponse{
+    id : Float,
+    modele : Int
+    matricule : String,
+    marque : String,
+    puissanceFiscale : Int
 }
 
 input VehiculeRequest{
