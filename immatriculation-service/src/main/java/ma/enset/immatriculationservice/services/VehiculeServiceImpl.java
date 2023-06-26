@@ -1,9 +1,12 @@
 package ma.enset.immatriculationservice.services;
 
 import lombok.AllArgsConstructor;
+import ma.enset.immatriculationservice.dto.ProprietaireResponseDto;
 import ma.enset.immatriculationservice.dto.VehiculeRequestDto;
 import ma.enset.immatriculationservice.dto.VehiculeResponseDto;
+import ma.enset.immatriculationservice.entities.Proprietaire;
 import ma.enset.immatriculationservice.entities.Vehicule;
+import ma.enset.immatriculationservice.mappers.ProprietaireMapper;
 import ma.enset.immatriculationservice.mappers.VehiculeMapper;
 import ma.enset.immatriculationservice.repositories.VehiculeRepository;
 import org.springframework.stereotype.Service;
@@ -11,6 +14,7 @@ import org.springframework.transaction.annotation.Transactional;
 import org.springframework.web.bind.annotation.PathVariable;
 
 import java.util.List;
+import java.util.stream.Collectors;
 
 @Service
 @Transactional
@@ -18,27 +22,31 @@ import java.util.List;
 public class VehiculeServiceImpl implements VehiculeService {
     private VehiculeRepository vehiculeRepository;
     private VehiculeMapper mappers;
+    private ProprietaireMapper proprietaireMapper;
     @Override
-    public List<Vehicule> getAllVehicules() {
-        return vehiculeRepository.findAll();
+    public List<VehiculeResponseDto> getAllVehicules() {
+        List<Vehicule> vehicules = vehiculeRepository.findAll();
+        return vehicules.stream().map(mappers::from).collect(Collectors.toList());
     }
 
     @Override
-    public Vehicule getVehiculeById(Long id) {
+    public VehiculeResponseDto getVehiculeById(Long id) {
         Vehicule vehicule = vehiculeRepository.findById(id).orElse(null);
         if (vehicule == null) throw new RuntimeException(String.format("Vehicule by id %dnot found", id));
-        return vehicule;
+        return mappers.from(vehicule);
     }
 
     @Override
-    public Vehicule saveVehicule(VehiculeRequestDto vehiculeRequest) {
+    public VehiculeResponseDto saveVehicule(VehiculeRequestDto vehiculeRequest) {
         Vehicule vehicule = mappers.to(vehiculeRequest);
-        return vehiculeRepository.save(vehicule);
+        Vehicule response = vehiculeRepository.save(vehicule);
+        return mappers.from(response);
     }
 
     @Override
-    public Vehicule updateVehicule(Long id, VehiculeRequestDto vehiculeRequest) {
-        Vehicule vehicule = getVehiculeById(id);
+    public VehiculeResponseDto updateVehicule(Long id, VehiculeRequestDto vehiculeRequest) {
+        Vehicule vehicule = vehiculeRepository.findById(id).orElse(null);
+        if (vehicule == null) throw new RuntimeException(String.format("Vehicule by id %dnot found", id));
         if(!vehicule.getMatricule().equals(vehiculeRequest.getMatricule())){
             vehicule.setMatricule(vehiculeRequest.getMatricule());
         }
@@ -51,7 +59,11 @@ public class VehiculeServiceImpl implements VehiculeService {
         if (vehicule.getPuissanceFiscale() != vehicule.getPuissanceFiscale()){
             vehicule.setPuissanceFiscale(vehiculeRequest.getPuissanceFiscale());
         }
-        return vehiculeRepository.save(vehicule);
+        if (vehicule.getProprietaire() != vehicule.getProprietaire()){
+            vehicule.setProprietaire(vehiculeRequest.getProprietaire());
+        }
+        Vehicule response = vehiculeRepository.save(vehicule);
+        return mappers.from(response);
     }
 
     @Override
@@ -65,4 +77,15 @@ public class VehiculeServiceImpl implements VehiculeService {
         if (vehicule == null) throw new RuntimeException(String.format("Matricule %s not found", matricule));
         return mappers.toResponse(vehicule);
     }
+
+    @Override
+    public ProprietaireResponseDto getProprietaireOfVehicule(Long id) {
+        Vehicule vehicule = vehiculeRepository.findById(id).orElse(null);
+        if (vehicule == null) throw new RuntimeException(String.format("Vehicule by id %dnot found", id));
+        Proprietaire proprietaire = vehicule.getProprietaire();
+        ProprietaireResponseDto response = proprietaireMapper.from(proprietaire);
+        return response;
+    }
+
+
 }

@@ -18,15 +18,17 @@ public class VehiculeMapper {
     public Vehicule to(VehiculeRequestDto vehicule){
         return modelMapper.map(vehicule, Vehicule.class);
     }
-    public Vehicule toGrpc(ImmatriculationService.Vehicule vehicule){
-        return modelMapper.map(vehicule, Vehicule.class);
+//    public Vehicule toGrpc(ImmatriculationService.Vehicule vehicule){
+//        return modelMapper.map(vehicule, Vehicule.class);
+//    }
+    public ImmatriculationService.VehiculeResponse fromResponseToGrpc(VehiculeResponseDto vehicule){
+        return modelMapper.map(vehicule, ImmatriculationService.VehiculeResponse.Builder.class).build();
     }
-    public ImmatriculationService.Vehicule fromGrpc(Vehicule vehicule){
-        return modelMapper.map(vehicule, ImmatriculationService.Vehicule.Builder.class).build();
+
+    public VehiculeRequestDto toRequestFromGrpc (ImmatriculationService.VehiculeRequest vehicule){
+        return modelMapper.map(vehicule, VehiculeRequestDto.class);
     }
-    public ImmatriculationService.Vehicule fromResponseToGrpc(VehiculeResponseDto vehicule){
-        return modelMapper.map(vehicule, ImmatriculationService.Vehicule.Builder.class).build();
-    }
+
     public VehiculeResponseDto toResponse (Vehicule vehicule){
         return modelMapper.map(vehicule, VehiculeResponseDto.class);
     }

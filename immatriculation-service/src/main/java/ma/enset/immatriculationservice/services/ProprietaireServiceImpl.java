@@ -2,6 +2,7 @@ package ma.enset.immatriculationservice.services;
 
 import lombok.AllArgsConstructor;
 import ma.enset.immatriculationservice.dto.ProprietaireRequestDto;
+import ma.enset.immatriculationservice.dto.ProprietaireResponseDto;
 import ma.enset.immatriculationservice.entities.Proprietaire;
 import ma.enset.immatriculationservice.entities.Vehicule;
 import ma.enset.immatriculationservice.mappers.ProprietaireMapper;
@@ -11,6 +12,7 @@ import org.springframework.transaction.annotation.Transactional;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.stream.Collectors;
 
 @Service
 @Transactional
@@ -20,26 +22,27 @@ public class ProprietaireServiceImpl implements ProprietaireService {
     private ProprietaireMapper mappers;
 
     @Override
-    public List<Proprietaire> getAllProprietaires() {
-        return propretaireRepository.findAll();
+    public List<ProprietaireResponseDto> getAllProprietaires() {
+        List<Proprietaire> proprietaires = propretaireRepository.findAll();
+        return proprietaires.stream().map(mappers::from).collect(Collectors.toList());
     }
 
     @Override
-    public Proprietaire getProprietaireById(Long id) {
+    public ProprietaireResponseDto getProprietaireById(Long id) {
         Proprietaire owner = propretaireRepository.findById(id).orElse(null);
         if (owner == null) throw new RuntimeException(String.format("Owner by Id : %d is not found", id));
-        return owner;
+        return mappers.from(owner);
     }
 
     @Override
-    public Proprietaire saveProprietaire(ProprietaireRequestDto ownerRequest) {
+    public ProprietaireResponseDto saveProprietaire(ProprietaireRequestDto ownerRequest) {
         Proprietaire owner = mappers.to(ownerRequest);
-        return propretaireRepository.save(owner);
+        return mappers.from(propretaireRepository.save(owner));
     }
 
     @Override
-    public Proprietaire updateProprietaire(Long id, ProprietaireRequestDto ownerRequest) {
-        Proprietaire owner = getProprietaireById(id);
+    public ProprietaireResponseDto updateProprietaire(Long id, ProprietaireRequestDto ownerRequest) {
+        ProprietaireResponseDto owner = getProprietaireById(id);
         if(!owner.getNom().equals(ownerRequest.getNom())){
             owner.setNom(ownerRequest.getNom());
         }
@@ -49,7 +52,8 @@ public class ProprietaireServiceImpl implements ProprietaireService {
         if (!owner.getDateDeNaissance().equals(ownerRequest.getDateDeNaissance())){
             owner.setDateDeNaissance(ownerRequest.getDateDeNaissance());
         }
-        return propretaireRepository.save(owner);
+        Proprietaire proprietaire = mappers.fromResponse(owner);
+        return mappers.from(propretaireRepository.save(proprietaire));
     }
 
     @Override
@@ -58,17 +62,20 @@ public class ProprietaireServiceImpl implements ProprietaireService {
     }
 
     @Override
-    public Proprietaire addVehicule(Long id, Vehicule vehicule) {
-        Proprietaire proprietaire = getProprietaireById(id);
-        List<Vehicule> vehicules = proprietaire.getVehicules();
-        if (vehicule == null){
-            List<Vehicule> vehiculeList = new ArrayList<>();
-            vehiculeList.add(vehicule);
-            proprietaire.setVehicules(vehiculeList);
-        }else {
-            vehicules.add(vehicule);
-            proprietaire.setVehicules(vehicules);
+    public ProprietaireResponseDto addVehicule(Long id, Vehicule vehicule) {
+        Proprietaire proprietaire = propretaireRepository.findById(id).orElse(null);
+        if (proprietaire == null) throw new RuntimeException(String.format("Owner by Id : %d is not found", id));
+        else {
+            List<Vehicule> vehicules = proprietaire.getVehicules();
+            if (vehicule == null){
+                List<Vehicule> vehiculeList = new ArrayList<>();
+                vehiculeList.add(vehicule);
+                proprietaire.setVehicules(vehiculeList);
+            }else {
+                vehicules.add(vehicule);
+                proprietaire.setVehicules(vehicules);
+            }
         }
-        return proprietaire;
+        return mappers.from(proprietaire);
     }
 }

@@ -4,9 +4,12 @@ import jakarta.jws.WebMethod;
 import jakarta.jws.WebParam;
 import jakarta.jws.WebService;
 import lombok.AllArgsConstructor;
+import ma.enset.immatriculationservice.dto.ProprietaireResponseDto;
 import ma.enset.immatriculationservice.dto.VehiculeResponseDto;
 import ma.enset.immatriculationservice.entities.Vehicule;
 import ma.enset.immatriculationservice.services.VehiculeService;
+import org.springframework.graphql.data.method.annotation.Argument;
+import org.springframework.graphql.data.method.annotation.QueryMapping;
 import org.springframework.stereotype.Component;
 
 import java.util.List;
@@ -17,11 +20,16 @@ import java.util.List;
 public class ImmatriculationSoapService {
     private VehiculeService vehiculeService;
     @WebMethod
-    public List<Vehicule> vehiculeList(){
+    public List<VehiculeResponseDto> vehiculeList(){
         return vehiculeService.getAllVehicules();
     }
     @WebMethod
     public VehiculeResponseDto vehiculeByMatricule(@WebParam(name = "matricule") String matricule){
         return vehiculeService.getVehiculeByMatricule(matricule);
+    }
+
+    @WebMethod
+    public ProprietaireResponseDto getProprietaireOfVehicule(@WebParam(name = "id") Long id){
+        return vehiculeService.getProprietaireOfVehicule(id);
     }
 }

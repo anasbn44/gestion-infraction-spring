@@ -1,18 +1,19 @@
 type Query{
-    prorietaires: [Proprietaire],
-    proprietaireById(id: Float) : Proprietaire,
+    prorietaires: [ProprietaireResponseDto],
+    proprietaireById(id: Float) : ProprietaireResponseDto,
     vehicules : [Vehicule],
     vehiculesById(id : Float) : Vehicule,
-    getVehiculeByMatricule(matricule : String) : VehiculeResponse
+    getVehiculeByMatricule(matricule : String) : VehiculeResponse,
+    getProprietaireOfVehicule(id : Float) : ProprietaireResponseDto
 }
 
 type Mutation{
     saveVehicule(vehicule :VehiculeRequest): Vehicule,
     updateVehicule(id: Float, vehicule :VehiculeRequest) : Vehicule,
     deleteVehicule(id: Float) : Vehicule,
-    saveProprietaire(proprietaire :ProprietaireRequest): Proprietaire,
-    updateProprietaire(id: Float, proprietaire :ProprietaireRequest) : Proprietaire,
-    deleteProprietaire(id: Float) : Proprietaire
+    saveProprietaire(proprietaire :ProprietaireRequest): ProprietaireResponseDto,
+    updateProprietaire(id: Float, proprietaire :ProprietaireRequest) : ProprietaireResponseDto,
+    deleteProprietaire(id: Float) : ProprietaireResponseDto
 }
 
 type Proprietaire {
@@ -21,6 +22,13 @@ type Proprietaire {
     dateDeNaissance :  Float,
     email : String
     vehicules : [Vehicule]
+}
+
+type ProprietaireResponseDto{
+    id : Float,
+    nom : String,
+    dateDeNaissance :  Float,
+    email : String
 }
 
 type Vehicule{

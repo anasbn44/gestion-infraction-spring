@@ -2,6 +2,7 @@ package ma.enset.immatriculationservice.web;
 
 import lombok.AllArgsConstructor;
 import ma.enset.immatriculationservice.dto.ProprietaireRequestDto;
+import ma.enset.immatriculationservice.dto.ProprietaireResponseDto;
 import ma.enset.immatriculationservice.dto.VehiculeRequestDto;
 import ma.enset.immatriculationservice.dto.VehiculeResponseDto;
 import ma.enset.immatriculationservice.entities.Proprietaire;
@@ -21,20 +22,20 @@ public class ImmatraculationRestControler {
 
 
     @GetMapping("/proprietaires")
-    public List<Proprietaire> prorietaires(){
+    public List<ProprietaireResponseDto> prorietaires(){
 
         return proprietaireService.getAllProprietaires();
     }
     @GetMapping("/proprietaires/{id}")
-    public Proprietaire prorietaireById(@PathVariable Long id){
+    public ProprietaireResponseDto prorietaireById(@PathVariable Long id){
         return proprietaireService.getProprietaireById(id);
     }
     @PostMapping("/proprietaires")
-    public Proprietaire saveProprietaire(@RequestBody ProprietaireRequestDto proprietaire){
+    public ProprietaireResponseDto saveProprietaire(@RequestBody ProprietaireRequestDto proprietaire){
         return proprietaireService.saveProprietaire(proprietaire);
     }
     @PutMapping("/proprietaires/{id}")
-    public Proprietaire updateProprietaire(@RequestBody ProprietaireRequestDto proprietaire, @PathVariable Long id){
+    public ProprietaireResponseDto updateProprietaire(@RequestBody ProprietaireRequestDto proprietaire, @PathVariable Long id){
         return proprietaireService.updateProprietaire(id, proprietaire);
     }
     @DeleteMapping("/proprietaires/{id}")
@@ -43,24 +44,24 @@ public class ImmatraculationRestControler {
     }
 
     @PutMapping("/proprietaires/vehicule/{id}")
-    public Proprietaire addVehiculeToProprietaire(@PathVariable Long id, @RequestBody Vehicule vehicule){
+    public ProprietaireResponseDto addVehiculeToProprietaire(@PathVariable Long id, @RequestBody Vehicule vehicule){
         return proprietaireService.addVehicule(id, vehicule);
     }
 
     @GetMapping("/vehicules")
-    public List<Vehicule> vehiculeList(){
+    public List<VehiculeResponseDto> vehiculeList(){
         return vehiculeService.getAllVehicules();
     }
     @GetMapping("/vehicules/{id}")
-    public Vehicule vehiculeById(@PathVariable Long id){
+    public VehiculeResponseDto vehiculeById(@PathVariable Long id){
         return vehiculeService.getVehiculeById(id);
     }
     @PostMapping("/vehicules")
-    public Vehicule saveVehicule(@RequestBody VehiculeRequestDto vehicule){
+    public VehiculeResponseDto saveVehicule(@RequestBody VehiculeRequestDto vehicule){
         return vehiculeService.saveVehicule(vehicule);
     }
     @PutMapping("/vehicules/{id}")
-    public Vehicule updateVehicule(@RequestBody VehiculeRequestDto vehicule, @PathVariable Long id){
+    public VehiculeResponseDto updateVehicule(@RequestBody VehiculeRequestDto vehicule, @PathVariable Long id){
         return vehiculeService.updateVehicule(id, vehicule);
     }
     @DeleteMapping("/vehicules/{id}")
@@ -71,5 +72,10 @@ public class ImmatraculationRestControler {
     @GetMapping("/vehicules/matricule/{matricule}")
     public VehiculeResponseDto getVehiculeByMatricule(@PathVariable(name = "matricule") String matricule){
         return vehiculeService.getVehiculeByMatricule(matricule);
+    }
+
+    @GetMapping("/vehicules/proprietaire/{id}")
+    public ProprietaireResponseDto getProprietaireOfVehicule(@PathVariable(name = "id") Long id){
+        return vehiculeService.getProprietaireOfVehicule(id);
     }
 }

@@ -16,4 +16,5 @@ public class VehiculeRequestDto {
     private String marque;
     private int puissanceFiscale;
     private int modele;
+    private Proprietaire proprietaire;
 }

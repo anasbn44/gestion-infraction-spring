@@ -6,6 +6,7 @@ import ma.enset.immatriculationservice.dto.VehiculeRequestDto;
 import ma.enset.immatriculationservice.dto.VehiculeResponseDto;
 import ma.enset.immatriculationservice.entities.Proprietaire;
 import ma.enset.immatriculationservice.entities.Vehicule;
+import ma.enset.immatriculationservice.web.grpc.stub.ImmatriculationService;
 import org.modelmapper.ModelMapper;
 import org.springframework.stereotype.Component;
 
@@ -18,7 +19,19 @@ public class ProprietaireMapper {
         return modelMapper.map(proprietaire, ProprietaireResponseDto.class);
     }
 
+    public Proprietaire fromResponse(ProprietaireResponseDto responseDto){
+        return modelMapper.map(responseDto, Proprietaire.class);
+    }
+
     public Proprietaire to(ProprietaireRequestDto proprietaireRequestDto){
         return modelMapper.map(proprietaireRequestDto, Proprietaire.class);
+    }
+
+    public ImmatriculationService.ProprietaireResponse fromResponseToGrpc(ProprietaireResponseDto proprietaire){
+        return modelMapper.map(proprietaire, ImmatriculationService.ProprietaireResponse.Builder.class).build();
+    }
+
+    public ProprietaireRequestDto toRequestFromGrpc (ImmatriculationService.ProprietaireRequest proprietaire){
+        return modelMapper.map(proprietaire, ProprietaireRequestDto.class);
     }
 }

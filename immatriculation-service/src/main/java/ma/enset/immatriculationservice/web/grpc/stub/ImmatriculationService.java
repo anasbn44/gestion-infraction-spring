@@ -14,6 +14,2974 @@ public final class ImmatriculationService {
     registerAllExtensions(
         (com.google.protobuf.ExtensionRegistryLite) registry);
   }
+  public interface emptyObjectOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:emptyObject)
+      com.google.protobuf.MessageOrBuilder {
+  }
+  /**
+   * Protobuf type {@code emptyObject}
+   */
+  public  static final class emptyObject extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:emptyObject)
+      emptyObjectOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use emptyObject.newBuilder() to construct.
+    private emptyObject(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private emptyObject() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new emptyObject();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private emptyObject(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return ma.enset.immatriculationservice.web.grpc.stub.ImmatriculationService.internal_static_emptyObject_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return ma.enset.immatriculationservice.web.grpc.stub.ImmatriculationService.internal_static_emptyObject_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              ma.enset.immatriculationservice.web.grpc.stub.ImmatriculationService.emptyObject.class, ma.enset.immatriculationservice.web.grpc.stub.ImmatriculationService.emptyObject.Builder.class);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof ma.enset.immatriculationservice.web.grpc.stub.ImmatriculationService.emptyObject)) {
+        return super.equals(obj);
+      }
+      ma.enset.immatriculationservice.web.grpc.stub.ImmatriculationService.emptyObject other = (ma.enset.immatriculationservice.web.grpc.stub.ImmatriculationService.emptyObject) obj;
+
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static ma.enset.immatriculationservice.web.grpc.stub.ImmatriculationService.emptyObject parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static ma.enset.immatriculationservice.web.grpc.stub.ImmatriculationService.emptyObject parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static ma.enset.immatriculationservice.web.grpc.stub.ImmatriculationService.emptyObject parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static ma.enset.immatriculationservice.web.grpc.stub.ImmatriculationService.emptyObject parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static ma.enset.immatriculationservice.web.grpc.stub.ImmatriculationService.emptyObject parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static ma.enset.immatriculationservice.web.grpc.stub.ImmatriculationService.emptyObject parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static ma.enset.immatriculationservice.web.grpc.stub.ImmatriculationService.emptyObject parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static ma.enset.immatriculationservice.web.grpc.stub.ImmatriculationService.emptyObject parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static ma.enset.immatriculationservice.web.grpc.stub.ImmatriculationService.emptyObject parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static ma.enset.immatriculationservice.web.grpc.stub.ImmatriculationService.emptyObject parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static ma.enset.immatriculationservice.web.grpc.stub.ImmatriculationService.emptyObject parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static ma.enset.immatriculationservice.web.grpc.stub.ImmatriculationService.emptyObject parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(ma.enset.immatriculationservice.web.grpc.stub.ImmatriculationService.emptyObject prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code emptyObject}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:emptyObject)
+        ma.enset.immatriculationservice.web.grpc.stub.ImmatriculationService.emptyObjectOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return ma.enset.immatriculationservice.web.grpc.stub.ImmatriculationService.internal_static_emptyObject_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return ma.enset.immatriculationservice.web.grpc.stub.ImmatriculationService.internal_static_emptyObject_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                ma.enset.immatriculationservice.web.grpc.stub.ImmatriculationService.emptyObject.class, ma.enset.immatriculationservice.web.grpc.stub.ImmatriculationService.emptyObject.Builder.class);
+      }
+
+      // Construct using ma.enset.immatriculationservice.web.grpc.stub.ImmatriculationService.emptyObject.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return ma.enset.immatriculationservice.web.grpc.stub.ImmatriculationService.internal_static_emptyObject_descriptor;
+      }
+
+      @java.lang.Override
+      public ma.enset.immatriculationservice.web.grpc.stub.ImmatriculationService.emptyObject getDefaultInstanceForType() {
+        return ma.enset.immatriculationservice.web.grpc.stub.ImmatriculationService.emptyObject.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public ma.enset.immatriculationservice.web.grpc.stub.ImmatriculationService.emptyObject build() {
+        ma.enset.immatriculationservice.web.grpc.stub.ImmatriculationService.emptyObject result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public ma.enset.immatriculationservice.web.grpc.stub.ImmatriculationService.emptyObject buildPartial() {
+        ma.enset.immatriculationservice.web.grpc.stub.ImmatriculationService.emptyObject result = new ma.enset.immatriculationservice.web.grpc.stub.ImmatriculationService.emptyObject(this);
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof ma.enset.immatriculationservice.web.grpc.stub.ImmatriculationService.emptyObject) {
+          return mergeFrom((ma.enset.immatriculationservice.web.grpc.stub.ImmatriculationService.emptyObject)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(ma.enset.immatriculationservice.web.grpc.stub.ImmatriculationService.emptyObject other) {
+        if (other == ma.enset.immatriculationservice.web.grpc.stub.ImmatriculationService.emptyObject.getDefaultInstance()) return this;
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        ma.enset.immatriculationservice.web.grpc.stub.ImmatriculationService.emptyObject parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (ma.enset.immatriculationservice.web.grpc.stub.ImmatriculationService.emptyObject) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:emptyObject)
+    }
+
+    // @@protoc_insertion_point(class_scope:emptyObject)
+    private static final ma.enset.immatriculationservice.web.grpc.stub.ImmatriculationService.emptyObject DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new ma.enset.immatriculationservice.web.grpc.stub.ImmatriculationService.emptyObject();
+    }
+
+    public static ma.enset.immatriculationservice.web.grpc.stub.ImmatriculationService.emptyObject getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<emptyObject>
+        PARSER = new com.google.protobuf.AbstractParser<emptyObject>() {
+      @java.lang.Override
+      public emptyObject parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new emptyObject(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<emptyObject> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<emptyObject> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public ma.enset.immatriculationservice.web.grpc.stub.ImmatriculationService.emptyObject getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface ProprietairesListOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:ProprietairesList)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>repeated .ProprietaireResponse proprietaires = 1;</code>
+     */
+    java.util.List<ma.enset.immatriculationservice.web.grpc.stub.ImmatriculationService.ProprietaireResponse> 
+        getProprietairesList();
+    /**
+     * <code>repeated .ProprietaireResponse proprietaires = 1;</code>
+     */
+    ma.enset.immatriculationservice.web.grpc.stub.ImmatriculationService.ProprietaireResponse getProprietaires(int index);
+    /**
+     * <code>repeated .ProprietaireResponse proprietaires = 1;</code>
+     */
+    int getProprietairesCount();
+    /**
+     * <code>repeated .ProprietaireResponse proprietaires = 1;</code>
+     */
+    java.util.List<? extends ma.enset.immatriculationservice.web.grpc.stub.ImmatriculationService.ProprietaireResponseOrBuilder> 
+        getProprietairesOrBuilderList();
+    /**
+     * <code>repeated .ProprietaireResponse proprietaires = 1;</code>
+     */
+    ma.enset.immatriculationservice.web.grpc.stub.ImmatriculationService.ProprietaireResponseOrBuilder getProprietairesOrBuilder(
+        int index);
+  }
+  /**
+   * Protobuf type {@code ProprietairesList}
+   */
+  public  static final class ProprietairesList extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:ProprietairesList)
+      ProprietairesListOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use ProprietairesList.newBuilder() to construct.
+    private ProprietairesList(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private ProprietairesList() {
+      proprietaires_ = java.util.Collections.emptyList();
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new ProprietairesList();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private ProprietairesList(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
+                proprietaires_ = new java.util.ArrayList<ma.enset.immatriculationservice.web.grpc.stub.ImmatriculationService.ProprietaireResponse>();
+                mutable_bitField0_ |= 0x00000001;
+              }
+              proprietaires_.add(
+                  input.readMessage(ma.enset.immatriculationservice.web.grpc.stub.ImmatriculationService.ProprietaireResponse.parser(), extensionRegistry));
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        if (((mutable_bitField0_ & 0x00000001) != 0)) {
+          proprietaires_ = java.util.Collections.unmodifiableList(proprietaires_);
+        }
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return ma.enset.immatriculationservice.web.grpc.stub.ImmatriculationService.internal_static_ProprietairesList_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return ma.enset.immatriculationservice.web.grpc.stub.ImmatriculationService.internal_static_ProprietairesList_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              ma.enset.immatriculationservice.web.grpc.stub.ImmatriculationService.ProprietairesList.class, ma.enset.immatriculationservice.web.grpc.stub.ImmatriculationService.ProprietairesList.Builder.class);
+    }
+
+    public static final int PROPRIETAIRES_FIELD_NUMBER = 1;
+    private java.util.List<ma.enset.immatriculationservice.web.grpc.stub.ImmatriculationService.ProprietaireResponse> proprietaires_;
+    /**
+     * <code>repeated .ProprietaireResponse proprietaires = 1;</code>
+     */
+    public java.util.List<ma.enset.immatriculationservice.web.grpc.stub.ImmatriculationService.ProprietaireResponse> getProprietairesList() {
+      return proprietaires_;
+    }
+    /**
+     * <code>repeated .ProprietaireResponse proprietaires = 1;</code>
+     */
+    public java.util.List<? extends ma.enset.immatriculationservice.web.grpc.stub.ImmatriculationService.ProprietaireResponseOrBuilder> 
+        getProprietairesOrBuilderList() {
+      return proprietaires_;
+    }
+    /**
+     * <code>repeated .ProprietaireResponse proprietaires = 1;</code>
+     */
+    public int getProprietairesCount() {
+      return proprietaires_.size();
+    }
+    /**
+     * <code>repeated .ProprietaireResponse proprietaires = 1;</code>
+     */
+    public ma.enset.immatriculationservice.web.grpc.stub.ImmatriculationService.ProprietaireResponse getProprietaires(int index) {
+      return proprietaires_.get(index);
+    }
+    /**
+     * <code>repeated .ProprietaireResponse proprietaires = 1;</code>
+     */
+    public ma.enset.immatriculationservice.web.grpc.stub.ImmatriculationService.ProprietaireResponseOrBuilder getProprietairesOrBuilder(
+        int index) {
+      return proprietaires_.get(index);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      for (int i = 0; i < proprietaires_.size(); i++) {
+        output.writeMessage(1, proprietaires_.get(i));
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      for (int i = 0; i < proprietaires_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, proprietaires_.get(i));
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof ma.enset.immatriculationservice.web.grpc.stub.ImmatriculationService.ProprietairesList)) {
+        return super.equals(obj);
+      }
+      ma.enset.immatriculationservice.web.grpc.stub.ImmatriculationService.ProprietairesList other = (ma.enset.immatriculationservice.web.grpc.stub.ImmatriculationService.ProprietairesList) obj;
+
+      if (!getProprietairesList()
+          .equals(other.getProprietairesList())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (getProprietairesCount() > 0) {
+        hash = (37 * hash) + PROPRIETAIRES_FIELD_NUMBER;
+        hash = (53 * hash) + getProprietairesList().hashCode();
+      }
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static ma.enset.immatriculationservice.web.grpc.stub.ImmatriculationService.ProprietairesList parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static ma.enset.immatriculationservice.web.grpc.stub.ImmatriculationService.ProprietairesList parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static ma.enset.immatriculationservice.web.grpc.stub.ImmatriculationService.ProprietairesList parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static ma.enset.immatriculationservice.web.grpc.stub.ImmatriculationService.ProprietairesList parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static ma.enset.immatriculationservice.web.grpc.stub.ImmatriculationService.ProprietairesList parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static ma.enset.immatriculationservice.web.grpc.stub.ImmatriculationService.ProprietairesList parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static ma.enset.immatriculationservice.web.grpc.stub.ImmatriculationService.ProprietairesList parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static ma.enset.immatriculationservice.web.grpc.stub.ImmatriculationService.ProprietairesList parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static ma.enset.immatriculationservice.web.grpc.stub.ImmatriculationService.ProprietairesList parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static ma.enset.immatriculationservice.web.grpc.stub.ImmatriculationService.ProprietairesList parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static ma.enset.immatriculationservice.web.grpc.stub.ImmatriculationService.ProprietairesList parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static ma.enset.immatriculationservice.web.grpc.stub.ImmatriculationService.ProprietairesList parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(ma.enset.immatriculationservice.web.grpc.stub.ImmatriculationService.ProprietairesList prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code ProprietairesList}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:ProprietairesList)
+        ma.enset.immatriculationservice.web.grpc.stub.ImmatriculationService.ProprietairesListOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return ma.enset.immatriculationservice.web.grpc.stub.ImmatriculationService.internal_static_ProprietairesList_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return ma.enset.immatriculationservice.web.grpc.stub.ImmatriculationService.internal_static_ProprietairesList_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                ma.enset.immatriculationservice.web.grpc.stub.ImmatriculationService.ProprietairesList.class, ma.enset.immatriculationservice.web.grpc.stub.ImmatriculationService.ProprietairesList.Builder.class);
+      }
+
+      // Construct using ma.enset.immatriculationservice.web.grpc.stub.ImmatriculationService.ProprietairesList.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getProprietairesFieldBuilder();
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        if (proprietairesBuilder_ == null) {
+          proprietaires_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000001);
+        } else {
+          proprietairesBuilder_.clear();
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return ma.enset.immatriculationservice.web.grpc.stub.ImmatriculationService.internal_static_ProprietairesList_descriptor;
+      }
+
+      @java.lang.Override
+      public ma.enset.immatriculationservice.web.grpc.stub.ImmatriculationService.ProprietairesList getDefaultInstanceForType() {
+        return ma.enset.immatriculationservice.web.grpc.stub.ImmatriculationService.ProprietairesList.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public ma.enset.immatriculationservice.web.grpc.stub.ImmatriculationService.ProprietairesList build() {
+        ma.enset.immatriculationservice.web.grpc.stub.ImmatriculationService.ProprietairesList result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public ma.enset.immatriculationservice.web.grpc.stub.ImmatriculationService.ProprietairesList buildPartial() {
+        ma.enset.immatriculationservice.web.grpc.stub.ImmatriculationService.ProprietairesList result = new ma.enset.immatriculationservice.web.grpc.stub.ImmatriculationService.ProprietairesList(this);
+        int from_bitField0_ = bitField0_;
+        if (proprietairesBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) != 0)) {
+            proprietaires_ = java.util.Collections.unmodifiableList(proprietaires_);
+            bitField0_ = (bitField0_ & ~0x00000001);
+          }
+          result.proprietaires_ = proprietaires_;
+        } else {
+          result.proprietaires_ = proprietairesBuilder_.build();
+        }
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof ma.enset.immatriculationservice.web.grpc.stub.ImmatriculationService.ProprietairesList) {
+          return mergeFrom((ma.enset.immatriculationservice.web.grpc.stub.ImmatriculationService.ProprietairesList)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(ma.enset.immatriculationservice.web.grpc.stub.ImmatriculationService.ProprietairesList other) {
+        if (other == ma.enset.immatriculationservice.web.grpc.stub.ImmatriculationService.ProprietairesList.getDefaultInstance()) return this;
+        if (proprietairesBuilder_ == null) {
+          if (!other.proprietaires_.isEmpty()) {
+            if (proprietaires_.isEmpty()) {
+              proprietaires_ = other.proprietaires_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+            } else {
+              ensureProprietairesIsMutable();
+              proprietaires_.addAll(other.proprietaires_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.proprietaires_.isEmpty()) {
+            if (proprietairesBuilder_.isEmpty()) {
+              proprietairesBuilder_.dispose();
+              proprietairesBuilder_ = null;
+              proprietaires_ = other.proprietaires_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+              proprietairesBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getProprietairesFieldBuilder() : null;
+            } else {
+              proprietairesBuilder_.addAllMessages(other.proprietaires_);
+            }
+          }
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        ma.enset.immatriculationservice.web.grpc.stub.ImmatriculationService.ProprietairesList parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (ma.enset.immatriculationservice.web.grpc.stub.ImmatriculationService.ProprietairesList) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      private int bitField0_;
+
+      private java.util.List<ma.enset.immatriculationservice.web.grpc.stub.ImmatriculationService.ProprietaireResponse> proprietaires_ =
+        java.util.Collections.emptyList();
+      private void ensureProprietairesIsMutable() {
+        if (!((bitField0_ & 0x00000001) != 0)) {
+          proprietaires_ = new java.util.ArrayList<ma.enset.immatriculationservice.web.grpc.stub.ImmatriculationService.ProprietaireResponse>(proprietaires_);
+          bitField0_ |= 0x00000001;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          ma.enset.immatriculationservice.web.grpc.stub.ImmatriculationService.ProprietaireResponse, ma.enset.immatriculationservice.web.grpc.stub.ImmatriculationService.ProprietaireResponse.Builder, ma.enset.immatriculationservice.web.grpc.stub.ImmatriculationService.ProprietaireResponseOrBuilder> proprietairesBuilder_;
+
+      /**
+       * <code>repeated .ProprietaireResponse proprietaires = 1;</code>
+       */
+      public java.util.List<ma.enset.immatriculationservice.web.grpc.stub.ImmatriculationService.ProprietaireResponse> getProprietairesList() {
+        if (proprietairesBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(proprietaires_);
+        } else {
+          return proprietairesBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <code>repeated .ProprietaireResponse proprietaires = 1;</code>
+       */
+      public int getProprietairesCount() {
+        if (proprietairesBuilder_ == null) {
+          return proprietaires_.size();
+        } else {
+          return proprietairesBuilder_.getCount();
+        }
+      }
+      /**
+       * <code>repeated .ProprietaireResponse proprietaires = 1;</code>
+       */
+      public ma.enset.immatriculationservice.web.grpc.stub.ImmatriculationService.ProprietaireResponse getProprietaires(int index) {
+        if (proprietairesBuilder_ == null) {
+          return proprietaires_.get(index);
+        } else {
+          return proprietairesBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <code>repeated .ProprietaireResponse proprietaires = 1;</code>
+       */
+      public Builder setProprietaires(
+          int index, ma.enset.immatriculationservice.web.grpc.stub.ImmatriculationService.ProprietaireResponse value) {
+        if (proprietairesBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureProprietairesIsMutable();
+          proprietaires_.set(index, value);
+          onChanged();
+        } else {
+          proprietairesBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .ProprietaireResponse proprietaires = 1;</code>
+       */
+      public Builder setProprietaires(
+          int index, ma.enset.immatriculationservice.web.grpc.stub.ImmatriculationService.ProprietaireResponse.Builder builderForValue) {
+        if (proprietairesBuilder_ == null) {
+          ensureProprietairesIsMutable();
+          proprietaires_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          proprietairesBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .ProprietaireResponse proprietaires = 1;</code>
+       */
+      public Builder addProprietaires(ma.enset.immatriculationservice.web.grpc.stub.ImmatriculationService.ProprietaireResponse value) {
+        if (proprietairesBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureProprietairesIsMutable();
+          proprietaires_.add(value);
+          onChanged();
+        } else {
+          proprietairesBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .ProprietaireResponse proprietaires = 1;</code>
+       */
+      public Builder addProprietaires(
+          int index, ma.enset.immatriculationservice.web.grpc.stub.ImmatriculationService.ProprietaireResponse value) {
+        if (proprietairesBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureProprietairesIsMutable();
+          proprietaires_.add(index, value);
+          onChanged();
+        } else {
+          proprietairesBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .ProprietaireResponse proprietaires = 1;</code>
+       */
+      public Builder addProprietaires(
+          ma.enset.immatriculationservice.web.grpc.stub.ImmatriculationService.ProprietaireResponse.Builder builderForValue) {
+        if (proprietairesBuilder_ == null) {
+          ensureProprietairesIsMutable();
+          proprietaires_.add(builderForValue.build());
+          onChanged();
+        } else {
+          proprietairesBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .ProprietaireResponse proprietaires = 1;</code>
+       */
+      public Builder addProprietaires(
+          int index, ma.enset.immatriculationservice.web.grpc.stub.ImmatriculationService.ProprietaireResponse.Builder builderForValue) {
+        if (proprietairesBuilder_ == null) {
+          ensureProprietairesIsMutable();
+          proprietaires_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          proprietairesBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .ProprietaireResponse proprietaires = 1;</code>
+       */
+      public Builder addAllProprietaires(
+          java.lang.Iterable<? extends ma.enset.immatriculationservice.web.grpc.stub.ImmatriculationService.ProprietaireResponse> values) {
+        if (proprietairesBuilder_ == null) {
+          ensureProprietairesIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, proprietaires_);
+          onChanged();
+        } else {
+          proprietairesBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .ProprietaireResponse proprietaires = 1;</code>
+       */
+      public Builder clearProprietaires() {
+        if (proprietairesBuilder_ == null) {
+          proprietaires_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000001);
+          onChanged();
+        } else {
+          proprietairesBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .ProprietaireResponse proprietaires = 1;</code>
+       */
+      public Builder removeProprietaires(int index) {
+        if (proprietairesBuilder_ == null) {
+          ensureProprietairesIsMutable();
+          proprietaires_.remove(index);
+          onChanged();
+        } else {
+          proprietairesBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .ProprietaireResponse proprietaires = 1;</code>
+       */
+      public ma.enset.immatriculationservice.web.grpc.stub.ImmatriculationService.ProprietaireResponse.Builder getProprietairesBuilder(
+          int index) {
+        return getProprietairesFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <code>repeated .ProprietaireResponse proprietaires = 1;</code>
+       */
+      public ma.enset.immatriculationservice.web.grpc.stub.ImmatriculationService.ProprietaireResponseOrBuilder getProprietairesOrBuilder(
+          int index) {
+        if (proprietairesBuilder_ == null) {
+          return proprietaires_.get(index);  } else {
+          return proprietairesBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <code>repeated .ProprietaireResponse proprietaires = 1;</code>
+       */
+      public java.util.List<? extends ma.enset.immatriculationservice.web.grpc.stub.ImmatriculationService.ProprietaireResponseOrBuilder> 
+           getProprietairesOrBuilderList() {
+        if (proprietairesBuilder_ != null) {
+          return proprietairesBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(proprietaires_);
+        }
+      }
+      /**
+       * <code>repeated .ProprietaireResponse proprietaires = 1;</code>
+       */
+      public ma.enset.immatriculationservice.web.grpc.stub.ImmatriculationService.ProprietaireResponse.Builder addProprietairesBuilder() {
+        return getProprietairesFieldBuilder().addBuilder(
+            ma.enset.immatriculationservice.web.grpc.stub.ImmatriculationService.ProprietaireResponse.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .ProprietaireResponse proprietaires = 1;</code>
+       */
+      public ma.enset.immatriculationservice.web.grpc.stub.ImmatriculationService.ProprietaireResponse.Builder addProprietairesBuilder(
+          int index) {
+        return getProprietairesFieldBuilder().addBuilder(
+            index, ma.enset.immatriculationservice.web.grpc.stub.ImmatriculationService.ProprietaireResponse.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .ProprietaireResponse proprietaires = 1;</code>
+       */
+      public java.util.List<ma.enset.immatriculationservice.web.grpc.stub.ImmatriculationService.ProprietaireResponse.Builder> 
+           getProprietairesBuilderList() {
+        return getProprietairesFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          ma.enset.immatriculationservice.web.grpc.stub.ImmatriculationService.ProprietaireResponse, ma.enset.immatriculationservice.web.grpc.stub.ImmatriculationService.ProprietaireResponse.Builder, ma.enset.immatriculationservice.web.grpc.stub.ImmatriculationService.ProprietaireResponseOrBuilder> 
+          getProprietairesFieldBuilder() {
+        if (proprietairesBuilder_ == null) {
+          proprietairesBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              ma.enset.immatriculationservice.web.grpc.stub.ImmatriculationService.ProprietaireResponse, ma.enset.immatriculationservice.web.grpc.stub.ImmatriculationService.ProprietaireResponse.Builder, ma.enset.immatriculationservice.web.grpc.stub.ImmatriculationService.ProprietaireResponseOrBuilder>(
+                  proprietaires_,
+                  ((bitField0_ & 0x00000001) != 0),
+                  getParentForChildren(),
+                  isClean());
+          proprietaires_ = null;
+        }
+        return proprietairesBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:ProprietairesList)
+    }
+
+    // @@protoc_insertion_point(class_scope:ProprietairesList)
+    private static final ma.enset.immatriculationservice.web.grpc.stub.ImmatriculationService.ProprietairesList DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new ma.enset.immatriculationservice.web.grpc.stub.ImmatriculationService.ProprietairesList();
+    }
+
+    public static ma.enset.immatriculationservice.web.grpc.stub.ImmatriculationService.ProprietairesList getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<ProprietairesList>
+        PARSER = new com.google.protobuf.AbstractParser<ProprietairesList>() {
+      @java.lang.Override
+      public ProprietairesList parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new ProprietairesList(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<ProprietairesList> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<ProprietairesList> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public ma.enset.immatriculationservice.web.grpc.stub.ImmatriculationService.ProprietairesList getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface ProprietaireIdRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:ProprietaireIdRequest)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>int64 id = 1;</code>
+     * @return The id.
+     */
+    long getId();
+  }
+  /**
+   * Protobuf type {@code ProprietaireIdRequest}
+   */
+  public  static final class ProprietaireIdRequest extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:ProprietaireIdRequest)
+      ProprietaireIdRequestOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use ProprietaireIdRequest.newBuilder() to construct.
+    private ProprietaireIdRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private ProprietaireIdRequest() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new ProprietaireIdRequest();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private ProprietaireIdRequest(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 8: {
+
+              id_ = input.readInt64();
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return ma.enset.immatriculationservice.web.grpc.stub.ImmatriculationService.internal_static_ProprietaireIdRequest_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return ma.enset.immatriculationservice.web.grpc.stub.ImmatriculationService.internal_static_ProprietaireIdRequest_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              ma.enset.immatriculationservice.web.grpc.stub.ImmatriculationService.ProprietaireIdRequest.class, ma.enset.immatriculationservice.web.grpc.stub.ImmatriculationService.ProprietaireIdRequest.Builder.class);
+    }
+
+    public static final int ID_FIELD_NUMBER = 1;
+    private long id_;
+    /**
+     * <code>int64 id = 1;</code>
+     * @return The id.
+     */
+    public long getId() {
+      return id_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (id_ != 0L) {
+        output.writeInt64(1, id_);
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (id_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt64Size(1, id_);
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof ma.enset.immatriculationservice.web.grpc.stub.ImmatriculationService.ProprietaireIdRequest)) {
+        return super.equals(obj);
+      }
+      ma.enset.immatriculationservice.web.grpc.stub.ImmatriculationService.ProprietaireIdRequest other = (ma.enset.immatriculationservice.web.grpc.stub.ImmatriculationService.ProprietaireIdRequest) obj;
+
+      if (getId()
+          != other.getId()) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + ID_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getId());
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static ma.enset.immatriculationservice.web.grpc.stub.ImmatriculationService.ProprietaireIdRequest parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static ma.enset.immatriculationservice.web.grpc.stub.ImmatriculationService.ProprietaireIdRequest parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static ma.enset.immatriculationservice.web.grpc.stub.ImmatriculationService.ProprietaireIdRequest parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static ma.enset.immatriculationservice.web.grpc.stub.ImmatriculationService.ProprietaireIdRequest parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static ma.enset.immatriculationservice.web.grpc.stub.ImmatriculationService.ProprietaireIdRequest parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static ma.enset.immatriculationservice.web.grpc.stub.ImmatriculationService.ProprietaireIdRequest parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static ma.enset.immatriculationservice.web.grpc.stub.ImmatriculationService.ProprietaireIdRequest parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static ma.enset.immatriculationservice.web.grpc.stub.ImmatriculationService.ProprietaireIdRequest parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static ma.enset.immatriculationservice.web.grpc.stub.ImmatriculationService.ProprietaireIdRequest parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static ma.enset.immatriculationservice.web.grpc.stub.ImmatriculationService.ProprietaireIdRequest parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static ma.enset.immatriculationservice.web.grpc.stub.ImmatriculationService.ProprietaireIdRequest parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static ma.enset.immatriculationservice.web.grpc.stub.ImmatriculationService.ProprietaireIdRequest parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(ma.enset.immatriculationservice.web.grpc.stub.ImmatriculationService.ProprietaireIdRequest prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code ProprietaireIdRequest}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:ProprietaireIdRequest)
+        ma.enset.immatriculationservice.web.grpc.stub.ImmatriculationService.ProprietaireIdRequestOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return ma.enset.immatriculationservice.web.grpc.stub.ImmatriculationService.internal_static_ProprietaireIdRequest_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return ma.enset.immatriculationservice.web.grpc.stub.ImmatriculationService.internal_static_ProprietaireIdRequest_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                ma.enset.immatriculationservice.web.grpc.stub.ImmatriculationService.ProprietaireIdRequest.class, ma.enset.immatriculationservice.web.grpc.stub.ImmatriculationService.ProprietaireIdRequest.Builder.class);
+      }
+
+      // Construct using ma.enset.immatriculationservice.web.grpc.stub.ImmatriculationService.ProprietaireIdRequest.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        id_ = 0L;
+
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return ma.enset.immatriculationservice.web.grpc.stub.ImmatriculationService.internal_static_ProprietaireIdRequest_descriptor;
+      }
+
+      @java.lang.Override
+      public ma.enset.immatriculationservice.web.grpc.stub.ImmatriculationService.ProprietaireIdRequest getDefaultInstanceForType() {
+        return ma.enset.immatriculationservice.web.grpc.stub.ImmatriculationService.ProprietaireIdRequest.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public ma.enset.immatriculationservice.web.grpc.stub.ImmatriculationService.ProprietaireIdRequest build() {
+        ma.enset.immatriculationservice.web.grpc.stub.ImmatriculationService.ProprietaireIdRequest result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public ma.enset.immatriculationservice.web.grpc.stub.ImmatriculationService.ProprietaireIdRequest buildPartial() {
+        ma.enset.immatriculationservice.web.grpc.stub.ImmatriculationService.ProprietaireIdRequest result = new ma.enset.immatriculationservice.web.grpc.stub.ImmatriculationService.ProprietaireIdRequest(this);
+        result.id_ = id_;
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof ma.enset.immatriculationservice.web.grpc.stub.ImmatriculationService.ProprietaireIdRequest) {
+          return mergeFrom((ma.enset.immatriculationservice.web.grpc.stub.ImmatriculationService.ProprietaireIdRequest)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(ma.enset.immatriculationservice.web.grpc.stub.ImmatriculationService.ProprietaireIdRequest other) {
+        if (other == ma.enset.immatriculationservice.web.grpc.stub.ImmatriculationService.ProprietaireIdRequest.getDefaultInstance()) return this;
+        if (other.getId() != 0L) {
+          setId(other.getId());
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        ma.enset.immatriculationservice.web.grpc.stub.ImmatriculationService.ProprietaireIdRequest parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (ma.enset.immatriculationservice.web.grpc.stub.ImmatriculationService.ProprietaireIdRequest) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+
+      private long id_ ;
+      /**
+       * <code>int64 id = 1;</code>
+       * @return The id.
+       */
+      public long getId() {
+        return id_;
+      }
+      /**
+       * <code>int64 id = 1;</code>
+       * @param value The id to set.
+       * @return This builder for chaining.
+       */
+      public Builder setId(long value) {
+        
+        id_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>int64 id = 1;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearId() {
+        
+        id_ = 0L;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:ProprietaireIdRequest)
+    }
+
+    // @@protoc_insertion_point(class_scope:ProprietaireIdRequest)
+    private static final ma.enset.immatriculationservice.web.grpc.stub.ImmatriculationService.ProprietaireIdRequest DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new ma.enset.immatriculationservice.web.grpc.stub.ImmatriculationService.ProprietaireIdRequest();
+    }
+
+    public static ma.enset.immatriculationservice.web.grpc.stub.ImmatriculationService.ProprietaireIdRequest getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<ProprietaireIdRequest>
+        PARSER = new com.google.protobuf.AbstractParser<ProprietaireIdRequest>() {
+      @java.lang.Override
+      public ProprietaireIdRequest parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new ProprietaireIdRequest(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<ProprietaireIdRequest> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<ProprietaireIdRequest> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public ma.enset.immatriculationservice.web.grpc.stub.ImmatriculationService.ProprietaireIdRequest getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface VehiculesListOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:VehiculesList)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>repeated .VehiculeResponse vehicules = 1;</code>
+     */
+    java.util.List<ma.enset.immatriculationservice.web.grpc.stub.ImmatriculationService.VehiculeResponse> 
+        getVehiculesList();
+    /**
+     * <code>repeated .VehiculeResponse vehicules = 1;</code>
+     */
+    ma.enset.immatriculationservice.web.grpc.stub.ImmatriculationService.VehiculeResponse getVehicules(int index);
+    /**
+     * <code>repeated .VehiculeResponse vehicules = 1;</code>
+     */
+    int getVehiculesCount();
+    /**
+     * <code>repeated .VehiculeResponse vehicules = 1;</code>
+     */
+    java.util.List<? extends ma.enset.immatriculationservice.web.grpc.stub.ImmatriculationService.VehiculeResponseOrBuilder> 
+        getVehiculesOrBuilderList();
+    /**
+     * <code>repeated .VehiculeResponse vehicules = 1;</code>
+     */
+    ma.enset.immatriculationservice.web.grpc.stub.ImmatriculationService.VehiculeResponseOrBuilder getVehiculesOrBuilder(
+        int index);
+  }
+  /**
+   * Protobuf type {@code VehiculesList}
+   */
+  public  static final class VehiculesList extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:VehiculesList)
+      VehiculesListOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use VehiculesList.newBuilder() to construct.
+    private VehiculesList(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private VehiculesList() {
+      vehicules_ = java.util.Collections.emptyList();
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new VehiculesList();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private VehiculesList(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
+                vehicules_ = new java.util.ArrayList<ma.enset.immatriculationservice.web.grpc.stub.ImmatriculationService.VehiculeResponse>();
+                mutable_bitField0_ |= 0x00000001;
+              }
+              vehicules_.add(
+                  input.readMessage(ma.enset.immatriculationservice.web.grpc.stub.ImmatriculationService.VehiculeResponse.parser(), extensionRegistry));
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        if (((mutable_bitField0_ & 0x00000001) != 0)) {
+          vehicules_ = java.util.Collections.unmodifiableList(vehicules_);
+        }
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return ma.enset.immatriculationservice.web.grpc.stub.ImmatriculationService.internal_static_VehiculesList_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return ma.enset.immatriculationservice.web.grpc.stub.ImmatriculationService.internal_static_VehiculesList_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              ma.enset.immatriculationservice.web.grpc.stub.ImmatriculationService.VehiculesList.class, ma.enset.immatriculationservice.web.grpc.stub.ImmatriculationService.VehiculesList.Builder.class);
+    }
+
+    public static final int VEHICULES_FIELD_NUMBER = 1;
+    private java.util.List<ma.enset.immatriculationservice.web.grpc.stub.ImmatriculationService.VehiculeResponse> vehicules_;
+    /**
+     * <code>repeated .VehiculeResponse vehicules = 1;</code>
+     */
+    public java.util.List<ma.enset.immatriculationservice.web.grpc.stub.ImmatriculationService.VehiculeResponse> getVehiculesList() {
+      return vehicules_;
+    }
+    /**
+     * <code>repeated .VehiculeResponse vehicules = 1;</code>
+     */
+    public java.util.List<? extends ma.enset.immatriculationservice.web.grpc.stub.ImmatriculationService.VehiculeResponseOrBuilder> 
+        getVehiculesOrBuilderList() {
+      return vehicules_;
+    }
+    /**
+     * <code>repeated .VehiculeResponse vehicules = 1;</code>
+     */
+    public int getVehiculesCount() {
+      return vehicules_.size();
+    }
+    /**
+     * <code>repeated .VehiculeResponse vehicules = 1;</code>
+     */
+    public ma.enset.immatriculationservice.web.grpc.stub.ImmatriculationService.VehiculeResponse getVehicules(int index) {
+      return vehicules_.get(index);
+    }
+    /**
+     * <code>repeated .VehiculeResponse vehicules = 1;</code>
+     */
+    public ma.enset.immatriculationservice.web.grpc.stub.ImmatriculationService.VehiculeResponseOrBuilder getVehiculesOrBuilder(
+        int index) {
+      return vehicules_.get(index);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      for (int i = 0; i < vehicules_.size(); i++) {
+        output.writeMessage(1, vehicules_.get(i));
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      for (int i = 0; i < vehicules_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, vehicules_.get(i));
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof ma.enset.immatriculationservice.web.grpc.stub.ImmatriculationService.VehiculesList)) {
+        return super.equals(obj);
+      }
+      ma.enset.immatriculationservice.web.grpc.stub.ImmatriculationService.VehiculesList other = (ma.enset.immatriculationservice.web.grpc.stub.ImmatriculationService.VehiculesList) obj;
+
+      if (!getVehiculesList()
+          .equals(other.getVehiculesList())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (getVehiculesCount() > 0) {
+        hash = (37 * hash) + VEHICULES_FIELD_NUMBER;
+        hash = (53 * hash) + getVehiculesList().hashCode();
+      }
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static ma.enset.immatriculationservice.web.grpc.stub.ImmatriculationService.VehiculesList parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static ma.enset.immatriculationservice.web.grpc.stub.ImmatriculationService.VehiculesList parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static ma.enset.immatriculationservice.web.grpc.stub.ImmatriculationService.VehiculesList parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static ma.enset.immatriculationservice.web.grpc.stub.ImmatriculationService.VehiculesList parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static ma.enset.immatriculationservice.web.grpc.stub.ImmatriculationService.VehiculesList parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static ma.enset.immatriculationservice.web.grpc.stub.ImmatriculationService.VehiculesList parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static ma.enset.immatriculationservice.web.grpc.stub.ImmatriculationService.VehiculesList parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static ma.enset.immatriculationservice.web.grpc.stub.ImmatriculationService.VehiculesList parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static ma.enset.immatriculationservice.web.grpc.stub.ImmatriculationService.VehiculesList parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static ma.enset.immatriculationservice.web.grpc.stub.ImmatriculationService.VehiculesList parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static ma.enset.immatriculationservice.web.grpc.stub.ImmatriculationService.VehiculesList parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static ma.enset.immatriculationservice.web.grpc.stub.ImmatriculationService.VehiculesList parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(ma.enset.immatriculationservice.web.grpc.stub.ImmatriculationService.VehiculesList prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code VehiculesList}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:VehiculesList)
+        ma.enset.immatriculationservice.web.grpc.stub.ImmatriculationService.VehiculesListOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return ma.enset.immatriculationservice.web.grpc.stub.ImmatriculationService.internal_static_VehiculesList_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return ma.enset.immatriculationservice.web.grpc.stub.ImmatriculationService.internal_static_VehiculesList_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                ma.enset.immatriculationservice.web.grpc.stub.ImmatriculationService.VehiculesList.class, ma.enset.immatriculationservice.web.grpc.stub.ImmatriculationService.VehiculesList.Builder.class);
+      }
+
+      // Construct using ma.enset.immatriculationservice.web.grpc.stub.ImmatriculationService.VehiculesList.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getVehiculesFieldBuilder();
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        if (vehiculesBuilder_ == null) {
+          vehicules_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000001);
+        } else {
+          vehiculesBuilder_.clear();
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return ma.enset.immatriculationservice.web.grpc.stub.ImmatriculationService.internal_static_VehiculesList_descriptor;
+      }
+
+      @java.lang.Override
+      public ma.enset.immatriculationservice.web.grpc.stub.ImmatriculationService.VehiculesList getDefaultInstanceForType() {
+        return ma.enset.immatriculationservice.web.grpc.stub.ImmatriculationService.VehiculesList.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public ma.enset.immatriculationservice.web.grpc.stub.ImmatriculationService.VehiculesList build() {
+        ma.enset.immatriculationservice.web.grpc.stub.ImmatriculationService.VehiculesList result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public ma.enset.immatriculationservice.web.grpc.stub.ImmatriculationService.VehiculesList buildPartial() {
+        ma.enset.immatriculationservice.web.grpc.stub.ImmatriculationService.VehiculesList result = new ma.enset.immatriculationservice.web.grpc.stub.ImmatriculationService.VehiculesList(this);
+        int from_bitField0_ = bitField0_;
+        if (vehiculesBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) != 0)) {
+            vehicules_ = java.util.Collections.unmodifiableList(vehicules_);
+            bitField0_ = (bitField0_ & ~0x00000001);
+          }
+          result.vehicules_ = vehicules_;
+        } else {
+          result.vehicules_ = vehiculesBuilder_.build();
+        }
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof ma.enset.immatriculationservice.web.grpc.stub.ImmatriculationService.VehiculesList) {
+          return mergeFrom((ma.enset.immatriculationservice.web.grpc.stub.ImmatriculationService.VehiculesList)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(ma.enset.immatriculationservice.web.grpc.stub.ImmatriculationService.VehiculesList other) {
+        if (other == ma.enset.immatriculationservice.web.grpc.stub.ImmatriculationService.VehiculesList.getDefaultInstance()) return this;
+        if (vehiculesBuilder_ == null) {
+          if (!other.vehicules_.isEmpty()) {
+            if (vehicules_.isEmpty()) {
+              vehicules_ = other.vehicules_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+            } else {
+              ensureVehiculesIsMutable();
+              vehicules_.addAll(other.vehicules_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.vehicules_.isEmpty()) {
+            if (vehiculesBuilder_.isEmpty()) {
+              vehiculesBuilder_.dispose();
+              vehiculesBuilder_ = null;
+              vehicules_ = other.vehicules_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+              vehiculesBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getVehiculesFieldBuilder() : null;
+            } else {
+              vehiculesBuilder_.addAllMessages(other.vehicules_);
+            }
+          }
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        ma.enset.immatriculationservice.web.grpc.stub.ImmatriculationService.VehiculesList parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (ma.enset.immatriculationservice.web.grpc.stub.ImmatriculationService.VehiculesList) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      private int bitField0_;
+
+      private java.util.List<ma.enset.immatriculationservice.web.grpc.stub.ImmatriculationService.VehiculeResponse> vehicules_ =
+        java.util.Collections.emptyList();
+      private void ensureVehiculesIsMutable() {
+        if (!((bitField0_ & 0x00000001) != 0)) {
+          vehicules_ = new java.util.ArrayList<ma.enset.immatriculationservice.web.grpc.stub.ImmatriculationService.VehiculeResponse>(vehicules_);
+          bitField0_ |= 0x00000001;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          ma.enset.immatriculationservice.web.grpc.stub.ImmatriculationService.VehiculeResponse, ma.enset.immatriculationservice.web.grpc.stub.ImmatriculationService.VehiculeResponse.Builder, ma.enset.immatriculationservice.web.grpc.stub.ImmatriculationService.VehiculeResponseOrBuilder> vehiculesBuilder_;
+
+      /**
+       * <code>repeated .VehiculeResponse vehicules = 1;</code>
+       */
+      public java.util.List<ma.enset.immatriculationservice.web.grpc.stub.ImmatriculationService.VehiculeResponse> getVehiculesList() {
+        if (vehiculesBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(vehicules_);
+        } else {
+          return vehiculesBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <code>repeated .VehiculeResponse vehicules = 1;</code>
+       */
+      public int getVehiculesCount() {
+        if (vehiculesBuilder_ == null) {
+          return vehicules_.size();
+        } else {
+          return vehiculesBuilder_.getCount();
+        }
+      }
+      /**
+       * <code>repeated .VehiculeResponse vehicules = 1;</code>
+       */
+      public ma.enset.immatriculationservice.web.grpc.stub.ImmatriculationService.VehiculeResponse getVehicules(int index) {
+        if (vehiculesBuilder_ == null) {
+          return vehicules_.get(index);
+        } else {
+          return vehiculesBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <code>repeated .VehiculeResponse vehicules = 1;</code>
+       */
+      public Builder setVehicules(
+          int index, ma.enset.immatriculationservice.web.grpc.stub.ImmatriculationService.VehiculeResponse value) {
+        if (vehiculesBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureVehiculesIsMutable();
+          vehicules_.set(index, value);
+          onChanged();
+        } else {
+          vehiculesBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .VehiculeResponse vehicules = 1;</code>
+       */
+      public Builder setVehicules(
+          int index, ma.enset.immatriculationservice.web.grpc.stub.ImmatriculationService.VehiculeResponse.Builder builderForValue) {
+        if (vehiculesBuilder_ == null) {
+          ensureVehiculesIsMutable();
+          vehicules_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          vehiculesBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .VehiculeResponse vehicules = 1;</code>
+       */
+      public Builder addVehicules(ma.enset.immatriculationservice.web.grpc.stub.ImmatriculationService.VehiculeResponse value) {
+        if (vehiculesBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureVehiculesIsMutable();
+          vehicules_.add(value);
+          onChanged();
+        } else {
+          vehiculesBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .VehiculeResponse vehicules = 1;</code>
+       */
+      public Builder addVehicules(
+          int index, ma.enset.immatriculationservice.web.grpc.stub.ImmatriculationService.VehiculeResponse value) {
+        if (vehiculesBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureVehiculesIsMutable();
+          vehicules_.add(index, value);
+          onChanged();
+        } else {
+          vehiculesBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .VehiculeResponse vehicules = 1;</code>
+       */
+      public Builder addVehicules(
+          ma.enset.immatriculationservice.web.grpc.stub.ImmatriculationService.VehiculeResponse.Builder builderForValue) {
+        if (vehiculesBuilder_ == null) {
+          ensureVehiculesIsMutable();
+          vehicules_.add(builderForValue.build());
+          onChanged();
+        } else {
+          vehiculesBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .VehiculeResponse vehicules = 1;</code>
+       */
+      public Builder addVehicules(
+          int index, ma.enset.immatriculationservice.web.grpc.stub.ImmatriculationService.VehiculeResponse.Builder builderForValue) {
+        if (vehiculesBuilder_ == null) {
+          ensureVehiculesIsMutable();
+          vehicules_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          vehiculesBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .VehiculeResponse vehicules = 1;</code>
+       */
+      public Builder addAllVehicules(
+          java.lang.Iterable<? extends ma.enset.immatriculationservice.web.grpc.stub.ImmatriculationService.VehiculeResponse> values) {
+        if (vehiculesBuilder_ == null) {
+          ensureVehiculesIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, vehicules_);
+          onChanged();
+        } else {
+          vehiculesBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .VehiculeResponse vehicules = 1;</code>
+       */
+      public Builder clearVehicules() {
+        if (vehiculesBuilder_ == null) {
+          vehicules_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000001);
+          onChanged();
+        } else {
+          vehiculesBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .VehiculeResponse vehicules = 1;</code>
+       */
+      public Builder removeVehicules(int index) {
+        if (vehiculesBuilder_ == null) {
+          ensureVehiculesIsMutable();
+          vehicules_.remove(index);
+          onChanged();
+        } else {
+          vehiculesBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .VehiculeResponse vehicules = 1;</code>
+       */
+      public ma.enset.immatriculationservice.web.grpc.stub.ImmatriculationService.VehiculeResponse.Builder getVehiculesBuilder(
+          int index) {
+        return getVehiculesFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <code>repeated .VehiculeResponse vehicules = 1;</code>
+       */
+      public ma.enset.immatriculationservice.web.grpc.stub.ImmatriculationService.VehiculeResponseOrBuilder getVehiculesOrBuilder(
+          int index) {
+        if (vehiculesBuilder_ == null) {
+          return vehicules_.get(index);  } else {
+          return vehiculesBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <code>repeated .VehiculeResponse vehicules = 1;</code>
+       */
+      public java.util.List<? extends ma.enset.immatriculationservice.web.grpc.stub.ImmatriculationService.VehiculeResponseOrBuilder> 
+           getVehiculesOrBuilderList() {
+        if (vehiculesBuilder_ != null) {
+          return vehiculesBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(vehicules_);
+        }
+      }
+      /**
+       * <code>repeated .VehiculeResponse vehicules = 1;</code>
+       */
+      public ma.enset.immatriculationservice.web.grpc.stub.ImmatriculationService.VehiculeResponse.Builder addVehiculesBuilder() {
+        return getVehiculesFieldBuilder().addBuilder(
+            ma.enset.immatriculationservice.web.grpc.stub.ImmatriculationService.VehiculeResponse.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .VehiculeResponse vehicules = 1;</code>
+       */
+      public ma.enset.immatriculationservice.web.grpc.stub.ImmatriculationService.VehiculeResponse.Builder addVehiculesBuilder(
+          int index) {
+        return getVehiculesFieldBuilder().addBuilder(
+            index, ma.enset.immatriculationservice.web.grpc.stub.ImmatriculationService.VehiculeResponse.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .VehiculeResponse vehicules = 1;</code>
+       */
+      public java.util.List<ma.enset.immatriculationservice.web.grpc.stub.ImmatriculationService.VehiculeResponse.Builder> 
+           getVehiculesBuilderList() {
+        return getVehiculesFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          ma.enset.immatriculationservice.web.grpc.stub.ImmatriculationService.VehiculeResponse, ma.enset.immatriculationservice.web.grpc.stub.ImmatriculationService.VehiculeResponse.Builder, ma.enset.immatriculationservice.web.grpc.stub.ImmatriculationService.VehiculeResponseOrBuilder> 
+          getVehiculesFieldBuilder() {
+        if (vehiculesBuilder_ == null) {
+          vehiculesBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              ma.enset.immatriculationservice.web.grpc.stub.ImmatriculationService.VehiculeResponse, ma.enset.immatriculationservice.web.grpc.stub.ImmatriculationService.VehiculeResponse.Builder, ma.enset.immatriculationservice.web.grpc.stub.ImmatriculationService.VehiculeResponseOrBuilder>(
+                  vehicules_,
+                  ((bitField0_ & 0x00000001) != 0),
+                  getParentForChildren(),
+                  isClean());
+          vehicules_ = null;
+        }
+        return vehiculesBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:VehiculesList)
+    }
+
+    // @@protoc_insertion_point(class_scope:VehiculesList)
+    private static final ma.enset.immatriculationservice.web.grpc.stub.ImmatriculationService.VehiculesList DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new ma.enset.immatriculationservice.web.grpc.stub.ImmatriculationService.VehiculesList();
+    }
+
+    public static ma.enset.immatriculationservice.web.grpc.stub.ImmatriculationService.VehiculesList getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<VehiculesList>
+        PARSER = new com.google.protobuf.AbstractParser<VehiculesList>() {
+      @java.lang.Override
+      public VehiculesList parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new VehiculesList(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<VehiculesList> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<VehiculesList> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public ma.enset.immatriculationservice.web.grpc.stub.ImmatriculationService.VehiculesList getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface VehiculeIdRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:VehiculeIdRequest)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>int64 id = 1;</code>
+     * @return The id.
+     */
+    long getId();
+  }
+  /**
+   * Protobuf type {@code VehiculeIdRequest}
+   */
+  public  static final class VehiculeIdRequest extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:VehiculeIdRequest)
+      VehiculeIdRequestOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use VehiculeIdRequest.newBuilder() to construct.
+    private VehiculeIdRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private VehiculeIdRequest() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new VehiculeIdRequest();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private VehiculeIdRequest(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 8: {
+
+              id_ = input.readInt64();
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return ma.enset.immatriculationservice.web.grpc.stub.ImmatriculationService.internal_static_VehiculeIdRequest_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return ma.enset.immatriculationservice.web.grpc.stub.ImmatriculationService.internal_static_VehiculeIdRequest_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              ma.enset.immatriculationservice.web.grpc.stub.ImmatriculationService.VehiculeIdRequest.class, ma.enset.immatriculationservice.web.grpc.stub.ImmatriculationService.VehiculeIdRequest.Builder.class);
+    }
+
+    public static final int ID_FIELD_NUMBER = 1;
+    private long id_;
+    /**
+     * <code>int64 id = 1;</code>
+     * @return The id.
+     */
+    public long getId() {
+      return id_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (id_ != 0L) {
+        output.writeInt64(1, id_);
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (id_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt64Size(1, id_);
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof ma.enset.immatriculationservice.web.grpc.stub.ImmatriculationService.VehiculeIdRequest)) {
+        return super.equals(obj);
+      }
+      ma.enset.immatriculationservice.web.grpc.stub.ImmatriculationService.VehiculeIdRequest other = (ma.enset.immatriculationservice.web.grpc.stub.ImmatriculationService.VehiculeIdRequest) obj;
+
+      if (getId()
+          != other.getId()) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + ID_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getId());
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static ma.enset.immatriculationservice.web.grpc.stub.ImmatriculationService.VehiculeIdRequest parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static ma.enset.immatriculationservice.web.grpc.stub.ImmatriculationService.VehiculeIdRequest parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static ma.enset.immatriculationservice.web.grpc.stub.ImmatriculationService.VehiculeIdRequest parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static ma.enset.immatriculationservice.web.grpc.stub.ImmatriculationService.VehiculeIdRequest parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static ma.enset.immatriculationservice.web.grpc.stub.ImmatriculationService.VehiculeIdRequest parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static ma.enset.immatriculationservice.web.grpc.stub.ImmatriculationService.VehiculeIdRequest parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static ma.enset.immatriculationservice.web.grpc.stub.ImmatriculationService.VehiculeIdRequest parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static ma.enset.immatriculationservice.web.grpc.stub.ImmatriculationService.VehiculeIdRequest parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static ma.enset.immatriculationservice.web.grpc.stub.ImmatriculationService.VehiculeIdRequest parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static ma.enset.immatriculationservice.web.grpc.stub.ImmatriculationService.VehiculeIdRequest parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static ma.enset.immatriculationservice.web.grpc.stub.ImmatriculationService.VehiculeIdRequest parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static ma.enset.immatriculationservice.web.grpc.stub.ImmatriculationService.VehiculeIdRequest parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(ma.enset.immatriculationservice.web.grpc.stub.ImmatriculationService.VehiculeIdRequest prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code VehiculeIdRequest}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:VehiculeIdRequest)
+        ma.enset.immatriculationservice.web.grpc.stub.ImmatriculationService.VehiculeIdRequestOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return ma.enset.immatriculationservice.web.grpc.stub.ImmatriculationService.internal_static_VehiculeIdRequest_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return ma.enset.immatriculationservice.web.grpc.stub.ImmatriculationService.internal_static_VehiculeIdRequest_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                ma.enset.immatriculationservice.web.grpc.stub.ImmatriculationService.VehiculeIdRequest.class, ma.enset.immatriculationservice.web.grpc.stub.ImmatriculationService.VehiculeIdRequest.Builder.class);
+      }
+
+      // Construct using ma.enset.immatriculationservice.web.grpc.stub.ImmatriculationService.VehiculeIdRequest.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        id_ = 0L;
+
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return ma.enset.immatriculationservice.web.grpc.stub.ImmatriculationService.internal_static_VehiculeIdRequest_descriptor;
+      }
+
+      @java.lang.Override
+      public ma.enset.immatriculationservice.web.grpc.stub.ImmatriculationService.VehiculeIdRequest getDefaultInstanceForType() {
+        return ma.enset.immatriculationservice.web.grpc.stub.ImmatriculationService.VehiculeIdRequest.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public ma.enset.immatriculationservice.web.grpc.stub.ImmatriculationService.VehiculeIdRequest build() {
+        ma.enset.immatriculationservice.web.grpc.stub.ImmatriculationService.VehiculeIdRequest result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public ma.enset.immatriculationservice.web.grpc.stub.ImmatriculationService.VehiculeIdRequest buildPartial() {
+        ma.enset.immatriculationservice.web.grpc.stub.ImmatriculationService.VehiculeIdRequest result = new ma.enset.immatriculationservice.web.grpc.stub.ImmatriculationService.VehiculeIdRequest(this);
+        result.id_ = id_;
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof ma.enset.immatriculationservice.web.grpc.stub.ImmatriculationService.VehiculeIdRequest) {
+          return mergeFrom((ma.enset.immatriculationservice.web.grpc.stub.ImmatriculationService.VehiculeIdRequest)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(ma.enset.immatriculationservice.web.grpc.stub.ImmatriculationService.VehiculeIdRequest other) {
+        if (other == ma.enset.immatriculationservice.web.grpc.stub.ImmatriculationService.VehiculeIdRequest.getDefaultInstance()) return this;
+        if (other.getId() != 0L) {
+          setId(other.getId());
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        ma.enset.immatriculationservice.web.grpc.stub.ImmatriculationService.VehiculeIdRequest parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (ma.enset.immatriculationservice.web.grpc.stub.ImmatriculationService.VehiculeIdRequest) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+
+      private long id_ ;
+      /**
+       * <code>int64 id = 1;</code>
+       * @return The id.
+       */
+      public long getId() {
+        return id_;
+      }
+      /**
+       * <code>int64 id = 1;</code>
+       * @param value The id to set.
+       * @return This builder for chaining.
+       */
+      public Builder setId(long value) {
+        
+        id_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>int64 id = 1;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearId() {
+        
+        id_ = 0L;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:VehiculeIdRequest)
+    }
+
+    // @@protoc_insertion_point(class_scope:VehiculeIdRequest)
+    private static final ma.enset.immatriculationservice.web.grpc.stub.ImmatriculationService.VehiculeIdRequest DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new ma.enset.immatriculationservice.web.grpc.stub.ImmatriculationService.VehiculeIdRequest();
+    }
+
+    public static ma.enset.immatriculationservice.web.grpc.stub.ImmatriculationService.VehiculeIdRequest getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<VehiculeIdRequest>
+        PARSER = new com.google.protobuf.AbstractParser<VehiculeIdRequest>() {
+      @java.lang.Override
+      public VehiculeIdRequest parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new VehiculeIdRequest(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<VehiculeIdRequest> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<VehiculeIdRequest> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public ma.enset.immatriculationservice.web.grpc.stub.ImmatriculationService.VehiculeIdRequest getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
   public interface MatriculeOrBuilder extends
       // @@protoc_insertion_point(interface_extends:Matricule)
       com.google.protobuf.MessageOrBuilder {
@@ -580,8 +3548,8 @@ public final class ImmatriculationService {
 
   }
 
-  public interface VehiculeOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:Vehicule)
+  public interface VehiculeResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:VehiculeResponse)
       com.google.protobuf.MessageOrBuilder {
 
     /**
@@ -625,35 +3593,20 @@ public final class ImmatriculationService {
      * @return The modele.
      */
     int getModele();
-
-    /**
-     * <code>.Proprietaire proprietaire = 6;</code>
-     * @return Whether the proprietaire field is set.
-     */
-    boolean hasProprietaire();
-    /**
-     * <code>.Proprietaire proprietaire = 6;</code>
-     * @return The proprietaire.
-     */
-    ma.enset.immatriculationservice.web.grpc.stub.ImmatriculationService.Proprietaire getProprietaire();
-    /**
-     * <code>.Proprietaire proprietaire = 6;</code>
-     */
-    ma.enset.immatriculationservice.web.grpc.stub.ImmatriculationService.ProprietaireOrBuilder getProprietaireOrBuilder();
   }
   /**
-   * Protobuf type {@code Vehicule}
+   * Protobuf type {@code VehiculeResponse}
    */
-  public  static final class Vehicule extends
+  public  static final class VehiculeResponse extends
       com.google.protobuf.GeneratedMessageV3 implements
-      // @@protoc_insertion_point(message_implements:Vehicule)
-      VehiculeOrBuilder {
+      // @@protoc_insertion_point(message_implements:VehiculeResponse)
+      VehiculeResponseOrBuilder {
   private static final long serialVersionUID = 0L;
-    // Use Vehicule.newBuilder() to construct.
-    private Vehicule(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+    // Use VehiculeResponse.newBuilder() to construct.
+    private VehiculeResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
       super(builder);
     }
-    private Vehicule() {
+    private VehiculeResponse() {
       matricule_ = "";
       marque_ = "";
     }
@@ -662,7 +3615,7 @@ public final class ImmatriculationService {
     @SuppressWarnings({"unused"})
     protected java.lang.Object newInstance(
         UnusedPrivateParameter unused) {
-      return new Vehicule();
+      return new VehiculeResponse();
     }
 
     @java.lang.Override
@@ -670,7 +3623,7 @@ public final class ImmatriculationService {
     getUnknownFields() {
       return this.unknownFields;
     }
-    private Vehicule(
+    private VehiculeResponse(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
@@ -715,19 +3668,6 @@ public final class ImmatriculationService {
               modele_ = input.readInt32();
               break;
             }
-            case 50: {
-              ma.enset.immatriculationservice.web.grpc.stub.ImmatriculationService.Proprietaire.Builder subBuilder = null;
-              if (proprietaire_ != null) {
-                subBuilder = proprietaire_.toBuilder();
-              }
-              proprietaire_ = input.readMessage(ma.enset.immatriculationservice.web.grpc.stub.ImmatriculationService.Proprietaire.parser(), extensionRegistry);
-              if (subBuilder != null) {
-                subBuilder.mergeFrom(proprietaire_);
-                proprietaire_ = subBuilder.buildPartial();
-              }
-
-              break;
-            }
             default: {
               if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
@@ -749,15 +3689,15 @@ public final class ImmatriculationService {
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return ma.enset.immatriculationservice.web.grpc.stub.ImmatriculationService.internal_static_Vehicule_descriptor;
+      return ma.enset.immatriculationservice.web.grpc.stub.ImmatriculationService.internal_static_VehiculeResponse_descriptor;
     }
 
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return ma.enset.immatriculationservice.web.grpc.stub.ImmatriculationService.internal_static_Vehicule_fieldAccessorTable
+      return ma.enset.immatriculationservice.web.grpc.stub.ImmatriculationService.internal_static_VehiculeResponse_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              ma.enset.immatriculationservice.web.grpc.stub.ImmatriculationService.Vehicule.class, ma.enset.immatriculationservice.web.grpc.stub.ImmatriculationService.Vehicule.Builder.class);
+              ma.enset.immatriculationservice.web.grpc.stub.ImmatriculationService.VehiculeResponse.class, ma.enset.immatriculationservice.web.grpc.stub.ImmatriculationService.VehiculeResponse.Builder.class);
     }
 
     public static final int ID_FIELD_NUMBER = 1;
@@ -862,29 +3802,6 @@ public final class ImmatriculationService {
       return modele_;
     }
 
-    public static final int PROPRIETAIRE_FIELD_NUMBER = 6;
-    private ma.enset.immatriculationservice.web.grpc.stub.ImmatriculationService.Proprietaire proprietaire_;
-    /**
-     * <code>.Proprietaire proprietaire = 6;</code>
-     * @return Whether the proprietaire field is set.
-     */
-    public boolean hasProprietaire() {
-      return proprietaire_ != null;
-    }
-    /**
-     * <code>.Proprietaire proprietaire = 6;</code>
-     * @return The proprietaire.
-     */
-    public ma.enset.immatriculationservice.web.grpc.stub.ImmatriculationService.Proprietaire getProprietaire() {
-      return proprietaire_ == null ? ma.enset.immatriculationservice.web.grpc.stub.ImmatriculationService.Proprietaire.getDefaultInstance() : proprietaire_;
-    }
-    /**
-     * <code>.Proprietaire proprietaire = 6;</code>
-     */
-    public ma.enset.immatriculationservice.web.grpc.stub.ImmatriculationService.ProprietaireOrBuilder getProprietaireOrBuilder() {
-      return getProprietaire();
-    }
-
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -914,9 +3831,6 @@ public final class ImmatriculationService {
       if (modele_ != 0) {
         output.writeInt32(5, modele_);
       }
-      if (proprietaire_ != null) {
-        output.writeMessage(6, getProprietaire());
-      }
       unknownFields.writeTo(output);
     }
 
@@ -944,10 +3858,6 @@ public final class ImmatriculationService {
         size += com.google.protobuf.CodedOutputStream
           .computeInt32Size(5, modele_);
       }
-      if (proprietaire_ != null) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(6, getProprietaire());
-      }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
@@ -958,10 +3868,10 @@ public final class ImmatriculationService {
       if (obj == this) {
        return true;
       }
-      if (!(obj instanceof ma.enset.immatriculationservice.web.grpc.stub.ImmatriculationService.Vehicule)) {
+      if (!(obj instanceof ma.enset.immatriculationservice.web.grpc.stub.ImmatriculationService.VehiculeResponse)) {
         return super.equals(obj);
       }
-      ma.enset.immatriculationservice.web.grpc.stub.ImmatriculationService.Vehicule other = (ma.enset.immatriculationservice.web.grpc.stub.ImmatriculationService.Vehicule) obj;
+      ma.enset.immatriculationservice.web.grpc.stub.ImmatriculationService.VehiculeResponse other = (ma.enset.immatriculationservice.web.grpc.stub.ImmatriculationService.VehiculeResponse) obj;
 
       if (getId()
           != other.getId()) return false;
@@ -973,11 +3883,6 @@ public final class ImmatriculationService {
           != other.getPuissanceFiscale()) return false;
       if (getModele()
           != other.getModele()) return false;
-      if (hasProprietaire() != other.hasProprietaire()) return false;
-      if (hasProprietaire()) {
-        if (!getProprietaire()
-            .equals(other.getProprietaire())) return false;
-      }
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -1000,78 +3905,74 @@ public final class ImmatriculationService {
       hash = (53 * hash) + getPuissanceFiscale();
       hash = (37 * hash) + MODELE_FIELD_NUMBER;
       hash = (53 * hash) + getModele();
-      if (hasProprietaire()) {
-        hash = (37 * hash) + PROPRIETAIRE_FIELD_NUMBER;
-        hash = (53 * hash) + getProprietaire().hashCode();
-      }
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
     }
 
-    public static ma.enset.immatriculationservice.web.grpc.stub.ImmatriculationService.Vehicule parseFrom(
+    public static ma.enset.immatriculationservice.web.grpc.stub.ImmatriculationService.VehiculeResponse parseFrom(
         java.nio.ByteBuffer data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static ma.enset.immatriculationservice.web.grpc.stub.ImmatriculationService.Vehicule parseFrom(
+    public static ma.enset.immatriculationservice.web.grpc.stub.ImmatriculationService.VehiculeResponse parseFrom(
         java.nio.ByteBuffer data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static ma.enset.immatriculationservice.web.grpc.stub.ImmatriculationService.Vehicule parseFrom(
+    public static ma.enset.immatriculationservice.web.grpc.stub.ImmatriculationService.VehiculeResponse parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static ma.enset.immatriculationservice.web.grpc.stub.ImmatriculationService.Vehicule parseFrom(
+    public static ma.enset.immatriculationservice.web.grpc.stub.ImmatriculationService.VehiculeResponse parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static ma.enset.immatriculationservice.web.grpc.stub.ImmatriculationService.Vehicule parseFrom(byte[] data)
+    public static ma.enset.immatriculationservice.web.grpc.stub.ImmatriculationService.VehiculeResponse parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static ma.enset.immatriculationservice.web.grpc.stub.ImmatriculationService.Vehicule parseFrom(
+    public static ma.enset.immatriculationservice.web.grpc.stub.ImmatriculationService.VehiculeResponse parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static ma.enset.immatriculationservice.web.grpc.stub.ImmatriculationService.Vehicule parseFrom(java.io.InputStream input)
+    public static ma.enset.immatriculationservice.web.grpc.stub.ImmatriculationService.VehiculeResponse parseFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static ma.enset.immatriculationservice.web.grpc.stub.ImmatriculationService.Vehicule parseFrom(
+    public static ma.enset.immatriculationservice.web.grpc.stub.ImmatriculationService.VehiculeResponse parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
-    public static ma.enset.immatriculationservice.web.grpc.stub.ImmatriculationService.Vehicule parseDelimitedFrom(java.io.InputStream input)
+    public static ma.enset.immatriculationservice.web.grpc.stub.ImmatriculationService.VehiculeResponse parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input);
     }
-    public static ma.enset.immatriculationservice.web.grpc.stub.ImmatriculationService.Vehicule parseDelimitedFrom(
+    public static ma.enset.immatriculationservice.web.grpc.stub.ImmatriculationService.VehiculeResponse parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
     }
-    public static ma.enset.immatriculationservice.web.grpc.stub.ImmatriculationService.Vehicule parseFrom(
+    public static ma.enset.immatriculationservice.web.grpc.stub.ImmatriculationService.VehiculeResponse parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static ma.enset.immatriculationservice.web.grpc.stub.ImmatriculationService.Vehicule parseFrom(
+    public static ma.enset.immatriculationservice.web.grpc.stub.ImmatriculationService.VehiculeResponse parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
@@ -1084,7 +3985,7 @@ public final class ImmatriculationService {
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
     }
-    public static Builder newBuilder(ma.enset.immatriculationservice.web.grpc.stub.ImmatriculationService.Vehicule prototype) {
+    public static Builder newBuilder(ma.enset.immatriculationservice.web.grpc.stub.ImmatriculationService.VehiculeResponse prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
     @java.lang.Override
@@ -1100,26 +4001,26 @@ public final class ImmatriculationService {
       return builder;
     }
     /**
-     * Protobuf type {@code Vehicule}
+     * Protobuf type {@code VehiculeResponse}
      */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:Vehicule)
-        ma.enset.immatriculationservice.web.grpc.stub.ImmatriculationService.VehiculeOrBuilder {
+        // @@protoc_insertion_point(builder_implements:VehiculeResponse)
+        ma.enset.immatriculationservice.web.grpc.stub.ImmatriculationService.VehiculeResponseOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return ma.enset.immatriculationservice.web.grpc.stub.ImmatriculationService.internal_static_Vehicule_descriptor;
+        return ma.enset.immatriculationservice.web.grpc.stub.ImmatriculationService.internal_static_VehiculeResponse_descriptor;
       }
 
       @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return ma.enset.immatriculationservice.web.grpc.stub.ImmatriculationService.internal_static_Vehicule_fieldAccessorTable
+        return ma.enset.immatriculationservice.web.grpc.stub.ImmatriculationService.internal_static_VehiculeResponse_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
-                ma.enset.immatriculationservice.web.grpc.stub.ImmatriculationService.Vehicule.class, ma.enset.immatriculationservice.web.grpc.stub.ImmatriculationService.Vehicule.Builder.class);
+                ma.enset.immatriculationservice.web.grpc.stub.ImmatriculationService.VehiculeResponse.class, ma.enset.immatriculationservice.web.grpc.stub.ImmatriculationService.VehiculeResponse.Builder.class);
       }
 
-      // Construct using ma.enset.immatriculationservice.web.grpc.stub.ImmatriculationService.Vehicule.newBuilder()
+      // Construct using ma.enset.immatriculationservice.web.grpc.stub.ImmatriculationService.VehiculeResponse.newBuilder()
       private Builder() {
         maybeForceBuilderInitialization();
       }
@@ -1147,29 +4048,23 @@ public final class ImmatriculationService {
 
         modele_ = 0;
 
-        if (proprietaireBuilder_ == null) {
-          proprietaire_ = null;
-        } else {
-          proprietaire_ = null;
-          proprietaireBuilder_ = null;
-        }
         return this;
       }
 
       @java.lang.Override
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return ma.enset.immatriculationservice.web.grpc.stub.ImmatriculationService.internal_static_Vehicule_descriptor;
+        return ma.enset.immatriculationservice.web.grpc.stub.ImmatriculationService.internal_static_VehiculeResponse_descriptor;
       }
 
       @java.lang.Override
-      public ma.enset.immatriculationservice.web.grpc.stub.ImmatriculationService.Vehicule getDefaultInstanceForType() {
-        return ma.enset.immatriculationservice.web.grpc.stub.ImmatriculationService.Vehicule.getDefaultInstance();
+      public ma.enset.immatriculationservice.web.grpc.stub.ImmatriculationService.VehiculeResponse getDefaultInstanceForType() {
+        return ma.enset.immatriculationservice.web.grpc.stub.ImmatriculationService.VehiculeResponse.getDefaultInstance();
       }
 
       @java.lang.Override
-      public ma.enset.immatriculationservice.web.grpc.stub.ImmatriculationService.Vehicule build() {
-        ma.enset.immatriculationservice.web.grpc.stub.ImmatriculationService.Vehicule result = buildPartial();
+      public ma.enset.immatriculationservice.web.grpc.stub.ImmatriculationService.VehiculeResponse build() {
+        ma.enset.immatriculationservice.web.grpc.stub.ImmatriculationService.VehiculeResponse result = buildPartial();
         if (!result.isInitialized()) {
           throw newUninitializedMessageException(result);
         }
@@ -1177,18 +4072,13 @@ public final class ImmatriculationService {
       }
 
       @java.lang.Override
-      public ma.enset.immatriculationservice.web.grpc.stub.ImmatriculationService.Vehicule buildPartial() {
-        ma.enset.immatriculationservice.web.grpc.stub.ImmatriculationService.Vehicule result = new ma.enset.immatriculationservice.web.grpc.stub.ImmatriculationService.Vehicule(this);
+      public ma.enset.immatriculationservice.web.grpc.stub.ImmatriculationService.VehiculeResponse buildPartial() {
+        ma.enset.immatriculationservice.web.grpc.stub.ImmatriculationService.VehiculeResponse result = new ma.enset.immatriculationservice.web.grpc.stub.ImmatriculationService.VehiculeResponse(this);
         result.id_ = id_;
         result.matricule_ = matricule_;
         result.marque_ = marque_;
         result.puissanceFiscale_ = puissanceFiscale_;
         result.modele_ = modele_;
-        if (proprietaireBuilder_ == null) {
-          result.proprietaire_ = proprietaire_;
-        } else {
-          result.proprietaire_ = proprietaireBuilder_.build();
-        }
         onBuilt();
         return result;
       }
@@ -1227,16 +4117,16 @@ public final class ImmatriculationService {
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof ma.enset.immatriculationservice.web.grpc.stub.ImmatriculationService.Vehicule) {
-          return mergeFrom((ma.enset.immatriculationservice.web.grpc.stub.ImmatriculationService.Vehicule)other);
+        if (other instanceof ma.enset.immatriculationservice.web.grpc.stub.ImmatriculationService.VehiculeResponse) {
+          return mergeFrom((ma.enset.immatriculationservice.web.grpc.stub.ImmatriculationService.VehiculeResponse)other);
         } else {
           super.mergeFrom(other);
           return this;
         }
       }
 
-      public Builder mergeFrom(ma.enset.immatriculationservice.web.grpc.stub.ImmatriculationService.Vehicule other) {
-        if (other == ma.enset.immatriculationservice.web.grpc.stub.ImmatriculationService.Vehicule.getDefaultInstance()) return this;
+      public Builder mergeFrom(ma.enset.immatriculationservice.web.grpc.stub.ImmatriculationService.VehiculeResponse other) {
+        if (other == ma.enset.immatriculationservice.web.grpc.stub.ImmatriculationService.VehiculeResponse.getDefaultInstance()) return this;
         if (other.getId() != 0L) {
           setId(other.getId());
         }
@@ -1254,9 +4144,6 @@ public final class ImmatriculationService {
         if (other.getModele() != 0) {
           setModele(other.getModele());
         }
-        if (other.hasProprietaire()) {
-          mergeProprietaire(other.getProprietaire());
-        }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
         return this;
@@ -1272,11 +4159,11 @@ public final class ImmatriculationService {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        ma.enset.immatriculationservice.web.grpc.stub.ImmatriculationService.Vehicule parsedMessage = null;
+        ma.enset.immatriculationservice.web.grpc.stub.ImmatriculationService.VehiculeResponse parsedMessage = null;
         try {
           parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (ma.enset.immatriculationservice.web.grpc.stub.ImmatriculationService.Vehicule) e.getUnfinishedMessage();
+          parsedMessage = (ma.enset.immatriculationservice.web.grpc.stub.ImmatriculationService.VehiculeResponse) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
           if (parsedMessage != null) {
@@ -1527,125 +4414,6 @@ public final class ImmatriculationService {
         onChanged();
         return this;
       }
-
-      private ma.enset.immatriculationservice.web.grpc.stub.ImmatriculationService.Proprietaire proprietaire_;
-      private com.google.protobuf.SingleFieldBuilderV3<
-          ma.enset.immatriculationservice.web.grpc.stub.ImmatriculationService.Proprietaire, ma.enset.immatriculationservice.web.grpc.stub.ImmatriculationService.Proprietaire.Builder, ma.enset.immatriculationservice.web.grpc.stub.ImmatriculationService.ProprietaireOrBuilder> proprietaireBuilder_;
-      /**
-       * <code>.Proprietaire proprietaire = 6;</code>
-       * @return Whether the proprietaire field is set.
-       */
-      public boolean hasProprietaire() {
-        return proprietaireBuilder_ != null || proprietaire_ != null;
-      }
-      /**
-       * <code>.Proprietaire proprietaire = 6;</code>
-       * @return The proprietaire.
-       */
-      public ma.enset.immatriculationservice.web.grpc.stub.ImmatriculationService.Proprietaire getProprietaire() {
-        if (proprietaireBuilder_ == null) {
-          return proprietaire_ == null ? ma.enset.immatriculationservice.web.grpc.stub.ImmatriculationService.Proprietaire.getDefaultInstance() : proprietaire_;
-        } else {
-          return proprietaireBuilder_.getMessage();
-        }
-      }
-      /**
-       * <code>.Proprietaire proprietaire = 6;</code>
-       */
-      public Builder setProprietaire(ma.enset.immatriculationservice.web.grpc.stub.ImmatriculationService.Proprietaire value) {
-        if (proprietaireBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          proprietaire_ = value;
-          onChanged();
-        } else {
-          proprietaireBuilder_.setMessage(value);
-        }
-
-        return this;
-      }
-      /**
-       * <code>.Proprietaire proprietaire = 6;</code>
-       */
-      public Builder setProprietaire(
-          ma.enset.immatriculationservice.web.grpc.stub.ImmatriculationService.Proprietaire.Builder builderForValue) {
-        if (proprietaireBuilder_ == null) {
-          proprietaire_ = builderForValue.build();
-          onChanged();
-        } else {
-          proprietaireBuilder_.setMessage(builderForValue.build());
-        }
-
-        return this;
-      }
-      /**
-       * <code>.Proprietaire proprietaire = 6;</code>
-       */
-      public Builder mergeProprietaire(ma.enset.immatriculationservice.web.grpc.stub.ImmatriculationService.Proprietaire value) {
-        if (proprietaireBuilder_ == null) {
-          if (proprietaire_ != null) {
-            proprietaire_ =
-              ma.enset.immatriculationservice.web.grpc.stub.ImmatriculationService.Proprietaire.newBuilder(proprietaire_).mergeFrom(value).buildPartial();
-          } else {
-            proprietaire_ = value;
-          }
-          onChanged();
-        } else {
-          proprietaireBuilder_.mergeFrom(value);
-        }
-
-        return this;
-      }
-      /**
-       * <code>.Proprietaire proprietaire = 6;</code>
-       */
-      public Builder clearProprietaire() {
-        if (proprietaireBuilder_ == null) {
-          proprietaire_ = null;
-          onChanged();
-        } else {
-          proprietaire_ = null;
-          proprietaireBuilder_ = null;
-        }
-
-        return this;
-      }
-      /**
-       * <code>.Proprietaire proprietaire = 6;</code>
-       */
-      public ma.enset.immatriculationservice.web.grpc.stub.ImmatriculationService.Proprietaire.Builder getProprietaireBuilder() {
-        
-        onChanged();
-        return getProprietaireFieldBuilder().getBuilder();
-      }
-      /**
-       * <code>.Proprietaire proprietaire = 6;</code>
-       */
-      public ma.enset.immatriculationservice.web.grpc.stub.ImmatriculationService.ProprietaireOrBuilder getProprietaireOrBuilder() {
-        if (proprietaireBuilder_ != null) {
-          return proprietaireBuilder_.getMessageOrBuilder();
-        } else {
-          return proprietaire_ == null ?
-              ma.enset.immatriculationservice.web.grpc.stub.ImmatriculationService.Proprietaire.getDefaultInstance() : proprietaire_;
-        }
-      }
-      /**
-       * <code>.Proprietaire proprietaire = 6;</code>
-       */
-      private com.google.protobuf.SingleFieldBuilderV3<
-          ma.enset.immatriculationservice.web.grpc.stub.ImmatriculationService.Proprietaire, ma.enset.immatriculationservice.web.grpc.stub.ImmatriculationService.Proprietaire.Builder, ma.enset.immatriculationservice.web.grpc.stub.ImmatriculationService.ProprietaireOrBuilder> 
-          getProprietaireFieldBuilder() {
-        if (proprietaireBuilder_ == null) {
-          proprietaireBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-              ma.enset.immatriculationservice.web.grpc.stub.ImmatriculationService.Proprietaire, ma.enset.immatriculationservice.web.grpc.stub.ImmatriculationService.Proprietaire.Builder, ma.enset.immatriculationservice.web.grpc.stub.ImmatriculationService.ProprietaireOrBuilder>(
-                  getProprietaire(),
-                  getParentForChildren(),
-                  isClean());
-          proprietaire_ = null;
-        }
-        return proprietaireBuilder_;
-      }
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
@@ -1659,48 +4427,48 @@ public final class ImmatriculationService {
       }
 
 
-      // @@protoc_insertion_point(builder_scope:Vehicule)
+      // @@protoc_insertion_point(builder_scope:VehiculeResponse)
     }
 
-    // @@protoc_insertion_point(class_scope:Vehicule)
-    private static final ma.enset.immatriculationservice.web.grpc.stub.ImmatriculationService.Vehicule DEFAULT_INSTANCE;
+    // @@protoc_insertion_point(class_scope:VehiculeResponse)
+    private static final ma.enset.immatriculationservice.web.grpc.stub.ImmatriculationService.VehiculeResponse DEFAULT_INSTANCE;
     static {
-      DEFAULT_INSTANCE = new ma.enset.immatriculationservice.web.grpc.stub.ImmatriculationService.Vehicule();
+      DEFAULT_INSTANCE = new ma.enset.immatriculationservice.web.grpc.stub.ImmatriculationService.VehiculeResponse();
     }
 
-    public static ma.enset.immatriculationservice.web.grpc.stub.ImmatriculationService.Vehicule getDefaultInstance() {
+    public static ma.enset.immatriculationservice.web.grpc.stub.ImmatriculationService.VehiculeResponse getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
-    private static final com.google.protobuf.Parser<Vehicule>
-        PARSER = new com.google.protobuf.AbstractParser<Vehicule>() {
+    private static final com.google.protobuf.Parser<VehiculeResponse>
+        PARSER = new com.google.protobuf.AbstractParser<VehiculeResponse>() {
       @java.lang.Override
-      public Vehicule parsePartialFrom(
+      public VehiculeResponse parsePartialFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-        return new Vehicule(input, extensionRegistry);
+        return new VehiculeResponse(input, extensionRegistry);
       }
     };
 
-    public static com.google.protobuf.Parser<Vehicule> parser() {
+    public static com.google.protobuf.Parser<VehiculeResponse> parser() {
       return PARSER;
     }
 
     @java.lang.Override
-    public com.google.protobuf.Parser<Vehicule> getParserForType() {
+    public com.google.protobuf.Parser<VehiculeResponse> getParserForType() {
       return PARSER;
     }
 
     @java.lang.Override
-    public ma.enset.immatriculationservice.web.grpc.stub.ImmatriculationService.Vehicule getDefaultInstanceForType() {
+    public ma.enset.immatriculationservice.web.grpc.stub.ImmatriculationService.VehiculeResponse getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
 
   }
 
-  public interface ProprietaireOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:Proprietaire)
+  public interface ProprietaireResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:ProprietaireResponse)
       com.google.protobuf.MessageOrBuilder {
 
     /**
@@ -1744,55 +4512,30 @@ public final class ImmatriculationService {
      */
     com.google.protobuf.ByteString
         getEmailBytes();
-
-    /**
-     * <code>repeated .Vehicule vehicules = 5;</code>
-     */
-    java.util.List<ma.enset.immatriculationservice.web.grpc.stub.ImmatriculationService.Vehicule> 
-        getVehiculesList();
-    /**
-     * <code>repeated .Vehicule vehicules = 5;</code>
-     */
-    ma.enset.immatriculationservice.web.grpc.stub.ImmatriculationService.Vehicule getVehicules(int index);
-    /**
-     * <code>repeated .Vehicule vehicules = 5;</code>
-     */
-    int getVehiculesCount();
-    /**
-     * <code>repeated .Vehicule vehicules = 5;</code>
-     */
-    java.util.List<? extends ma.enset.immatriculationservice.web.grpc.stub.ImmatriculationService.VehiculeOrBuilder> 
-        getVehiculesOrBuilderList();
-    /**
-     * <code>repeated .Vehicule vehicules = 5;</code>
-     */
-    ma.enset.immatriculationservice.web.grpc.stub.ImmatriculationService.VehiculeOrBuilder getVehiculesOrBuilder(
-        int index);
   }
   /**
-   * Protobuf type {@code Proprietaire}
+   * Protobuf type {@code ProprietaireResponse}
    */
-  public  static final class Proprietaire extends
+  public  static final class ProprietaireResponse extends
       com.google.protobuf.GeneratedMessageV3 implements
-      // @@protoc_insertion_point(message_implements:Proprietaire)
-      ProprietaireOrBuilder {
+      // @@protoc_insertion_point(message_implements:ProprietaireResponse)
+      ProprietaireResponseOrBuilder {
   private static final long serialVersionUID = 0L;
-    // Use Proprietaire.newBuilder() to construct.
-    private Proprietaire(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+    // Use ProprietaireResponse.newBuilder() to construct.
+    private ProprietaireResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
       super(builder);
     }
-    private Proprietaire() {
+    private ProprietaireResponse() {
       nom_ = "";
       dateDeNaissance_ = "";
       email_ = "";
-      vehicules_ = java.util.Collections.emptyList();
     }
 
     @java.lang.Override
     @SuppressWarnings({"unused"})
     protected java.lang.Object newInstance(
         UnusedPrivateParameter unused) {
-      return new Proprietaire();
+      return new ProprietaireResponse();
     }
 
     @java.lang.Override
@@ -1800,7 +4543,7 @@ public final class ImmatriculationService {
     getUnknownFields() {
       return this.unknownFields;
     }
-    private Proprietaire(
+    private ProprietaireResponse(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
@@ -1808,7 +4551,6 @@ public final class ImmatriculationService {
       if (extensionRegistry == null) {
         throw new java.lang.NullPointerException();
       }
-      int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -1842,15 +4584,6 @@ public final class ImmatriculationService {
               email_ = s;
               break;
             }
-            case 42: {
-              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
-                vehicules_ = new java.util.ArrayList<ma.enset.immatriculationservice.web.grpc.stub.ImmatriculationService.Vehicule>();
-                mutable_bitField0_ |= 0x00000001;
-              }
-              vehicules_.add(
-                  input.readMessage(ma.enset.immatriculationservice.web.grpc.stub.ImmatriculationService.Vehicule.parser(), extensionRegistry));
-              break;
-            }
             default: {
               if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
@@ -1866,24 +4599,21 @@ public final class ImmatriculationService {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
       } finally {
-        if (((mutable_bitField0_ & 0x00000001) != 0)) {
-          vehicules_ = java.util.Collections.unmodifiableList(vehicules_);
-        }
         this.unknownFields = unknownFields.build();
         makeExtensionsImmutable();
       }
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return ma.enset.immatriculationservice.web.grpc.stub.ImmatriculationService.internal_static_Proprietaire_descriptor;
+      return ma.enset.immatriculationservice.web.grpc.stub.ImmatriculationService.internal_static_ProprietaireResponse_descriptor;
     }
 
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return ma.enset.immatriculationservice.web.grpc.stub.ImmatriculationService.internal_static_Proprietaire_fieldAccessorTable
+      return ma.enset.immatriculationservice.web.grpc.stub.ImmatriculationService.internal_static_ProprietaireResponse_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              ma.enset.immatriculationservice.web.grpc.stub.ImmatriculationService.Proprietaire.class, ma.enset.immatriculationservice.web.grpc.stub.ImmatriculationService.Proprietaire.Builder.class);
+              ma.enset.immatriculationservice.web.grpc.stub.ImmatriculationService.ProprietaireResponse.class, ma.enset.immatriculationservice.web.grpc.stub.ImmatriculationService.ProprietaireResponse.Builder.class);
     }
 
     public static final int ID_FIELD_NUMBER = 1;
@@ -2004,41 +4734,6 @@ public final class ImmatriculationService {
       }
     }
 
-    public static final int VEHICULES_FIELD_NUMBER = 5;
-    private java.util.List<ma.enset.immatriculationservice.web.grpc.stub.ImmatriculationService.Vehicule> vehicules_;
-    /**
-     * <code>repeated .Vehicule vehicules = 5;</code>
-     */
-    public java.util.List<ma.enset.immatriculationservice.web.grpc.stub.ImmatriculationService.Vehicule> getVehiculesList() {
-      return vehicules_;
-    }
-    /**
-     * <code>repeated .Vehicule vehicules = 5;</code>
-     */
-    public java.util.List<? extends ma.enset.immatriculationservice.web.grpc.stub.ImmatriculationService.VehiculeOrBuilder> 
-        getVehiculesOrBuilderList() {
-      return vehicules_;
-    }
-    /**
-     * <code>repeated .Vehicule vehicules = 5;</code>
-     */
-    public int getVehiculesCount() {
-      return vehicules_.size();
-    }
-    /**
-     * <code>repeated .Vehicule vehicules = 5;</code>
-     */
-    public ma.enset.immatriculationservice.web.grpc.stub.ImmatriculationService.Vehicule getVehicules(int index) {
-      return vehicules_.get(index);
-    }
-    /**
-     * <code>repeated .Vehicule vehicules = 5;</code>
-     */
-    public ma.enset.immatriculationservice.web.grpc.stub.ImmatriculationService.VehiculeOrBuilder getVehiculesOrBuilder(
-        int index) {
-      return vehicules_.get(index);
-    }
-
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -2065,9 +4760,6 @@ public final class ImmatriculationService {
       if (!getEmailBytes().isEmpty()) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 4, email_);
       }
-      for (int i = 0; i < vehicules_.size(); i++) {
-        output.writeMessage(5, vehicules_.get(i));
-      }
       unknownFields.writeTo(output);
     }
 
@@ -2090,10 +4782,6 @@ public final class ImmatriculationService {
       if (!getEmailBytes().isEmpty()) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, email_);
       }
-      for (int i = 0; i < vehicules_.size(); i++) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(5, vehicules_.get(i));
-      }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
@@ -2104,10 +4792,10 @@ public final class ImmatriculationService {
       if (obj == this) {
        return true;
       }
-      if (!(obj instanceof ma.enset.immatriculationservice.web.grpc.stub.ImmatriculationService.Proprietaire)) {
+      if (!(obj instanceof ma.enset.immatriculationservice.web.grpc.stub.ImmatriculationService.ProprietaireResponse)) {
         return super.equals(obj);
       }
-      ma.enset.immatriculationservice.web.grpc.stub.ImmatriculationService.Proprietaire other = (ma.enset.immatriculationservice.web.grpc.stub.ImmatriculationService.Proprietaire) obj;
+      ma.enset.immatriculationservice.web.grpc.stub.ImmatriculationService.ProprietaireResponse other = (ma.enset.immatriculationservice.web.grpc.stub.ImmatriculationService.ProprietaireResponse) obj;
 
       if (getId()
           != other.getId()) return false;
@@ -2117,8 +4805,6 @@ public final class ImmatriculationService {
           .equals(other.getDateDeNaissance())) return false;
       if (!getEmail()
           .equals(other.getEmail())) return false;
-      if (!getVehiculesList()
-          .equals(other.getVehiculesList())) return false;
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -2139,78 +4825,74 @@ public final class ImmatriculationService {
       hash = (53 * hash) + getDateDeNaissance().hashCode();
       hash = (37 * hash) + EMAIL_FIELD_NUMBER;
       hash = (53 * hash) + getEmail().hashCode();
-      if (getVehiculesCount() > 0) {
-        hash = (37 * hash) + VEHICULES_FIELD_NUMBER;
-        hash = (53 * hash) + getVehiculesList().hashCode();
-      }
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
     }
 
-    public static ma.enset.immatriculationservice.web.grpc.stub.ImmatriculationService.Proprietaire parseFrom(
+    public static ma.enset.immatriculationservice.web.grpc.stub.ImmatriculationService.ProprietaireResponse parseFrom(
         java.nio.ByteBuffer data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static ma.enset.immatriculationservice.web.grpc.stub.ImmatriculationService.Proprietaire parseFrom(
+    public static ma.enset.immatriculationservice.web.grpc.stub.ImmatriculationService.ProprietaireResponse parseFrom(
         java.nio.ByteBuffer data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static ma.enset.immatriculationservice.web.grpc.stub.ImmatriculationService.Proprietaire parseFrom(
+    public static ma.enset.immatriculationservice.web.grpc.stub.ImmatriculationService.ProprietaireResponse parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static ma.enset.immatriculationservice.web.grpc.stub.ImmatriculationService.Proprietaire parseFrom(
+    public static ma.enset.immatriculationservice.web.grpc.stub.ImmatriculationService.ProprietaireResponse parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static ma.enset.immatriculationservice.web.grpc.stub.ImmatriculationService.Proprietaire parseFrom(byte[] data)
+    public static ma.enset.immatriculationservice.web.grpc.stub.ImmatriculationService.ProprietaireResponse parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static ma.enset.immatriculationservice.web.grpc.stub.ImmatriculationService.Proprietaire parseFrom(
+    public static ma.enset.immatriculationservice.web.grpc.stub.ImmatriculationService.ProprietaireResponse parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static ma.enset.immatriculationservice.web.grpc.stub.ImmatriculationService.Proprietaire parseFrom(java.io.InputStream input)
+    public static ma.enset.immatriculationservice.web.grpc.stub.ImmatriculationService.ProprietaireResponse parseFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static ma.enset.immatriculationservice.web.grpc.stub.ImmatriculationService.Proprietaire parseFrom(
+    public static ma.enset.immatriculationservice.web.grpc.stub.ImmatriculationService.ProprietaireResponse parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
-    public static ma.enset.immatriculationservice.web.grpc.stub.ImmatriculationService.Proprietaire parseDelimitedFrom(java.io.InputStream input)
+    public static ma.enset.immatriculationservice.web.grpc.stub.ImmatriculationService.ProprietaireResponse parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input);
     }
-    public static ma.enset.immatriculationservice.web.grpc.stub.ImmatriculationService.Proprietaire parseDelimitedFrom(
+    public static ma.enset.immatriculationservice.web.grpc.stub.ImmatriculationService.ProprietaireResponse parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
     }
-    public static ma.enset.immatriculationservice.web.grpc.stub.ImmatriculationService.Proprietaire parseFrom(
+    public static ma.enset.immatriculationservice.web.grpc.stub.ImmatriculationService.ProprietaireResponse parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static ma.enset.immatriculationservice.web.grpc.stub.ImmatriculationService.Proprietaire parseFrom(
+    public static ma.enset.immatriculationservice.web.grpc.stub.ImmatriculationService.ProprietaireResponse parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
@@ -2223,7 +4905,7 @@ public final class ImmatriculationService {
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
     }
-    public static Builder newBuilder(ma.enset.immatriculationservice.web.grpc.stub.ImmatriculationService.Proprietaire prototype) {
+    public static Builder newBuilder(ma.enset.immatriculationservice.web.grpc.stub.ImmatriculationService.ProprietaireResponse prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
     @java.lang.Override
@@ -2239,26 +4921,26 @@ public final class ImmatriculationService {
       return builder;
     }
     /**
-     * Protobuf type {@code Proprietaire}
+     * Protobuf type {@code ProprietaireResponse}
      */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:Proprietaire)
-        ma.enset.immatriculationservice.web.grpc.stub.ImmatriculationService.ProprietaireOrBuilder {
+        // @@protoc_insertion_point(builder_implements:ProprietaireResponse)
+        ma.enset.immatriculationservice.web.grpc.stub.ImmatriculationService.ProprietaireResponseOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return ma.enset.immatriculationservice.web.grpc.stub.ImmatriculationService.internal_static_Proprietaire_descriptor;
+        return ma.enset.immatriculationservice.web.grpc.stub.ImmatriculationService.internal_static_ProprietaireResponse_descriptor;
       }
 
       @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return ma.enset.immatriculationservice.web.grpc.stub.ImmatriculationService.internal_static_Proprietaire_fieldAccessorTable
+        return ma.enset.immatriculationservice.web.grpc.stub.ImmatriculationService.internal_static_ProprietaireResponse_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
-                ma.enset.immatriculationservice.web.grpc.stub.ImmatriculationService.Proprietaire.class, ma.enset.immatriculationservice.web.grpc.stub.ImmatriculationService.Proprietaire.Builder.class);
+                ma.enset.immatriculationservice.web.grpc.stub.ImmatriculationService.ProprietaireResponse.class, ma.enset.immatriculationservice.web.grpc.stub.ImmatriculationService.ProprietaireResponse.Builder.class);
       }
 
-      // Construct using ma.enset.immatriculationservice.web.grpc.stub.ImmatriculationService.Proprietaire.newBuilder()
+      // Construct using ma.enset.immatriculationservice.web.grpc.stub.ImmatriculationService.ProprietaireResponse.newBuilder()
       private Builder() {
         maybeForceBuilderInitialization();
       }
@@ -2271,7 +4953,6 @@ public final class ImmatriculationService {
       private void maybeForceBuilderInitialization() {
         if (com.google.protobuf.GeneratedMessageV3
                 .alwaysUseFieldBuilders) {
-          getVehiculesFieldBuilder();
         }
       }
       @java.lang.Override
@@ -2285,29 +4966,23 @@ public final class ImmatriculationService {
 
         email_ = "";
 
-        if (vehiculesBuilder_ == null) {
-          vehicules_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00000001);
-        } else {
-          vehiculesBuilder_.clear();
-        }
         return this;
       }
 
       @java.lang.Override
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return ma.enset.immatriculationservice.web.grpc.stub.ImmatriculationService.internal_static_Proprietaire_descriptor;
+        return ma.enset.immatriculationservice.web.grpc.stub.ImmatriculationService.internal_static_ProprietaireResponse_descriptor;
       }
 
       @java.lang.Override
-      public ma.enset.immatriculationservice.web.grpc.stub.ImmatriculationService.Proprietaire getDefaultInstanceForType() {
-        return ma.enset.immatriculationservice.web.grpc.stub.ImmatriculationService.Proprietaire.getDefaultInstance();
+      public ma.enset.immatriculationservice.web.grpc.stub.ImmatriculationService.ProprietaireResponse getDefaultInstanceForType() {
+        return ma.enset.immatriculationservice.web.grpc.stub.ImmatriculationService.ProprietaireResponse.getDefaultInstance();
       }
 
       @java.lang.Override
-      public ma.enset.immatriculationservice.web.grpc.stub.ImmatriculationService.Proprietaire build() {
-        ma.enset.immatriculationservice.web.grpc.stub.ImmatriculationService.Proprietaire result = buildPartial();
+      public ma.enset.immatriculationservice.web.grpc.stub.ImmatriculationService.ProprietaireResponse build() {
+        ma.enset.immatriculationservice.web.grpc.stub.ImmatriculationService.ProprietaireResponse result = buildPartial();
         if (!result.isInitialized()) {
           throw newUninitializedMessageException(result);
         }
@@ -2315,22 +4990,12 @@ public final class ImmatriculationService {
       }
 
       @java.lang.Override
-      public ma.enset.immatriculationservice.web.grpc.stub.ImmatriculationService.Proprietaire buildPartial() {
-        ma.enset.immatriculationservice.web.grpc.stub.ImmatriculationService.Proprietaire result = new ma.enset.immatriculationservice.web.grpc.stub.ImmatriculationService.Proprietaire(this);
-        int from_bitField0_ = bitField0_;
+      public ma.enset.immatriculationservice.web.grpc.stub.ImmatriculationService.ProprietaireResponse buildPartial() {
+        ma.enset.immatriculationservice.web.grpc.stub.ImmatriculationService.ProprietaireResponse result = new ma.enset.immatriculationservice.web.grpc.stub.ImmatriculationService.ProprietaireResponse(this);
         result.id_ = id_;
         result.nom_ = nom_;
         result.dateDeNaissance_ = dateDeNaissance_;
         result.email_ = email_;
-        if (vehiculesBuilder_ == null) {
-          if (((bitField0_ & 0x00000001) != 0)) {
-            vehicules_ = java.util.Collections.unmodifiableList(vehicules_);
-            bitField0_ = (bitField0_ & ~0x00000001);
-          }
-          result.vehicules_ = vehicules_;
-        } else {
-          result.vehicules_ = vehiculesBuilder_.build();
-        }
         onBuilt();
         return result;
       }
@@ -2369,16 +5034,16 @@ public final class ImmatriculationService {
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof ma.enset.immatriculationservice.web.grpc.stub.ImmatriculationService.Proprietaire) {
-          return mergeFrom((ma.enset.immatriculationservice.web.grpc.stub.ImmatriculationService.Proprietaire)other);
+        if (other instanceof ma.enset.immatriculationservice.web.grpc.stub.ImmatriculationService.ProprietaireResponse) {
+          return mergeFrom((ma.enset.immatriculationservice.web.grpc.stub.ImmatriculationService.ProprietaireResponse)other);
         } else {
           super.mergeFrom(other);
           return this;
         }
       }
 
-      public Builder mergeFrom(ma.enset.immatriculationservice.web.grpc.stub.ImmatriculationService.Proprietaire other) {
-        if (other == ma.enset.immatriculationservice.web.grpc.stub.ImmatriculationService.Proprietaire.getDefaultInstance()) return this;
+      public Builder mergeFrom(ma.enset.immatriculationservice.web.grpc.stub.ImmatriculationService.ProprietaireResponse other) {
+        if (other == ma.enset.immatriculationservice.web.grpc.stub.ImmatriculationService.ProprietaireResponse.getDefaultInstance()) return this;
         if (other.getId() != 0L) {
           setId(other.getId());
         }
@@ -2393,32 +5058,6 @@ public final class ImmatriculationService {
         if (!other.getEmail().isEmpty()) {
           email_ = other.email_;
           onChanged();
-        }
-        if (vehiculesBuilder_ == null) {
-          if (!other.vehicules_.isEmpty()) {
-            if (vehicules_.isEmpty()) {
-              vehicules_ = other.vehicules_;
-              bitField0_ = (bitField0_ & ~0x00000001);
-            } else {
-              ensureVehiculesIsMutable();
-              vehicules_.addAll(other.vehicules_);
-            }
-            onChanged();
-          }
-        } else {
-          if (!other.vehicules_.isEmpty()) {
-            if (vehiculesBuilder_.isEmpty()) {
-              vehiculesBuilder_.dispose();
-              vehiculesBuilder_ = null;
-              vehicules_ = other.vehicules_;
-              bitField0_ = (bitField0_ & ~0x00000001);
-              vehiculesBuilder_ = 
-                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
-                   getVehiculesFieldBuilder() : null;
-            } else {
-              vehiculesBuilder_.addAllMessages(other.vehicules_);
-            }
-          }
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -2435,11 +5074,11 @@ public final class ImmatriculationService {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        ma.enset.immatriculationservice.web.grpc.stub.ImmatriculationService.Proprietaire parsedMessage = null;
+        ma.enset.immatriculationservice.web.grpc.stub.ImmatriculationService.ProprietaireResponse parsedMessage = null;
         try {
           parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (ma.enset.immatriculationservice.web.grpc.stub.ImmatriculationService.Proprietaire) e.getUnfinishedMessage();
+          parsedMessage = (ma.enset.immatriculationservice.web.grpc.stub.ImmatriculationService.ProprietaireResponse) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
           if (parsedMessage != null) {
@@ -2448,7 +5087,6 @@ public final class ImmatriculationService {
         }
         return this;
       }
-      private int bitField0_;
 
       private long id_ ;
       /**
@@ -2707,245 +5345,1055 @@ public final class ImmatriculationService {
         onChanged();
         return this;
       }
-
-      private java.util.List<ma.enset.immatriculationservice.web.grpc.stub.ImmatriculationService.Vehicule> vehicules_ =
-        java.util.Collections.emptyList();
-      private void ensureVehiculesIsMutable() {
-        if (!((bitField0_ & 0x00000001) != 0)) {
-          vehicules_ = new java.util.ArrayList<ma.enset.immatriculationservice.web.grpc.stub.ImmatriculationService.Vehicule>(vehicules_);
-          bitField0_ |= 0x00000001;
-         }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
       }
 
-      private com.google.protobuf.RepeatedFieldBuilderV3<
-          ma.enset.immatriculationservice.web.grpc.stub.ImmatriculationService.Vehicule, ma.enset.immatriculationservice.web.grpc.stub.ImmatriculationService.Vehicule.Builder, ma.enset.immatriculationservice.web.grpc.stub.ImmatriculationService.VehiculeOrBuilder> vehiculesBuilder_;
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
 
-      /**
-       * <code>repeated .Vehicule vehicules = 5;</code>
-       */
-      public java.util.List<ma.enset.immatriculationservice.web.grpc.stub.ImmatriculationService.Vehicule> getVehiculesList() {
-        if (vehiculesBuilder_ == null) {
-          return java.util.Collections.unmodifiableList(vehicules_);
+
+      // @@protoc_insertion_point(builder_scope:ProprietaireResponse)
+    }
+
+    // @@protoc_insertion_point(class_scope:ProprietaireResponse)
+    private static final ma.enset.immatriculationservice.web.grpc.stub.ImmatriculationService.ProprietaireResponse DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new ma.enset.immatriculationservice.web.grpc.stub.ImmatriculationService.ProprietaireResponse();
+    }
+
+    public static ma.enset.immatriculationservice.web.grpc.stub.ImmatriculationService.ProprietaireResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<ProprietaireResponse>
+        PARSER = new com.google.protobuf.AbstractParser<ProprietaireResponse>() {
+      @java.lang.Override
+      public ProprietaireResponse parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new ProprietaireResponse(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<ProprietaireResponse> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<ProprietaireResponse> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public ma.enset.immatriculationservice.web.grpc.stub.ImmatriculationService.ProprietaireResponse getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface VehiculeRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:VehiculeRequest)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>string matricule = 1;</code>
+     * @return The matricule.
+     */
+    java.lang.String getMatricule();
+    /**
+     * <code>string matricule = 1;</code>
+     * @return The bytes for matricule.
+     */
+    com.google.protobuf.ByteString
+        getMatriculeBytes();
+
+    /**
+     * <code>string marque = 2;</code>
+     * @return The marque.
+     */
+    java.lang.String getMarque();
+    /**
+     * <code>string marque = 2;</code>
+     * @return The bytes for marque.
+     */
+    com.google.protobuf.ByteString
+        getMarqueBytes();
+
+    /**
+     * <code>int32 puissanceFiscale = 3;</code>
+     * @return The puissanceFiscale.
+     */
+    int getPuissanceFiscale();
+
+    /**
+     * <code>int32 modele = 4;</code>
+     * @return The modele.
+     */
+    int getModele();
+
+    /**
+     * <code>.ProprietaireResponse proprietaire = 5;</code>
+     * @return Whether the proprietaire field is set.
+     */
+    boolean hasProprietaire();
+    /**
+     * <code>.ProprietaireResponse proprietaire = 5;</code>
+     * @return The proprietaire.
+     */
+    ma.enset.immatriculationservice.web.grpc.stub.ImmatriculationService.ProprietaireResponse getProprietaire();
+    /**
+     * <code>.ProprietaireResponse proprietaire = 5;</code>
+     */
+    ma.enset.immatriculationservice.web.grpc.stub.ImmatriculationService.ProprietaireResponseOrBuilder getProprietaireOrBuilder();
+  }
+  /**
+   * Protobuf type {@code VehiculeRequest}
+   */
+  public  static final class VehiculeRequest extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:VehiculeRequest)
+      VehiculeRequestOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use VehiculeRequest.newBuilder() to construct.
+    private VehiculeRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private VehiculeRequest() {
+      matricule_ = "";
+      marque_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new VehiculeRequest();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private VehiculeRequest(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              matricule_ = s;
+              break;
+            }
+            case 18: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              marque_ = s;
+              break;
+            }
+            case 24: {
+
+              puissanceFiscale_ = input.readInt32();
+              break;
+            }
+            case 32: {
+
+              modele_ = input.readInt32();
+              break;
+            }
+            case 42: {
+              ma.enset.immatriculationservice.web.grpc.stub.ImmatriculationService.ProprietaireResponse.Builder subBuilder = null;
+              if (proprietaire_ != null) {
+                subBuilder = proprietaire_.toBuilder();
+              }
+              proprietaire_ = input.readMessage(ma.enset.immatriculationservice.web.grpc.stub.ImmatriculationService.ProprietaireResponse.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(proprietaire_);
+                proprietaire_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return ma.enset.immatriculationservice.web.grpc.stub.ImmatriculationService.internal_static_VehiculeRequest_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return ma.enset.immatriculationservice.web.grpc.stub.ImmatriculationService.internal_static_VehiculeRequest_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              ma.enset.immatriculationservice.web.grpc.stub.ImmatriculationService.VehiculeRequest.class, ma.enset.immatriculationservice.web.grpc.stub.ImmatriculationService.VehiculeRequest.Builder.class);
+    }
+
+    public static final int MATRICULE_FIELD_NUMBER = 1;
+    private volatile java.lang.Object matricule_;
+    /**
+     * <code>string matricule = 1;</code>
+     * @return The matricule.
+     */
+    public java.lang.String getMatricule() {
+      java.lang.Object ref = matricule_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        matricule_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string matricule = 1;</code>
+     * @return The bytes for matricule.
+     */
+    public com.google.protobuf.ByteString
+        getMatriculeBytes() {
+      java.lang.Object ref = matricule_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        matricule_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int MARQUE_FIELD_NUMBER = 2;
+    private volatile java.lang.Object marque_;
+    /**
+     * <code>string marque = 2;</code>
+     * @return The marque.
+     */
+    public java.lang.String getMarque() {
+      java.lang.Object ref = marque_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        marque_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string marque = 2;</code>
+     * @return The bytes for marque.
+     */
+    public com.google.protobuf.ByteString
+        getMarqueBytes() {
+      java.lang.Object ref = marque_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        marque_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int PUISSANCEFISCALE_FIELD_NUMBER = 3;
+    private int puissanceFiscale_;
+    /**
+     * <code>int32 puissanceFiscale = 3;</code>
+     * @return The puissanceFiscale.
+     */
+    public int getPuissanceFiscale() {
+      return puissanceFiscale_;
+    }
+
+    public static final int MODELE_FIELD_NUMBER = 4;
+    private int modele_;
+    /**
+     * <code>int32 modele = 4;</code>
+     * @return The modele.
+     */
+    public int getModele() {
+      return modele_;
+    }
+
+    public static final int PROPRIETAIRE_FIELD_NUMBER = 5;
+    private ma.enset.immatriculationservice.web.grpc.stub.ImmatriculationService.ProprietaireResponse proprietaire_;
+    /**
+     * <code>.ProprietaireResponse proprietaire = 5;</code>
+     * @return Whether the proprietaire field is set.
+     */
+    public boolean hasProprietaire() {
+      return proprietaire_ != null;
+    }
+    /**
+     * <code>.ProprietaireResponse proprietaire = 5;</code>
+     * @return The proprietaire.
+     */
+    public ma.enset.immatriculationservice.web.grpc.stub.ImmatriculationService.ProprietaireResponse getProprietaire() {
+      return proprietaire_ == null ? ma.enset.immatriculationservice.web.grpc.stub.ImmatriculationService.ProprietaireResponse.getDefaultInstance() : proprietaire_;
+    }
+    /**
+     * <code>.ProprietaireResponse proprietaire = 5;</code>
+     */
+    public ma.enset.immatriculationservice.web.grpc.stub.ImmatriculationService.ProprietaireResponseOrBuilder getProprietaireOrBuilder() {
+      return getProprietaire();
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!getMatriculeBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, matricule_);
+      }
+      if (!getMarqueBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, marque_);
+      }
+      if (puissanceFiscale_ != 0) {
+        output.writeInt32(3, puissanceFiscale_);
+      }
+      if (modele_ != 0) {
+        output.writeInt32(4, modele_);
+      }
+      if (proprietaire_ != null) {
+        output.writeMessage(5, getProprietaire());
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!getMatriculeBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, matricule_);
+      }
+      if (!getMarqueBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, marque_);
+      }
+      if (puissanceFiscale_ != 0) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt32Size(3, puissanceFiscale_);
+      }
+      if (modele_ != 0) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt32Size(4, modele_);
+      }
+      if (proprietaire_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(5, getProprietaire());
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof ma.enset.immatriculationservice.web.grpc.stub.ImmatriculationService.VehiculeRequest)) {
+        return super.equals(obj);
+      }
+      ma.enset.immatriculationservice.web.grpc.stub.ImmatriculationService.VehiculeRequest other = (ma.enset.immatriculationservice.web.grpc.stub.ImmatriculationService.VehiculeRequest) obj;
+
+      if (!getMatricule()
+          .equals(other.getMatricule())) return false;
+      if (!getMarque()
+          .equals(other.getMarque())) return false;
+      if (getPuissanceFiscale()
+          != other.getPuissanceFiscale()) return false;
+      if (getModele()
+          != other.getModele()) return false;
+      if (hasProprietaire() != other.hasProprietaire()) return false;
+      if (hasProprietaire()) {
+        if (!getProprietaire()
+            .equals(other.getProprietaire())) return false;
+      }
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + MATRICULE_FIELD_NUMBER;
+      hash = (53 * hash) + getMatricule().hashCode();
+      hash = (37 * hash) + MARQUE_FIELD_NUMBER;
+      hash = (53 * hash) + getMarque().hashCode();
+      hash = (37 * hash) + PUISSANCEFISCALE_FIELD_NUMBER;
+      hash = (53 * hash) + getPuissanceFiscale();
+      hash = (37 * hash) + MODELE_FIELD_NUMBER;
+      hash = (53 * hash) + getModele();
+      if (hasProprietaire()) {
+        hash = (37 * hash) + PROPRIETAIRE_FIELD_NUMBER;
+        hash = (53 * hash) + getProprietaire().hashCode();
+      }
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static ma.enset.immatriculationservice.web.grpc.stub.ImmatriculationService.VehiculeRequest parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static ma.enset.immatriculationservice.web.grpc.stub.ImmatriculationService.VehiculeRequest parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static ma.enset.immatriculationservice.web.grpc.stub.ImmatriculationService.VehiculeRequest parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static ma.enset.immatriculationservice.web.grpc.stub.ImmatriculationService.VehiculeRequest parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static ma.enset.immatriculationservice.web.grpc.stub.ImmatriculationService.VehiculeRequest parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static ma.enset.immatriculationservice.web.grpc.stub.ImmatriculationService.VehiculeRequest parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static ma.enset.immatriculationservice.web.grpc.stub.ImmatriculationService.VehiculeRequest parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static ma.enset.immatriculationservice.web.grpc.stub.ImmatriculationService.VehiculeRequest parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static ma.enset.immatriculationservice.web.grpc.stub.ImmatriculationService.VehiculeRequest parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static ma.enset.immatriculationservice.web.grpc.stub.ImmatriculationService.VehiculeRequest parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static ma.enset.immatriculationservice.web.grpc.stub.ImmatriculationService.VehiculeRequest parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static ma.enset.immatriculationservice.web.grpc.stub.ImmatriculationService.VehiculeRequest parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(ma.enset.immatriculationservice.web.grpc.stub.ImmatriculationService.VehiculeRequest prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code VehiculeRequest}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:VehiculeRequest)
+        ma.enset.immatriculationservice.web.grpc.stub.ImmatriculationService.VehiculeRequestOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return ma.enset.immatriculationservice.web.grpc.stub.ImmatriculationService.internal_static_VehiculeRequest_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return ma.enset.immatriculationservice.web.grpc.stub.ImmatriculationService.internal_static_VehiculeRequest_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                ma.enset.immatriculationservice.web.grpc.stub.ImmatriculationService.VehiculeRequest.class, ma.enset.immatriculationservice.web.grpc.stub.ImmatriculationService.VehiculeRequest.Builder.class);
+      }
+
+      // Construct using ma.enset.immatriculationservice.web.grpc.stub.ImmatriculationService.VehiculeRequest.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        matricule_ = "";
+
+        marque_ = "";
+
+        puissanceFiscale_ = 0;
+
+        modele_ = 0;
+
+        if (proprietaireBuilder_ == null) {
+          proprietaire_ = null;
         } else {
-          return vehiculesBuilder_.getMessageList();
+          proprietaire_ = null;
+          proprietaireBuilder_ = null;
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return ma.enset.immatriculationservice.web.grpc.stub.ImmatriculationService.internal_static_VehiculeRequest_descriptor;
+      }
+
+      @java.lang.Override
+      public ma.enset.immatriculationservice.web.grpc.stub.ImmatriculationService.VehiculeRequest getDefaultInstanceForType() {
+        return ma.enset.immatriculationservice.web.grpc.stub.ImmatriculationService.VehiculeRequest.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public ma.enset.immatriculationservice.web.grpc.stub.ImmatriculationService.VehiculeRequest build() {
+        ma.enset.immatriculationservice.web.grpc.stub.ImmatriculationService.VehiculeRequest result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public ma.enset.immatriculationservice.web.grpc.stub.ImmatriculationService.VehiculeRequest buildPartial() {
+        ma.enset.immatriculationservice.web.grpc.stub.ImmatriculationService.VehiculeRequest result = new ma.enset.immatriculationservice.web.grpc.stub.ImmatriculationService.VehiculeRequest(this);
+        result.matricule_ = matricule_;
+        result.marque_ = marque_;
+        result.puissanceFiscale_ = puissanceFiscale_;
+        result.modele_ = modele_;
+        if (proprietaireBuilder_ == null) {
+          result.proprietaire_ = proprietaire_;
+        } else {
+          result.proprietaire_ = proprietaireBuilder_.build();
+        }
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof ma.enset.immatriculationservice.web.grpc.stub.ImmatriculationService.VehiculeRequest) {
+          return mergeFrom((ma.enset.immatriculationservice.web.grpc.stub.ImmatriculationService.VehiculeRequest)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(ma.enset.immatriculationservice.web.grpc.stub.ImmatriculationService.VehiculeRequest other) {
+        if (other == ma.enset.immatriculationservice.web.grpc.stub.ImmatriculationService.VehiculeRequest.getDefaultInstance()) return this;
+        if (!other.getMatricule().isEmpty()) {
+          matricule_ = other.matricule_;
+          onChanged();
+        }
+        if (!other.getMarque().isEmpty()) {
+          marque_ = other.marque_;
+          onChanged();
+        }
+        if (other.getPuissanceFiscale() != 0) {
+          setPuissanceFiscale(other.getPuissanceFiscale());
+        }
+        if (other.getModele() != 0) {
+          setModele(other.getModele());
+        }
+        if (other.hasProprietaire()) {
+          mergeProprietaire(other.getProprietaire());
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        ma.enset.immatriculationservice.web.grpc.stub.ImmatriculationService.VehiculeRequest parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (ma.enset.immatriculationservice.web.grpc.stub.ImmatriculationService.VehiculeRequest) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+
+      private java.lang.Object matricule_ = "";
+      /**
+       * <code>string matricule = 1;</code>
+       * @return The matricule.
+       */
+      public java.lang.String getMatricule() {
+        java.lang.Object ref = matricule_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          matricule_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
         }
       }
       /**
-       * <code>repeated .Vehicule vehicules = 5;</code>
+       * <code>string matricule = 1;</code>
+       * @return The bytes for matricule.
        */
-      public int getVehiculesCount() {
-        if (vehiculesBuilder_ == null) {
-          return vehicules_.size();
+      public com.google.protobuf.ByteString
+          getMatriculeBytes() {
+        java.lang.Object ref = matricule_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          matricule_ = b;
+          return b;
         } else {
-          return vehiculesBuilder_.getCount();
+          return (com.google.protobuf.ByteString) ref;
         }
       }
       /**
-       * <code>repeated .Vehicule vehicules = 5;</code>
+       * <code>string matricule = 1;</code>
+       * @param value The matricule to set.
+       * @return This builder for chaining.
        */
-      public ma.enset.immatriculationservice.web.grpc.stub.ImmatriculationService.Vehicule getVehicules(int index) {
-        if (vehiculesBuilder_ == null) {
-          return vehicules_.get(index);
+      public Builder setMatricule(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        matricule_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string matricule = 1;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearMatricule() {
+        
+        matricule_ = getDefaultInstance().getMatricule();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string matricule = 1;</code>
+       * @param value The bytes for matricule to set.
+       * @return This builder for chaining.
+       */
+      public Builder setMatriculeBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        matricule_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object marque_ = "";
+      /**
+       * <code>string marque = 2;</code>
+       * @return The marque.
+       */
+      public java.lang.String getMarque() {
+        java.lang.Object ref = marque_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          marque_ = s;
+          return s;
         } else {
-          return vehiculesBuilder_.getMessage(index);
+          return (java.lang.String) ref;
         }
       }
       /**
-       * <code>repeated .Vehicule vehicules = 5;</code>
+       * <code>string marque = 2;</code>
+       * @return The bytes for marque.
        */
-      public Builder setVehicules(
-          int index, ma.enset.immatriculationservice.web.grpc.stub.ImmatriculationService.Vehicule value) {
-        if (vehiculesBuilder_ == null) {
+      public com.google.protobuf.ByteString
+          getMarqueBytes() {
+        java.lang.Object ref = marque_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          marque_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string marque = 2;</code>
+       * @param value The marque to set.
+       * @return This builder for chaining.
+       */
+      public Builder setMarque(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        marque_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string marque = 2;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearMarque() {
+        
+        marque_ = getDefaultInstance().getMarque();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string marque = 2;</code>
+       * @param value The bytes for marque to set.
+       * @return This builder for chaining.
+       */
+      public Builder setMarqueBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        marque_ = value;
+        onChanged();
+        return this;
+      }
+
+      private int puissanceFiscale_ ;
+      /**
+       * <code>int32 puissanceFiscale = 3;</code>
+       * @return The puissanceFiscale.
+       */
+      public int getPuissanceFiscale() {
+        return puissanceFiscale_;
+      }
+      /**
+       * <code>int32 puissanceFiscale = 3;</code>
+       * @param value The puissanceFiscale to set.
+       * @return This builder for chaining.
+       */
+      public Builder setPuissanceFiscale(int value) {
+        
+        puissanceFiscale_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>int32 puissanceFiscale = 3;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearPuissanceFiscale() {
+        
+        puissanceFiscale_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private int modele_ ;
+      /**
+       * <code>int32 modele = 4;</code>
+       * @return The modele.
+       */
+      public int getModele() {
+        return modele_;
+      }
+      /**
+       * <code>int32 modele = 4;</code>
+       * @param value The modele to set.
+       * @return This builder for chaining.
+       */
+      public Builder setModele(int value) {
+        
+        modele_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>int32 modele = 4;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearModele() {
+        
+        modele_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private ma.enset.immatriculationservice.web.grpc.stub.ImmatriculationService.ProprietaireResponse proprietaire_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          ma.enset.immatriculationservice.web.grpc.stub.ImmatriculationService.ProprietaireResponse, ma.enset.immatriculationservice.web.grpc.stub.ImmatriculationService.ProprietaireResponse.Builder, ma.enset.immatriculationservice.web.grpc.stub.ImmatriculationService.ProprietaireResponseOrBuilder> proprietaireBuilder_;
+      /**
+       * <code>.ProprietaireResponse proprietaire = 5;</code>
+       * @return Whether the proprietaire field is set.
+       */
+      public boolean hasProprietaire() {
+        return proprietaireBuilder_ != null || proprietaire_ != null;
+      }
+      /**
+       * <code>.ProprietaireResponse proprietaire = 5;</code>
+       * @return The proprietaire.
+       */
+      public ma.enset.immatriculationservice.web.grpc.stub.ImmatriculationService.ProprietaireResponse getProprietaire() {
+        if (proprietaireBuilder_ == null) {
+          return proprietaire_ == null ? ma.enset.immatriculationservice.web.grpc.stub.ImmatriculationService.ProprietaireResponse.getDefaultInstance() : proprietaire_;
+        } else {
+          return proprietaireBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.ProprietaireResponse proprietaire = 5;</code>
+       */
+      public Builder setProprietaire(ma.enset.immatriculationservice.web.grpc.stub.ImmatriculationService.ProprietaireResponse value) {
+        if (proprietaireBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
           }
-          ensureVehiculesIsMutable();
-          vehicules_.set(index, value);
+          proprietaire_ = value;
           onChanged();
         } else {
-          vehiculesBuilder_.setMessage(index, value);
+          proprietaireBuilder_.setMessage(value);
         }
+
         return this;
       }
       /**
-       * <code>repeated .Vehicule vehicules = 5;</code>
+       * <code>.ProprietaireResponse proprietaire = 5;</code>
        */
-      public Builder setVehicules(
-          int index, ma.enset.immatriculationservice.web.grpc.stub.ImmatriculationService.Vehicule.Builder builderForValue) {
-        if (vehiculesBuilder_ == null) {
-          ensureVehiculesIsMutable();
-          vehicules_.set(index, builderForValue.build());
+      public Builder setProprietaire(
+          ma.enset.immatriculationservice.web.grpc.stub.ImmatriculationService.ProprietaireResponse.Builder builderForValue) {
+        if (proprietaireBuilder_ == null) {
+          proprietaire_ = builderForValue.build();
           onChanged();
         } else {
-          vehiculesBuilder_.setMessage(index, builderForValue.build());
+          proprietaireBuilder_.setMessage(builderForValue.build());
         }
+
         return this;
       }
       /**
-       * <code>repeated .Vehicule vehicules = 5;</code>
+       * <code>.ProprietaireResponse proprietaire = 5;</code>
        */
-      public Builder addVehicules(ma.enset.immatriculationservice.web.grpc.stub.ImmatriculationService.Vehicule value) {
-        if (vehiculesBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
+      public Builder mergeProprietaire(ma.enset.immatriculationservice.web.grpc.stub.ImmatriculationService.ProprietaireResponse value) {
+        if (proprietaireBuilder_ == null) {
+          if (proprietaire_ != null) {
+            proprietaire_ =
+              ma.enset.immatriculationservice.web.grpc.stub.ImmatriculationService.ProprietaireResponse.newBuilder(proprietaire_).mergeFrom(value).buildPartial();
+          } else {
+            proprietaire_ = value;
           }
-          ensureVehiculesIsMutable();
-          vehicules_.add(value);
           onChanged();
         } else {
-          vehiculesBuilder_.addMessage(value);
+          proprietaireBuilder_.mergeFrom(value);
         }
+
         return this;
       }
       /**
-       * <code>repeated .Vehicule vehicules = 5;</code>
+       * <code>.ProprietaireResponse proprietaire = 5;</code>
        */
-      public Builder addVehicules(
-          int index, ma.enset.immatriculationservice.web.grpc.stub.ImmatriculationService.Vehicule value) {
-        if (vehiculesBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          ensureVehiculesIsMutable();
-          vehicules_.add(index, value);
+      public Builder clearProprietaire() {
+        if (proprietaireBuilder_ == null) {
+          proprietaire_ = null;
           onChanged();
         } else {
-          vehiculesBuilder_.addMessage(index, value);
+          proprietaire_ = null;
+          proprietaireBuilder_ = null;
         }
+
         return this;
       }
       /**
-       * <code>repeated .Vehicule vehicules = 5;</code>
+       * <code>.ProprietaireResponse proprietaire = 5;</code>
        */
-      public Builder addVehicules(
-          ma.enset.immatriculationservice.web.grpc.stub.ImmatriculationService.Vehicule.Builder builderForValue) {
-        if (vehiculesBuilder_ == null) {
-          ensureVehiculesIsMutable();
-          vehicules_.add(builderForValue.build());
-          onChanged();
+      public ma.enset.immatriculationservice.web.grpc.stub.ImmatriculationService.ProprietaireResponse.Builder getProprietaireBuilder() {
+        
+        onChanged();
+        return getProprietaireFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.ProprietaireResponse proprietaire = 5;</code>
+       */
+      public ma.enset.immatriculationservice.web.grpc.stub.ImmatriculationService.ProprietaireResponseOrBuilder getProprietaireOrBuilder() {
+        if (proprietaireBuilder_ != null) {
+          return proprietaireBuilder_.getMessageOrBuilder();
         } else {
-          vehiculesBuilder_.addMessage(builderForValue.build());
-        }
-        return this;
-      }
-      /**
-       * <code>repeated .Vehicule vehicules = 5;</code>
-       */
-      public Builder addVehicules(
-          int index, ma.enset.immatriculationservice.web.grpc.stub.ImmatriculationService.Vehicule.Builder builderForValue) {
-        if (vehiculesBuilder_ == null) {
-          ensureVehiculesIsMutable();
-          vehicules_.add(index, builderForValue.build());
-          onChanged();
-        } else {
-          vehiculesBuilder_.addMessage(index, builderForValue.build());
-        }
-        return this;
-      }
-      /**
-       * <code>repeated .Vehicule vehicules = 5;</code>
-       */
-      public Builder addAllVehicules(
-          java.lang.Iterable<? extends ma.enset.immatriculationservice.web.grpc.stub.ImmatriculationService.Vehicule> values) {
-        if (vehiculesBuilder_ == null) {
-          ensureVehiculesIsMutable();
-          com.google.protobuf.AbstractMessageLite.Builder.addAll(
-              values, vehicules_);
-          onChanged();
-        } else {
-          vehiculesBuilder_.addAllMessages(values);
-        }
-        return this;
-      }
-      /**
-       * <code>repeated .Vehicule vehicules = 5;</code>
-       */
-      public Builder clearVehicules() {
-        if (vehiculesBuilder_ == null) {
-          vehicules_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00000001);
-          onChanged();
-        } else {
-          vehiculesBuilder_.clear();
-        }
-        return this;
-      }
-      /**
-       * <code>repeated .Vehicule vehicules = 5;</code>
-       */
-      public Builder removeVehicules(int index) {
-        if (vehiculesBuilder_ == null) {
-          ensureVehiculesIsMutable();
-          vehicules_.remove(index);
-          onChanged();
-        } else {
-          vehiculesBuilder_.remove(index);
-        }
-        return this;
-      }
-      /**
-       * <code>repeated .Vehicule vehicules = 5;</code>
-       */
-      public ma.enset.immatriculationservice.web.grpc.stub.ImmatriculationService.Vehicule.Builder getVehiculesBuilder(
-          int index) {
-        return getVehiculesFieldBuilder().getBuilder(index);
-      }
-      /**
-       * <code>repeated .Vehicule vehicules = 5;</code>
-       */
-      public ma.enset.immatriculationservice.web.grpc.stub.ImmatriculationService.VehiculeOrBuilder getVehiculesOrBuilder(
-          int index) {
-        if (vehiculesBuilder_ == null) {
-          return vehicules_.get(index);  } else {
-          return vehiculesBuilder_.getMessageOrBuilder(index);
+          return proprietaire_ == null ?
+              ma.enset.immatriculationservice.web.grpc.stub.ImmatriculationService.ProprietaireResponse.getDefaultInstance() : proprietaire_;
         }
       }
       /**
-       * <code>repeated .Vehicule vehicules = 5;</code>
+       * <code>.ProprietaireResponse proprietaire = 5;</code>
        */
-      public java.util.List<? extends ma.enset.immatriculationservice.web.grpc.stub.ImmatriculationService.VehiculeOrBuilder> 
-           getVehiculesOrBuilderList() {
-        if (vehiculesBuilder_ != null) {
-          return vehiculesBuilder_.getMessageOrBuilderList();
-        } else {
-          return java.util.Collections.unmodifiableList(vehicules_);
-        }
-      }
-      /**
-       * <code>repeated .Vehicule vehicules = 5;</code>
-       */
-      public ma.enset.immatriculationservice.web.grpc.stub.ImmatriculationService.Vehicule.Builder addVehiculesBuilder() {
-        return getVehiculesFieldBuilder().addBuilder(
-            ma.enset.immatriculationservice.web.grpc.stub.ImmatriculationService.Vehicule.getDefaultInstance());
-      }
-      /**
-       * <code>repeated .Vehicule vehicules = 5;</code>
-       */
-      public ma.enset.immatriculationservice.web.grpc.stub.ImmatriculationService.Vehicule.Builder addVehiculesBuilder(
-          int index) {
-        return getVehiculesFieldBuilder().addBuilder(
-            index, ma.enset.immatriculationservice.web.grpc.stub.ImmatriculationService.Vehicule.getDefaultInstance());
-      }
-      /**
-       * <code>repeated .Vehicule vehicules = 5;</code>
-       */
-      public java.util.List<ma.enset.immatriculationservice.web.grpc.stub.ImmatriculationService.Vehicule.Builder> 
-           getVehiculesBuilderList() {
-        return getVehiculesFieldBuilder().getBuilderList();
-      }
-      private com.google.protobuf.RepeatedFieldBuilderV3<
-          ma.enset.immatriculationservice.web.grpc.stub.ImmatriculationService.Vehicule, ma.enset.immatriculationservice.web.grpc.stub.ImmatriculationService.Vehicule.Builder, ma.enset.immatriculationservice.web.grpc.stub.ImmatriculationService.VehiculeOrBuilder> 
-          getVehiculesFieldBuilder() {
-        if (vehiculesBuilder_ == null) {
-          vehiculesBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
-              ma.enset.immatriculationservice.web.grpc.stub.ImmatriculationService.Vehicule, ma.enset.immatriculationservice.web.grpc.stub.ImmatriculationService.Vehicule.Builder, ma.enset.immatriculationservice.web.grpc.stub.ImmatriculationService.VehiculeOrBuilder>(
-                  vehicules_,
-                  ((bitField0_ & 0x00000001) != 0),
+      private com.google.protobuf.SingleFieldBuilderV3<
+          ma.enset.immatriculationservice.web.grpc.stub.ImmatriculationService.ProprietaireResponse, ma.enset.immatriculationservice.web.grpc.stub.ImmatriculationService.ProprietaireResponse.Builder, ma.enset.immatriculationservice.web.grpc.stub.ImmatriculationService.ProprietaireResponseOrBuilder> 
+          getProprietaireFieldBuilder() {
+        if (proprietaireBuilder_ == null) {
+          proprietaireBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              ma.enset.immatriculationservice.web.grpc.stub.ImmatriculationService.ProprietaireResponse, ma.enset.immatriculationservice.web.grpc.stub.ImmatriculationService.ProprietaireResponse.Builder, ma.enset.immatriculationservice.web.grpc.stub.ImmatriculationService.ProprietaireResponseOrBuilder>(
+                  getProprietaire(),
                   getParentForChildren(),
                   isClean());
-          vehicules_ = null;
+          proprietaire_ = null;
         }
-        return vehiculesBuilder_;
+        return proprietaireBuilder_;
       }
       @java.lang.Override
       public final Builder setUnknownFields(
@@ -2960,61 +6408,958 @@ public final class ImmatriculationService {
       }
 
 
-      // @@protoc_insertion_point(builder_scope:Proprietaire)
+      // @@protoc_insertion_point(builder_scope:VehiculeRequest)
     }
 
-    // @@protoc_insertion_point(class_scope:Proprietaire)
-    private static final ma.enset.immatriculationservice.web.grpc.stub.ImmatriculationService.Proprietaire DEFAULT_INSTANCE;
+    // @@protoc_insertion_point(class_scope:VehiculeRequest)
+    private static final ma.enset.immatriculationservice.web.grpc.stub.ImmatriculationService.VehiculeRequest DEFAULT_INSTANCE;
     static {
-      DEFAULT_INSTANCE = new ma.enset.immatriculationservice.web.grpc.stub.ImmatriculationService.Proprietaire();
+      DEFAULT_INSTANCE = new ma.enset.immatriculationservice.web.grpc.stub.ImmatriculationService.VehiculeRequest();
     }
 
-    public static ma.enset.immatriculationservice.web.grpc.stub.ImmatriculationService.Proprietaire getDefaultInstance() {
+    public static ma.enset.immatriculationservice.web.grpc.stub.ImmatriculationService.VehiculeRequest getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
-    private static final com.google.protobuf.Parser<Proprietaire>
-        PARSER = new com.google.protobuf.AbstractParser<Proprietaire>() {
+    private static final com.google.protobuf.Parser<VehiculeRequest>
+        PARSER = new com.google.protobuf.AbstractParser<VehiculeRequest>() {
       @java.lang.Override
-      public Proprietaire parsePartialFrom(
+      public VehiculeRequest parsePartialFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-        return new Proprietaire(input, extensionRegistry);
+        return new VehiculeRequest(input, extensionRegistry);
       }
     };
 
-    public static com.google.protobuf.Parser<Proprietaire> parser() {
+    public static com.google.protobuf.Parser<VehiculeRequest> parser() {
       return PARSER;
     }
 
     @java.lang.Override
-    public com.google.protobuf.Parser<Proprietaire> getParserForType() {
+    public com.google.protobuf.Parser<VehiculeRequest> getParserForType() {
       return PARSER;
     }
 
     @java.lang.Override
-    public ma.enset.immatriculationservice.web.grpc.stub.ImmatriculationService.Proprietaire getDefaultInstanceForType() {
+    public ma.enset.immatriculationservice.web.grpc.stub.ImmatriculationService.VehiculeRequest getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface ProprietaireRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:ProprietaireRequest)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>string nom = 1;</code>
+     * @return The nom.
+     */
+    java.lang.String getNom();
+    /**
+     * <code>string nom = 1;</code>
+     * @return The bytes for nom.
+     */
+    com.google.protobuf.ByteString
+        getNomBytes();
+
+    /**
+     * <code>string dateDeNaissance = 2;</code>
+     * @return The dateDeNaissance.
+     */
+    java.lang.String getDateDeNaissance();
+    /**
+     * <code>string dateDeNaissance = 2;</code>
+     * @return The bytes for dateDeNaissance.
+     */
+    com.google.protobuf.ByteString
+        getDateDeNaissanceBytes();
+
+    /**
+     * <code>string email = 3;</code>
+     * @return The email.
+     */
+    java.lang.String getEmail();
+    /**
+     * <code>string email = 3;</code>
+     * @return The bytes for email.
+     */
+    com.google.protobuf.ByteString
+        getEmailBytes();
+  }
+  /**
+   * Protobuf type {@code ProprietaireRequest}
+   */
+  public  static final class ProprietaireRequest extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:ProprietaireRequest)
+      ProprietaireRequestOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use ProprietaireRequest.newBuilder() to construct.
+    private ProprietaireRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private ProprietaireRequest() {
+      nom_ = "";
+      dateDeNaissance_ = "";
+      email_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new ProprietaireRequest();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private ProprietaireRequest(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              nom_ = s;
+              break;
+            }
+            case 18: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              dateDeNaissance_ = s;
+              break;
+            }
+            case 26: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              email_ = s;
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return ma.enset.immatriculationservice.web.grpc.stub.ImmatriculationService.internal_static_ProprietaireRequest_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return ma.enset.immatriculationservice.web.grpc.stub.ImmatriculationService.internal_static_ProprietaireRequest_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              ma.enset.immatriculationservice.web.grpc.stub.ImmatriculationService.ProprietaireRequest.class, ma.enset.immatriculationservice.web.grpc.stub.ImmatriculationService.ProprietaireRequest.Builder.class);
+    }
+
+    public static final int NOM_FIELD_NUMBER = 1;
+    private volatile java.lang.Object nom_;
+    /**
+     * <code>string nom = 1;</code>
+     * @return The nom.
+     */
+    public java.lang.String getNom() {
+      java.lang.Object ref = nom_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        nom_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string nom = 1;</code>
+     * @return The bytes for nom.
+     */
+    public com.google.protobuf.ByteString
+        getNomBytes() {
+      java.lang.Object ref = nom_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        nom_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int DATEDENAISSANCE_FIELD_NUMBER = 2;
+    private volatile java.lang.Object dateDeNaissance_;
+    /**
+     * <code>string dateDeNaissance = 2;</code>
+     * @return The dateDeNaissance.
+     */
+    public java.lang.String getDateDeNaissance() {
+      java.lang.Object ref = dateDeNaissance_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        dateDeNaissance_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string dateDeNaissance = 2;</code>
+     * @return The bytes for dateDeNaissance.
+     */
+    public com.google.protobuf.ByteString
+        getDateDeNaissanceBytes() {
+      java.lang.Object ref = dateDeNaissance_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        dateDeNaissance_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int EMAIL_FIELD_NUMBER = 3;
+    private volatile java.lang.Object email_;
+    /**
+     * <code>string email = 3;</code>
+     * @return The email.
+     */
+    public java.lang.String getEmail() {
+      java.lang.Object ref = email_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        email_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string email = 3;</code>
+     * @return The bytes for email.
+     */
+    public com.google.protobuf.ByteString
+        getEmailBytes() {
+      java.lang.Object ref = email_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        email_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!getNomBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, nom_);
+      }
+      if (!getDateDeNaissanceBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, dateDeNaissance_);
+      }
+      if (!getEmailBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 3, email_);
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!getNomBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, nom_);
+      }
+      if (!getDateDeNaissanceBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, dateDeNaissance_);
+      }
+      if (!getEmailBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, email_);
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof ma.enset.immatriculationservice.web.grpc.stub.ImmatriculationService.ProprietaireRequest)) {
+        return super.equals(obj);
+      }
+      ma.enset.immatriculationservice.web.grpc.stub.ImmatriculationService.ProprietaireRequest other = (ma.enset.immatriculationservice.web.grpc.stub.ImmatriculationService.ProprietaireRequest) obj;
+
+      if (!getNom()
+          .equals(other.getNom())) return false;
+      if (!getDateDeNaissance()
+          .equals(other.getDateDeNaissance())) return false;
+      if (!getEmail()
+          .equals(other.getEmail())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + NOM_FIELD_NUMBER;
+      hash = (53 * hash) + getNom().hashCode();
+      hash = (37 * hash) + DATEDENAISSANCE_FIELD_NUMBER;
+      hash = (53 * hash) + getDateDeNaissance().hashCode();
+      hash = (37 * hash) + EMAIL_FIELD_NUMBER;
+      hash = (53 * hash) + getEmail().hashCode();
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static ma.enset.immatriculationservice.web.grpc.stub.ImmatriculationService.ProprietaireRequest parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static ma.enset.immatriculationservice.web.grpc.stub.ImmatriculationService.ProprietaireRequest parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static ma.enset.immatriculationservice.web.grpc.stub.ImmatriculationService.ProprietaireRequest parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static ma.enset.immatriculationservice.web.grpc.stub.ImmatriculationService.ProprietaireRequest parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static ma.enset.immatriculationservice.web.grpc.stub.ImmatriculationService.ProprietaireRequest parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static ma.enset.immatriculationservice.web.grpc.stub.ImmatriculationService.ProprietaireRequest parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static ma.enset.immatriculationservice.web.grpc.stub.ImmatriculationService.ProprietaireRequest parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static ma.enset.immatriculationservice.web.grpc.stub.ImmatriculationService.ProprietaireRequest parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static ma.enset.immatriculationservice.web.grpc.stub.ImmatriculationService.ProprietaireRequest parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static ma.enset.immatriculationservice.web.grpc.stub.ImmatriculationService.ProprietaireRequest parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static ma.enset.immatriculationservice.web.grpc.stub.ImmatriculationService.ProprietaireRequest parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static ma.enset.immatriculationservice.web.grpc.stub.ImmatriculationService.ProprietaireRequest parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(ma.enset.immatriculationservice.web.grpc.stub.ImmatriculationService.ProprietaireRequest prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code ProprietaireRequest}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:ProprietaireRequest)
+        ma.enset.immatriculationservice.web.grpc.stub.ImmatriculationService.ProprietaireRequestOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return ma.enset.immatriculationservice.web.grpc.stub.ImmatriculationService.internal_static_ProprietaireRequest_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return ma.enset.immatriculationservice.web.grpc.stub.ImmatriculationService.internal_static_ProprietaireRequest_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                ma.enset.immatriculationservice.web.grpc.stub.ImmatriculationService.ProprietaireRequest.class, ma.enset.immatriculationservice.web.grpc.stub.ImmatriculationService.ProprietaireRequest.Builder.class);
+      }
+
+      // Construct using ma.enset.immatriculationservice.web.grpc.stub.ImmatriculationService.ProprietaireRequest.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        nom_ = "";
+
+        dateDeNaissance_ = "";
+
+        email_ = "";
+
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return ma.enset.immatriculationservice.web.grpc.stub.ImmatriculationService.internal_static_ProprietaireRequest_descriptor;
+      }
+
+      @java.lang.Override
+      public ma.enset.immatriculationservice.web.grpc.stub.ImmatriculationService.ProprietaireRequest getDefaultInstanceForType() {
+        return ma.enset.immatriculationservice.web.grpc.stub.ImmatriculationService.ProprietaireRequest.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public ma.enset.immatriculationservice.web.grpc.stub.ImmatriculationService.ProprietaireRequest build() {
+        ma.enset.immatriculationservice.web.grpc.stub.ImmatriculationService.ProprietaireRequest result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public ma.enset.immatriculationservice.web.grpc.stub.ImmatriculationService.ProprietaireRequest buildPartial() {
+        ma.enset.immatriculationservice.web.grpc.stub.ImmatriculationService.ProprietaireRequest result = new ma.enset.immatriculationservice.web.grpc.stub.ImmatriculationService.ProprietaireRequest(this);
+        result.nom_ = nom_;
+        result.dateDeNaissance_ = dateDeNaissance_;
+        result.email_ = email_;
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof ma.enset.immatriculationservice.web.grpc.stub.ImmatriculationService.ProprietaireRequest) {
+          return mergeFrom((ma.enset.immatriculationservice.web.grpc.stub.ImmatriculationService.ProprietaireRequest)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(ma.enset.immatriculationservice.web.grpc.stub.ImmatriculationService.ProprietaireRequest other) {
+        if (other == ma.enset.immatriculationservice.web.grpc.stub.ImmatriculationService.ProprietaireRequest.getDefaultInstance()) return this;
+        if (!other.getNom().isEmpty()) {
+          nom_ = other.nom_;
+          onChanged();
+        }
+        if (!other.getDateDeNaissance().isEmpty()) {
+          dateDeNaissance_ = other.dateDeNaissance_;
+          onChanged();
+        }
+        if (!other.getEmail().isEmpty()) {
+          email_ = other.email_;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        ma.enset.immatriculationservice.web.grpc.stub.ImmatriculationService.ProprietaireRequest parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (ma.enset.immatriculationservice.web.grpc.stub.ImmatriculationService.ProprietaireRequest) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+
+      private java.lang.Object nom_ = "";
+      /**
+       * <code>string nom = 1;</code>
+       * @return The nom.
+       */
+      public java.lang.String getNom() {
+        java.lang.Object ref = nom_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          nom_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string nom = 1;</code>
+       * @return The bytes for nom.
+       */
+      public com.google.protobuf.ByteString
+          getNomBytes() {
+        java.lang.Object ref = nom_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          nom_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string nom = 1;</code>
+       * @param value The nom to set.
+       * @return This builder for chaining.
+       */
+      public Builder setNom(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        nom_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string nom = 1;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearNom() {
+        
+        nom_ = getDefaultInstance().getNom();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string nom = 1;</code>
+       * @param value The bytes for nom to set.
+       * @return This builder for chaining.
+       */
+      public Builder setNomBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        nom_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object dateDeNaissance_ = "";
+      /**
+       * <code>string dateDeNaissance = 2;</code>
+       * @return The dateDeNaissance.
+       */
+      public java.lang.String getDateDeNaissance() {
+        java.lang.Object ref = dateDeNaissance_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          dateDeNaissance_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string dateDeNaissance = 2;</code>
+       * @return The bytes for dateDeNaissance.
+       */
+      public com.google.protobuf.ByteString
+          getDateDeNaissanceBytes() {
+        java.lang.Object ref = dateDeNaissance_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          dateDeNaissance_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string dateDeNaissance = 2;</code>
+       * @param value The dateDeNaissance to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDateDeNaissance(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        dateDeNaissance_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string dateDeNaissance = 2;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearDateDeNaissance() {
+        
+        dateDeNaissance_ = getDefaultInstance().getDateDeNaissance();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string dateDeNaissance = 2;</code>
+       * @param value The bytes for dateDeNaissance to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDateDeNaissanceBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        dateDeNaissance_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object email_ = "";
+      /**
+       * <code>string email = 3;</code>
+       * @return The email.
+       */
+      public java.lang.String getEmail() {
+        java.lang.Object ref = email_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          email_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string email = 3;</code>
+       * @return The bytes for email.
+       */
+      public com.google.protobuf.ByteString
+          getEmailBytes() {
+        java.lang.Object ref = email_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          email_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string email = 3;</code>
+       * @param value The email to set.
+       * @return This builder for chaining.
+       */
+      public Builder setEmail(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        email_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string email = 3;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearEmail() {
+        
+        email_ = getDefaultInstance().getEmail();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string email = 3;</code>
+       * @param value The bytes for email to set.
+       * @return This builder for chaining.
+       */
+      public Builder setEmailBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        email_ = value;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:ProprietaireRequest)
+    }
+
+    // @@protoc_insertion_point(class_scope:ProprietaireRequest)
+    private static final ma.enset.immatriculationservice.web.grpc.stub.ImmatriculationService.ProprietaireRequest DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new ma.enset.immatriculationservice.web.grpc.stub.ImmatriculationService.ProprietaireRequest();
+    }
+
+    public static ma.enset.immatriculationservice.web.grpc.stub.ImmatriculationService.ProprietaireRequest getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<ProprietaireRequest>
+        PARSER = new com.google.protobuf.AbstractParser<ProprietaireRequest>() {
+      @java.lang.Override
+      public ProprietaireRequest parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new ProprietaireRequest(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<ProprietaireRequest> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<ProprietaireRequest> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public ma.enset.immatriculationservice.web.grpc.stub.ImmatriculationService.ProprietaireRequest getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
 
   }
 
   private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_emptyObject_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_emptyObject_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_ProprietairesList_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_ProprietairesList_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_ProprietaireIdRequest_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_ProprietaireIdRequest_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_VehiculesList_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_VehiculesList_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_VehiculeIdRequest_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_VehiculeIdRequest_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_Matricule_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_Matricule_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_Vehicule_descriptor;
+    internal_static_VehiculeResponse_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_Vehicule_fieldAccessorTable;
+      internal_static_VehiculeResponse_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_Proprietaire_descriptor;
+    internal_static_ProprietaireResponse_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_Proprietaire_fieldAccessorTable;
+      internal_static_ProprietaireResponse_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_VehiculeRequest_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_VehiculeRequest_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_ProprietaireRequest_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_ProprietaireRequest_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -3024,41 +7369,106 @@ public final class ImmatriculationService {
       descriptor;
   static {
     java.lang.String[] descriptorData = {
-      "\n\034ImmatriculationService.proto\"\036\n\tMatric" +
-      "ule\022\021\n\tmatricule\030\001 \001(\t\"\210\001\n\010Vehicule\022\n\n\002i" +
-      "d\030\001 \001(\003\022\021\n\tmatricule\030\002 \001(\t\022\016\n\006marque\030\003 \001" +
-      "(\t\022\030\n\020puissanceFiscale\030\004 \001(\005\022\016\n\006modele\030\005" +
-      " \001(\005\022#\n\014proprietaire\030\006 \001(\0132\r.Proprietair" +
-      "e\"m\n\014Proprietaire\022\n\n\002id\030\001 \001(\003\022\013\n\003nom\030\002 \001" +
-      "(\t\022\027\n\017dateDeNaissance\030\003 \001(\t\022\r\n\005email\030\004 \001" +
-      "(\t\022\034\n\tvehicules\030\005 \003(\0132\t.Vehicule2M\n\032Imma" +
-      "triculationGrpcService\022/\n\026getVehiculeByM" +
-      "atricule\022\n.Matricule\032\t.VehiculeB/\n-ma.en" +
-      "set.immatriculationservice.web.grpc.stub" +
-      "b\006proto3"
+      "\n\034ImmatriculationService.proto\"\r\n\013emptyO" +
+      "bject\"A\n\021ProprietairesList\022,\n\rproprietai" +
+      "res\030\001 \003(\0132\025.ProprietaireResponse\"#\n\025Prop" +
+      "rietaireIdRequest\022\n\n\002id\030\001 \001(\003\"5\n\rVehicul" +
+      "esList\022$\n\tvehicules\030\001 \003(\0132\021.VehiculeResp" +
+      "onse\"\037\n\021VehiculeIdRequest\022\n\n\002id\030\001 \001(\003\"\036\n" +
+      "\tMatricule\022\021\n\tmatricule\030\001 \001(\t\"k\n\020Vehicul" +
+      "eResponse\022\n\n\002id\030\001 \001(\003\022\021\n\tmatricule\030\002 \001(\t" +
+      "\022\016\n\006marque\030\003 \001(\t\022\030\n\020puissanceFiscale\030\004 \001" +
+      "(\005\022\016\n\006modele\030\005 \001(\005\"W\n\024ProprietaireRespon" +
+      "se\022\n\n\002id\030\001 \001(\003\022\013\n\003nom\030\002 \001(\t\022\027\n\017dateDeNai" +
+      "ssance\030\003 \001(\t\022\r\n\005email\030\004 \001(\t\"\213\001\n\017Vehicule" +
+      "Request\022\021\n\tmatricule\030\001 \001(\t\022\016\n\006marque\030\002 \001" +
+      "(\t\022\030\n\020puissanceFiscale\030\003 \001(\005\022\016\n\006modele\030\004" +
+      " \001(\005\022+\n\014proprietaire\030\005 \001(\0132\025.Proprietair" +
+      "eResponse\"J\n\023ProprietaireRequest\022\013\n\003nom\030" +
+      "\001 \001(\t\022\027\n\017dateDeNaissance\030\002 \001(\t\022\r\n\005email\030" +
+      "\003 \001(\t2\351\004\n\032ImmatriculationGrpcService\022.\n\016" +
+      "getAllVehicule\022\014.emptyObject\032\016.Vehicules" +
+      "List\0228\n\017getVehiculeById\022\022.VehiculeIdRequ" +
+      "est\032\021.VehiculeResponse\0223\n\014saveVehicule\022\020" +
+      ".VehiculeRequest\032\021.VehiculeResponse\0221\n\rd" +
+      "eletVehicule\022\022.VehiculeIdRequest\032\014.empty" +
+      "Object\0227\n\026getVehiculeByMatricule\022\n.Matri" +
+      "cule\032\021.VehiculeResponse\022F\n\031getProprietai" +
+      "reOfVehicule\022\022.VehiculeIdRequest\032\025.Propr" +
+      "ietaireResponse\0226\n\022getAllProprietaire\022\014." +
+      "emptyObject\032\022.ProprietairesList\022D\n\023getPr" +
+      "oprietaireById\022\026.ProprietaireIdRequest\032\025" +
+      ".ProprietaireResponse\022?\n\020saveProprietair" +
+      "e\022\024.ProprietaireRequest\032\025.ProprietaireRe" +
+      "sponse\0229\n\021deletProprietaire\022\026.Proprietai" +
+      "reIdRequest\032\014.emptyObjectB/\n-ma.enset.im" +
+      "matriculationservice.web.grpc.stubb\006prot" +
+      "o3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
         });
-    internal_static_Matricule_descriptor =
+    internal_static_emptyObject_descriptor =
       getDescriptor().getMessageTypes().get(0);
+    internal_static_emptyObject_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_emptyObject_descriptor,
+        new java.lang.String[] { });
+    internal_static_ProprietairesList_descriptor =
+      getDescriptor().getMessageTypes().get(1);
+    internal_static_ProprietairesList_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_ProprietairesList_descriptor,
+        new java.lang.String[] { "Proprietaires", });
+    internal_static_ProprietaireIdRequest_descriptor =
+      getDescriptor().getMessageTypes().get(2);
+    internal_static_ProprietaireIdRequest_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_ProprietaireIdRequest_descriptor,
+        new java.lang.String[] { "Id", });
+    internal_static_VehiculesList_descriptor =
+      getDescriptor().getMessageTypes().get(3);
+    internal_static_VehiculesList_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_VehiculesList_descriptor,
+        new java.lang.String[] { "Vehicules", });
+    internal_static_VehiculeIdRequest_descriptor =
+      getDescriptor().getMessageTypes().get(4);
+    internal_static_VehiculeIdRequest_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_VehiculeIdRequest_descriptor,
+        new java.lang.String[] { "Id", });
+    internal_static_Matricule_descriptor =
+      getDescriptor().getMessageTypes().get(5);
     internal_static_Matricule_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_Matricule_descriptor,
         new java.lang.String[] { "Matricule", });
-    internal_static_Vehicule_descriptor =
-      getDescriptor().getMessageTypes().get(1);
-    internal_static_Vehicule_fieldAccessorTable = new
+    internal_static_VehiculeResponse_descriptor =
+      getDescriptor().getMessageTypes().get(6);
+    internal_static_VehiculeResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_Vehicule_descriptor,
-        new java.lang.String[] { "Id", "Matricule", "Marque", "PuissanceFiscale", "Modele", "Proprietaire", });
-    internal_static_Proprietaire_descriptor =
-      getDescriptor().getMessageTypes().get(2);
-    internal_static_Proprietaire_fieldAccessorTable = new
+        internal_static_VehiculeResponse_descriptor,
+        new java.lang.String[] { "Id", "Matricule", "Marque", "PuissanceFiscale", "Modele", });
+    internal_static_ProprietaireResponse_descriptor =
+      getDescriptor().getMessageTypes().get(7);
+    internal_static_ProprietaireResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_Proprietaire_descriptor,
-        new java.lang.String[] { "Id", "Nom", "DateDeNaissance", "Email", "Vehicules", });
+        internal_static_ProprietaireResponse_descriptor,
+        new java.lang.String[] { "Id", "Nom", "DateDeNaissance", "Email", });
+    internal_static_VehiculeRequest_descriptor =
+      getDescriptor().getMessageTypes().get(8);
+    internal_static_VehiculeRequest_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_VehiculeRequest_descriptor,
+        new java.lang.String[] { "Matricule", "Marque", "PuissanceFiscale", "Modele", "Proprietaire", });
+    internal_static_ProprietaireRequest_descriptor =
+      getDescriptor().getMessageTypes().get(9);
+    internal_static_ProprietaireRequest_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_ProprietaireRequest_descriptor,
+        new java.lang.String[] { "Nom", "DateDeNaissance", "Email", });
   }
 
   // @@protoc_insertion_point(outer_class_scope)

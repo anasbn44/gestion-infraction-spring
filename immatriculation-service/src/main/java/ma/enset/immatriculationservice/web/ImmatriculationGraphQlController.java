@@ -2,6 +2,7 @@ package ma.enset.immatriculationservice.web;
 
 import lombok.AllArgsConstructor;
 import ma.enset.immatriculationservice.dto.ProprietaireRequestDto;
+import ma.enset.immatriculationservice.dto.ProprietaireResponseDto;
 import ma.enset.immatriculationservice.dto.VehiculeRequestDto;
 import ma.enset.immatriculationservice.dto.VehiculeResponseDto;
 import ma.enset.immatriculationservice.entities.Proprietaire;
@@ -25,22 +26,22 @@ public class ImmatriculationGraphQlController {
     private VehiculeService vehiculeService;
 
     @QueryMapping
-    public List<Proprietaire> prorietaires(){
+    public List<ProprietaireResponseDto> prorietaires(){
         return proprietaireService.getAllProprietaires();
     }
 
     @QueryMapping
-    public Proprietaire proprietaireById(@Argument Long id){
+    public ProprietaireResponseDto proprietaireById(@Argument Long id){
         return proprietaireService.getProprietaireById(id);
     }
 
     @MutationMapping
-    public Proprietaire saveProprietaire(@Argument ProprietaireRequestDto proprietaire){
+    public ProprietaireResponseDto saveProprietaire(@Argument ProprietaireRequestDto proprietaire){
         return proprietaireService.saveProprietaire(proprietaire);
     }
 
     @MutationMapping
-    public Proprietaire updateProprietaire(@Argument Long id,@Argument ProprietaireRequestDto proprietaire){
+    public ProprietaireResponseDto updateProprietaire(@Argument Long id,@Argument ProprietaireRequestDto proprietaire){
         return proprietaireService.updateProprietaire(id, proprietaire);
     }
 
@@ -50,22 +51,22 @@ public class ImmatriculationGraphQlController {
     }
 
     @QueryMapping
-    public List<Vehicule> vehicules(){
+    public List<VehiculeResponseDto> vehicules(){
         return vehiculeService.getAllVehicules();
     }
 
     @QueryMapping
-    public Vehicule vehiculesById(@Argument Long id){
+    public VehiculeResponseDto vehiculesById(@Argument Long id){
         return vehiculeService.getVehiculeById(id);
     }
 
     @MutationMapping
-    public Vehicule saveVehicule(@Argument VehiculeRequestDto vehicule){
+    public VehiculeResponseDto saveVehicule(@Argument VehiculeRequestDto vehicule){
         return vehiculeService.saveVehicule(vehicule);
     }
 
     @MutationMapping
-    public Vehicule updateVehicule(@Argument Long id, @Argument VehiculeRequestDto vehicule){
+    public VehiculeResponseDto updateVehicule(@Argument Long id, @Argument VehiculeRequestDto vehicule){
         return vehiculeService.updateVehicule(id, vehicule);
     }
 
@@ -77,4 +78,10 @@ public class ImmatriculationGraphQlController {
     public VehiculeResponseDto getVehiculeByMatricule(@Argument String matricule){
         return vehiculeService.getVehiculeByMatricule(matricule);
     }
+
+    @QueryMapping
+    public ProprietaireResponseDto getProprietaireOfVehicule(@Argument Long id){
+        return vehiculeService.getProprietaireOfVehicule(id);
+    }
+
 }
