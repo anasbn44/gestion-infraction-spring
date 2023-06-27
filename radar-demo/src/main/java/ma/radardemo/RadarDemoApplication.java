@@ -4,18 +4,22 @@ import lombok.AllArgsConstructor;
 import ma.radardemo.entities.Infraction;
 import ma.radardemo.entities.Radar;
 import ma.radardemo.entities.Vehicule;
+import ma.radardemo.services.RadarGrpcService;
 import ma.radardemo.services.RestTempServices;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
+import java.util.List;
 import java.util.Random;
 import java.util.Timer;
 import java.util.TimerTask;
+import java.util.stream.Collectors;
 
 @SpringBootApplication @AllArgsConstructor
 public class RadarDemoApplication implements CommandLineRunner {
     private RestTempServices restTempServices;
+    private RadarGrpcService radarGrpcService;
     public static void main(String[] args) {
         SpringApplication.run(RadarDemoApplication.class, args);
     }
@@ -23,46 +27,50 @@ public class RadarDemoApplication implements CommandLineRunner {
 
     @Override
     public void run(String... args) throws Exception {
-        //getAllRadars
-        Radar[] allRadars = restTempServices.getAllRadars();
-        //getAllVehicles
-        Vehicule[] allVehicles = restTempServices.getAllVehicles();
-        //createRandomIndex
+        //get all radars
+        List<Radar> radars = radarGrpcService.getAllRadars();
+        //get matricules of vehicules
+        List<String> matricules =
+                radarGrpcService.getAllVehicules().stream().map(vehicule -> vehicule.getMatricule()).collect(Collectors.toList());
+
+        //creating random indexes
         Random random=new Random();
-        //randomIndexes
-        int indxRadar = random.nextInt(allRadars.length);
-        int indxVehicle = random.nextInt(allVehicles.length);
-        //SelecteIndexesVariable
-        Radar selectedRadar=allRadars[indxRadar];
-        Vehicule selectedVehicle=allVehicles[indxVehicle];
-        //RandomSpeeedOfVehicle
-        double vehicleSpeed=random.nextDouble(selectedRadar.getVitesseMax(),selectedRadar.getVitesseMax()+random.nextInt(1,100));
-        //sendNewInfraction
-        Infraction newInfracInfo = Infraction.builder().numeroRadar(selectedRadar.getId()).matriculeVehicule(selectedVehicle.getMatricule()).vitesseVehicule(vehicleSpeed).build();
-        boolean results = restTempServices.senInfraction(newInfracInfo);
-        System.out.println(results);
+        int indexRadar = random.nextInt(radars.size());
+        int indexMatricules = random.nextInt(matricules.size());
+        //getting random radar and matricule
+        Radar randomRadar = radars.get(indexRadar);
+        String randomMatricule = matricules.get(indexMatricules);
+        //getting radom vehicule speed
+        double vitesseVehicle =
+                random.nextDouble(randomRadar.getVitesseMax(),randomRadar.getVitesseMax() + random.nextInt(1,100));
+        //generating new infraction
+        Infraction infraction = radarGrpcService.generateInfraction(randomMatricule, vitesseVehicle, randomRadar);
+
+        System.out.println(infraction);
 
         TimerTask task=new TimerTask() {
             @Override
             public void run() {
-                //getAllRadars
-                Radar[] allRadars = restTempServices.getAllRadars();
-                //getAllVehicles
-                Vehicule[] allVehicles = restTempServices.getAllVehicles();
-                //createRandomIndex
+                //get all radars
+                List<Radar> radars = radarGrpcService.getAllRadars();
+                //get matricules of vehicules
+                List<String> matricules =
+                        radarGrpcService.getAllVehicules().stream().map(vehicule -> vehicule.getMatricule()).collect(Collectors.toList());
+
+                //creating random indexes
                 Random random=new Random();
-                //randomIndexes
-                int indxRadar = random.nextInt(allRadars.length);
-                int indxVehicle = random.nextInt(allVehicles.length);
-                //SelecteIndexesVariable
-                Radar selectedRadar=allRadars[indxRadar];
-                Vehicule selectedVehicle=allVehicles[indxVehicle];
-                //RandomSpeeedOfVehicle
-                double vehicleSpeed=random.nextDouble(selectedRadar.getVitesseMax(),selectedRadar.getVitesseMax()+random.nextInt(1,100));
-                //sendNewInfraction
-                Infraction newInfracInfo = Infraction.builder().numeroRadar(selectedRadar.getId()).matriculeVehicule(selectedVehicle.getMatricule()).vitesseVehicule(vehicleSpeed).build();
-                boolean results = restTempServices.senInfraction(newInfracInfo);
-                System.out.println(results);
+                int indexRadar = random.nextInt(radars.size());
+                int indexMatricules = random.nextInt(matricules.size());
+                //getting random radar and matricule
+                Radar randomRadar = radars.get(indexRadar);
+                String randomMatricule = matricules.get(indexMatricules);
+                //getting radom vehicule speed
+                double vitesseVehicle =
+                        random.nextDouble(randomRadar.getVitesseMax(),randomRadar.getVitesseMax() + random.nextInt(1,100));
+                //generating new infraction
+                Infraction infraction = radarGrpcService.generateInfraction(randomMatricule, vitesseVehicle, randomRadar);
+
+                System.out.println(infraction);
 
             }
         };

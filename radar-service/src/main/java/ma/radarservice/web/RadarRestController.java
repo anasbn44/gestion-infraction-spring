@@ -43,7 +43,7 @@ public class RadarRestController {
     }
 
     @PostMapping("/radars/infraction/{matricule}")
-    public Infraction generateInfraction(@PathVariable(name = "matricule") String matricule, @RequestBody Radar radar){
-        return radarService.generateInfraction(matricule, radar);
+    public Infraction generateInfraction(@PathVariable(name = "matricule") String matricule, @RequestBody Radar radar, @RequestBody double vitesseVehicule){
+        return radarService.generateInfraction(matricule, radar, vitesseVehicule);
     }
 }

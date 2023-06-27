@@ -11,6 +11,7 @@ public class Infraction {
     private Date date;
     private Long numeroRadar;
     private String matriculeVehicule;
+    private String nomPropietaire;
     private double vitesseMax;
     private double vitesseVehicule;
     private double montant;

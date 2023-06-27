@@ -27,28 +27,28 @@ public final class ImmatriculationGrpcServiceGrpc {
   public static final String SERVICE_NAME = "ImmatriculationGrpcService";
 
   // Static method descriptors that strictly reflect the proto.
-  private static volatile io.grpc.MethodDescriptor<ma.enset.immatriculationservice.web.grpc.stub.ImmatriculationService.emptyObject,
+  private static volatile io.grpc.MethodDescriptor<ma.enset.immatriculationservice.web.grpc.stub.ImmatriculationService.EmptyObject,
       ma.enset.immatriculationservice.web.grpc.stub.ImmatriculationService.VehiculesList> getGetAllVehiculeMethod;
 
   @io.grpc.stub.annotations.RpcMethod(
       fullMethodName = SERVICE_NAME + '/' + "getAllVehicule",
-      requestType = ma.enset.immatriculationservice.web.grpc.stub.ImmatriculationService.emptyObject.class,
+      requestType = ma.enset.immatriculationservice.web.grpc.stub.ImmatriculationService.EmptyObject.class,
       responseType = ma.enset.immatriculationservice.web.grpc.stub.ImmatriculationService.VehiculesList.class,
       methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
-  public static io.grpc.MethodDescriptor<ma.enset.immatriculationservice.web.grpc.stub.ImmatriculationService.emptyObject,
+  public static io.grpc.MethodDescriptor<ma.enset.immatriculationservice.web.grpc.stub.ImmatriculationService.EmptyObject,
       ma.enset.immatriculationservice.web.grpc.stub.ImmatriculationService.VehiculesList> getGetAllVehiculeMethod() {
-    io.grpc.MethodDescriptor<ma.enset.immatriculationservice.web.grpc.stub.ImmatriculationService.emptyObject, ma.enset.immatriculationservice.web.grpc.stub.ImmatriculationService.VehiculesList> getGetAllVehiculeMethod;
+    io.grpc.MethodDescriptor<ma.enset.immatriculationservice.web.grpc.stub.ImmatriculationService.EmptyObject, ma.enset.immatriculationservice.web.grpc.stub.ImmatriculationService.VehiculesList> getGetAllVehiculeMethod;
     if ((getGetAllVehiculeMethod = ImmatriculationGrpcServiceGrpc.getGetAllVehiculeMethod) == null) {
       synchronized (ImmatriculationGrpcServiceGrpc.class) {
         if ((getGetAllVehiculeMethod = ImmatriculationGrpcServiceGrpc.getGetAllVehiculeMethod) == null) {
           ImmatriculationGrpcServiceGrpc.getGetAllVehiculeMethod = getGetAllVehiculeMethod = 
-              io.grpc.MethodDescriptor.<ma.enset.immatriculationservice.web.grpc.stub.ImmatriculationService.emptyObject, ma.enset.immatriculationservice.web.grpc.stub.ImmatriculationService.VehiculesList>newBuilder()
+              io.grpc.MethodDescriptor.<ma.enset.immatriculationservice.web.grpc.stub.ImmatriculationService.EmptyObject, ma.enset.immatriculationservice.web.grpc.stub.ImmatriculationService.VehiculesList>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
               .setFullMethodName(generateFullMethodName(
                   "ImmatriculationGrpcService", "getAllVehicule"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  ma.enset.immatriculationservice.web.grpc.stub.ImmatriculationService.emptyObject.getDefaultInstance()))
+                  ma.enset.immatriculationservice.web.grpc.stub.ImmatriculationService.EmptyObject.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   ma.enset.immatriculationservice.web.grpc.stub.ImmatriculationService.VehiculesList.getDefaultInstance()))
                   .setSchemaDescriptor(new ImmatriculationGrpcServiceMethodDescriptorSupplier("getAllVehicule"))
@@ -124,21 +124,21 @@ public final class ImmatriculationGrpcServiceGrpc {
   }
 
   private static volatile io.grpc.MethodDescriptor<ma.enset.immatriculationservice.web.grpc.stub.ImmatriculationService.VehiculeIdRequest,
-      ma.enset.immatriculationservice.web.grpc.stub.ImmatriculationService.emptyObject> getDeletVehiculeMethod;
+      ma.enset.immatriculationservice.web.grpc.stub.ImmatriculationService.EmptyObject> getDeletVehiculeMethod;
 
   @io.grpc.stub.annotations.RpcMethod(
       fullMethodName = SERVICE_NAME + '/' + "deletVehicule",
       requestType = ma.enset.immatriculationservice.web.grpc.stub.ImmatriculationService.VehiculeIdRequest.class,
-      responseType = ma.enset.immatriculationservice.web.grpc.stub.ImmatriculationService.emptyObject.class,
+      responseType = ma.enset.immatriculationservice.web.grpc.stub.ImmatriculationService.EmptyObject.class,
       methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
   public static io.grpc.MethodDescriptor<ma.enset.immatriculationservice.web.grpc.stub.ImmatriculationService.VehiculeIdRequest,
-      ma.enset.immatriculationservice.web.grpc.stub.ImmatriculationService.emptyObject> getDeletVehiculeMethod() {
-    io.grpc.MethodDescriptor<ma.enset.immatriculationservice.web.grpc.stub.ImmatriculationService.VehiculeIdRequest, ma.enset.immatriculationservice.web.grpc.stub.ImmatriculationService.emptyObject> getDeletVehiculeMethod;
+      ma.enset.immatriculationservice.web.grpc.stub.ImmatriculationService.EmptyObject> getDeletVehiculeMethod() {
+    io.grpc.MethodDescriptor<ma.enset.immatriculationservice.web.grpc.stub.ImmatriculationService.VehiculeIdRequest, ma.enset.immatriculationservice.web.grpc.stub.ImmatriculationService.EmptyObject> getDeletVehiculeMethod;
     if ((getDeletVehiculeMethod = ImmatriculationGrpcServiceGrpc.getDeletVehiculeMethod) == null) {
       synchronized (ImmatriculationGrpcServiceGrpc.class) {
         if ((getDeletVehiculeMethod = ImmatriculationGrpcServiceGrpc.getDeletVehiculeMethod) == null) {
           ImmatriculationGrpcServiceGrpc.getDeletVehiculeMethod = getDeletVehiculeMethod = 
-              io.grpc.MethodDescriptor.<ma.enset.immatriculationservice.web.grpc.stub.ImmatriculationService.VehiculeIdRequest, ma.enset.immatriculationservice.web.grpc.stub.ImmatriculationService.emptyObject>newBuilder()
+              io.grpc.MethodDescriptor.<ma.enset.immatriculationservice.web.grpc.stub.ImmatriculationService.VehiculeIdRequest, ma.enset.immatriculationservice.web.grpc.stub.ImmatriculationService.EmptyObject>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
               .setFullMethodName(generateFullMethodName(
                   "ImmatriculationGrpcService", "deletVehicule"))
@@ -146,7 +146,7 @@ public final class ImmatriculationGrpcServiceGrpc {
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   ma.enset.immatriculationservice.web.grpc.stub.ImmatriculationService.VehiculeIdRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  ma.enset.immatriculationservice.web.grpc.stub.ImmatriculationService.emptyObject.getDefaultInstance()))
+                  ma.enset.immatriculationservice.web.grpc.stub.ImmatriculationService.EmptyObject.getDefaultInstance()))
                   .setSchemaDescriptor(new ImmatriculationGrpcServiceMethodDescriptorSupplier("deletVehicule"))
                   .build();
           }
@@ -219,28 +219,28 @@ public final class ImmatriculationGrpcServiceGrpc {
      return getGetProprietaireOfVehiculeMethod;
   }
 
-  private static volatile io.grpc.MethodDescriptor<ma.enset.immatriculationservice.web.grpc.stub.ImmatriculationService.emptyObject,
+  private static volatile io.grpc.MethodDescriptor<ma.enset.immatriculationservice.web.grpc.stub.ImmatriculationService.EmptyObject,
       ma.enset.immatriculationservice.web.grpc.stub.ImmatriculationService.ProprietairesList> getGetAllProprietaireMethod;
 
   @io.grpc.stub.annotations.RpcMethod(
       fullMethodName = SERVICE_NAME + '/' + "getAllProprietaire",
-      requestType = ma.enset.immatriculationservice.web.grpc.stub.ImmatriculationService.emptyObject.class,
+      requestType = ma.enset.immatriculationservice.web.grpc.stub.ImmatriculationService.EmptyObject.class,
       responseType = ma.enset.immatriculationservice.web.grpc.stub.ImmatriculationService.ProprietairesList.class,
       methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
-  public static io.grpc.MethodDescriptor<ma.enset.immatriculationservice.web.grpc.stub.ImmatriculationService.emptyObject,
+  public static io.grpc.MethodDescriptor<ma.enset.immatriculationservice.web.grpc.stub.ImmatriculationService.EmptyObject,
       ma.enset.immatriculationservice.web.grpc.stub.ImmatriculationService.ProprietairesList> getGetAllProprietaireMethod() {
-    io.grpc.MethodDescriptor<ma.enset.immatriculationservice.web.grpc.stub.ImmatriculationService.emptyObject, ma.enset.immatriculationservice.web.grpc.stub.ImmatriculationService.ProprietairesList> getGetAllProprietaireMethod;
+    io.grpc.MethodDescriptor<ma.enset.immatriculationservice.web.grpc.stub.ImmatriculationService.EmptyObject, ma.enset.immatriculationservice.web.grpc.stub.ImmatriculationService.ProprietairesList> getGetAllProprietaireMethod;
     if ((getGetAllProprietaireMethod = ImmatriculationGrpcServiceGrpc.getGetAllProprietaireMethod) == null) {
       synchronized (ImmatriculationGrpcServiceGrpc.class) {
         if ((getGetAllProprietaireMethod = ImmatriculationGrpcServiceGrpc.getGetAllProprietaireMethod) == null) {
           ImmatriculationGrpcServiceGrpc.getGetAllProprietaireMethod = getGetAllProprietaireMethod = 
-              io.grpc.MethodDescriptor.<ma.enset.immatriculationservice.web.grpc.stub.ImmatriculationService.emptyObject, ma.enset.immatriculationservice.web.grpc.stub.ImmatriculationService.ProprietairesList>newBuilder()
+              io.grpc.MethodDescriptor.<ma.enset.immatriculationservice.web.grpc.stub.ImmatriculationService.EmptyObject, ma.enset.immatriculationservice.web.grpc.stub.ImmatriculationService.ProprietairesList>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
               .setFullMethodName(generateFullMethodName(
                   "ImmatriculationGrpcService", "getAllProprietaire"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  ma.enset.immatriculationservice.web.grpc.stub.ImmatriculationService.emptyObject.getDefaultInstance()))
+                  ma.enset.immatriculationservice.web.grpc.stub.ImmatriculationService.EmptyObject.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   ma.enset.immatriculationservice.web.grpc.stub.ImmatriculationService.ProprietairesList.getDefaultInstance()))
                   .setSchemaDescriptor(new ImmatriculationGrpcServiceMethodDescriptorSupplier("getAllProprietaire"))
@@ -316,21 +316,21 @@ public final class ImmatriculationGrpcServiceGrpc {
   }
 
   private static volatile io.grpc.MethodDescriptor<ma.enset.immatriculationservice.web.grpc.stub.ImmatriculationService.ProprietaireIdRequest,
-      ma.enset.immatriculationservice.web.grpc.stub.ImmatriculationService.emptyObject> getDeletProprietaireMethod;
+      ma.enset.immatriculationservice.web.grpc.stub.ImmatriculationService.EmptyObject> getDeletProprietaireMethod;
 
   @io.grpc.stub.annotations.RpcMethod(
       fullMethodName = SERVICE_NAME + '/' + "deletProprietaire",
       requestType = ma.enset.immatriculationservice.web.grpc.stub.ImmatriculationService.ProprietaireIdRequest.class,
-      responseType = ma.enset.immatriculationservice.web.grpc.stub.ImmatriculationService.emptyObject.class,
+      responseType = ma.enset.immatriculationservice.web.grpc.stub.ImmatriculationService.EmptyObject.class,
       methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
   public static io.grpc.MethodDescriptor<ma.enset.immatriculationservice.web.grpc.stub.ImmatriculationService.ProprietaireIdRequest,
-      ma.enset.immatriculationservice.web.grpc.stub.ImmatriculationService.emptyObject> getDeletProprietaireMethod() {
-    io.grpc.MethodDescriptor<ma.enset.immatriculationservice.web.grpc.stub.ImmatriculationService.ProprietaireIdRequest, ma.enset.immatriculationservice.web.grpc.stub.ImmatriculationService.emptyObject> getDeletProprietaireMethod;
+      ma.enset.immatriculationservice.web.grpc.stub.ImmatriculationService.EmptyObject> getDeletProprietaireMethod() {
+    io.grpc.MethodDescriptor<ma.enset.immatriculationservice.web.grpc.stub.ImmatriculationService.ProprietaireIdRequest, ma.enset.immatriculationservice.web.grpc.stub.ImmatriculationService.EmptyObject> getDeletProprietaireMethod;
     if ((getDeletProprietaireMethod = ImmatriculationGrpcServiceGrpc.getDeletProprietaireMethod) == null) {
       synchronized (ImmatriculationGrpcServiceGrpc.class) {
         if ((getDeletProprietaireMethod = ImmatriculationGrpcServiceGrpc.getDeletProprietaireMethod) == null) {
           ImmatriculationGrpcServiceGrpc.getDeletProprietaireMethod = getDeletProprietaireMethod = 
-              io.grpc.MethodDescriptor.<ma.enset.immatriculationservice.web.grpc.stub.ImmatriculationService.ProprietaireIdRequest, ma.enset.immatriculationservice.web.grpc.stub.ImmatriculationService.emptyObject>newBuilder()
+              io.grpc.MethodDescriptor.<ma.enset.immatriculationservice.web.grpc.stub.ImmatriculationService.ProprietaireIdRequest, ma.enset.immatriculationservice.web.grpc.stub.ImmatriculationService.EmptyObject>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
               .setFullMethodName(generateFullMethodName(
                   "ImmatriculationGrpcService", "deletProprietaire"))
@@ -338,7 +338,7 @@ public final class ImmatriculationGrpcServiceGrpc {
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   ma.enset.immatriculationservice.web.grpc.stub.ImmatriculationService.ProprietaireIdRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  ma.enset.immatriculationservice.web.grpc.stub.ImmatriculationService.emptyObject.getDefaultInstance()))
+                  ma.enset.immatriculationservice.web.grpc.stub.ImmatriculationService.EmptyObject.getDefaultInstance()))
                   .setSchemaDescriptor(new ImmatriculationGrpcServiceMethodDescriptorSupplier("deletProprietaire"))
                   .build();
           }
@@ -376,7 +376,7 @@ public final class ImmatriculationGrpcServiceGrpc {
 
     /**
      */
-    public void getAllVehicule(ma.enset.immatriculationservice.web.grpc.stub.ImmatriculationService.emptyObject request,
+    public void getAllVehicule(ma.enset.immatriculationservice.web.grpc.stub.ImmatriculationService.EmptyObject request,
         io.grpc.stub.StreamObserver<ma.enset.immatriculationservice.web.grpc.stub.ImmatriculationService.VehiculesList> responseObserver) {
       asyncUnimplementedUnaryCall(getGetAllVehiculeMethod(), responseObserver);
     }
@@ -398,7 +398,7 @@ public final class ImmatriculationGrpcServiceGrpc {
     /**
      */
     public void deletVehicule(ma.enset.immatriculationservice.web.grpc.stub.ImmatriculationService.VehiculeIdRequest request,
-        io.grpc.stub.StreamObserver<ma.enset.immatriculationservice.web.grpc.stub.ImmatriculationService.emptyObject> responseObserver) {
+        io.grpc.stub.StreamObserver<ma.enset.immatriculationservice.web.grpc.stub.ImmatriculationService.EmptyObject> responseObserver) {
       asyncUnimplementedUnaryCall(getDeletVehiculeMethod(), responseObserver);
     }
 
@@ -418,7 +418,7 @@ public final class ImmatriculationGrpcServiceGrpc {
 
     /**
      */
-    public void getAllProprietaire(ma.enset.immatriculationservice.web.grpc.stub.ImmatriculationService.emptyObject request,
+    public void getAllProprietaire(ma.enset.immatriculationservice.web.grpc.stub.ImmatriculationService.EmptyObject request,
         io.grpc.stub.StreamObserver<ma.enset.immatriculationservice.web.grpc.stub.ImmatriculationService.ProprietairesList> responseObserver) {
       asyncUnimplementedUnaryCall(getGetAllProprietaireMethod(), responseObserver);
     }
@@ -440,7 +440,7 @@ public final class ImmatriculationGrpcServiceGrpc {
     /**
      */
     public void deletProprietaire(ma.enset.immatriculationservice.web.grpc.stub.ImmatriculationService.ProprietaireIdRequest request,
-        io.grpc.stub.StreamObserver<ma.enset.immatriculationservice.web.grpc.stub.ImmatriculationService.emptyObject> responseObserver) {
+        io.grpc.stub.StreamObserver<ma.enset.immatriculationservice.web.grpc.stub.ImmatriculationService.EmptyObject> responseObserver) {
       asyncUnimplementedUnaryCall(getDeletProprietaireMethod(), responseObserver);
     }
 
@@ -450,7 +450,7 @@ public final class ImmatriculationGrpcServiceGrpc {
             getGetAllVehiculeMethod(),
             asyncUnaryCall(
               new MethodHandlers<
-                ma.enset.immatriculationservice.web.grpc.stub.ImmatriculationService.emptyObject,
+                ma.enset.immatriculationservice.web.grpc.stub.ImmatriculationService.EmptyObject,
                 ma.enset.immatriculationservice.web.grpc.stub.ImmatriculationService.VehiculesList>(
                   this, METHODID_GET_ALL_VEHICULE)))
           .addMethod(
@@ -472,7 +472,7 @@ public final class ImmatriculationGrpcServiceGrpc {
             asyncUnaryCall(
               new MethodHandlers<
                 ma.enset.immatriculationservice.web.grpc.stub.ImmatriculationService.VehiculeIdRequest,
-                ma.enset.immatriculationservice.web.grpc.stub.ImmatriculationService.emptyObject>(
+                ma.enset.immatriculationservice.web.grpc.stub.ImmatriculationService.EmptyObject>(
                   this, METHODID_DELET_VEHICULE)))
           .addMethod(
             getGetVehiculeByMatriculeMethod(),
@@ -492,7 +492,7 @@ public final class ImmatriculationGrpcServiceGrpc {
             getGetAllProprietaireMethod(),
             asyncUnaryCall(
               new MethodHandlers<
-                ma.enset.immatriculationservice.web.grpc.stub.ImmatriculationService.emptyObject,
+                ma.enset.immatriculationservice.web.grpc.stub.ImmatriculationService.EmptyObject,
                 ma.enset.immatriculationservice.web.grpc.stub.ImmatriculationService.ProprietairesList>(
                   this, METHODID_GET_ALL_PROPRIETAIRE)))
           .addMethod(
@@ -514,7 +514,7 @@ public final class ImmatriculationGrpcServiceGrpc {
             asyncUnaryCall(
               new MethodHandlers<
                 ma.enset.immatriculationservice.web.grpc.stub.ImmatriculationService.ProprietaireIdRequest,
-                ma.enset.immatriculationservice.web.grpc.stub.ImmatriculationService.emptyObject>(
+                ma.enset.immatriculationservice.web.grpc.stub.ImmatriculationService.EmptyObject>(
                   this, METHODID_DELET_PROPRIETAIRE)))
           .build();
     }
@@ -540,7 +540,7 @@ public final class ImmatriculationGrpcServiceGrpc {
 
     /**
      */
-    public void getAllVehicule(ma.enset.immatriculationservice.web.grpc.stub.ImmatriculationService.emptyObject request,
+    public void getAllVehicule(ma.enset.immatriculationservice.web.grpc.stub.ImmatriculationService.EmptyObject request,
         io.grpc.stub.StreamObserver<ma.enset.immatriculationservice.web.grpc.stub.ImmatriculationService.VehiculesList> responseObserver) {
       asyncUnaryCall(
           getChannel().newCall(getGetAllVehiculeMethod(), getCallOptions()), request, responseObserver);
@@ -565,7 +565,7 @@ public final class ImmatriculationGrpcServiceGrpc {
     /**
      */
     public void deletVehicule(ma.enset.immatriculationservice.web.grpc.stub.ImmatriculationService.VehiculeIdRequest request,
-        io.grpc.stub.StreamObserver<ma.enset.immatriculationservice.web.grpc.stub.ImmatriculationService.emptyObject> responseObserver) {
+        io.grpc.stub.StreamObserver<ma.enset.immatriculationservice.web.grpc.stub.ImmatriculationService.EmptyObject> responseObserver) {
       asyncUnaryCall(
           getChannel().newCall(getDeletVehiculeMethod(), getCallOptions()), request, responseObserver);
     }
@@ -588,7 +588,7 @@ public final class ImmatriculationGrpcServiceGrpc {
 
     /**
      */
-    public void getAllProprietaire(ma.enset.immatriculationservice.web.grpc.stub.ImmatriculationService.emptyObject request,
+    public void getAllProprietaire(ma.enset.immatriculationservice.web.grpc.stub.ImmatriculationService.EmptyObject request,
         io.grpc.stub.StreamObserver<ma.enset.immatriculationservice.web.grpc.stub.ImmatriculationService.ProprietairesList> responseObserver) {
       asyncUnaryCall(
           getChannel().newCall(getGetAllProprietaireMethod(), getCallOptions()), request, responseObserver);
@@ -613,7 +613,7 @@ public final class ImmatriculationGrpcServiceGrpc {
     /**
      */
     public void deletProprietaire(ma.enset.immatriculationservice.web.grpc.stub.ImmatriculationService.ProprietaireIdRequest request,
-        io.grpc.stub.StreamObserver<ma.enset.immatriculationservice.web.grpc.stub.ImmatriculationService.emptyObject> responseObserver) {
+        io.grpc.stub.StreamObserver<ma.enset.immatriculationservice.web.grpc.stub.ImmatriculationService.EmptyObject> responseObserver) {
       asyncUnaryCall(
           getChannel().newCall(getDeletProprietaireMethod(), getCallOptions()), request, responseObserver);
     }
@@ -639,7 +639,7 @@ public final class ImmatriculationGrpcServiceGrpc {
 
     /**
      */
-    public ma.enset.immatriculationservice.web.grpc.stub.ImmatriculationService.VehiculesList getAllVehicule(ma.enset.immatriculationservice.web.grpc.stub.ImmatriculationService.emptyObject request) {
+    public ma.enset.immatriculationservice.web.grpc.stub.ImmatriculationService.VehiculesList getAllVehicule(ma.enset.immatriculationservice.web.grpc.stub.ImmatriculationService.EmptyObject request) {
       return blockingUnaryCall(
           getChannel(), getGetAllVehiculeMethod(), getCallOptions(), request);
     }
@@ -660,7 +660,7 @@ public final class ImmatriculationGrpcServiceGrpc {
 
     /**
      */
-    public ma.enset.immatriculationservice.web.grpc.stub.ImmatriculationService.emptyObject deletVehicule(ma.enset.immatriculationservice.web.grpc.stub.ImmatriculationService.VehiculeIdRequest request) {
+    public ma.enset.immatriculationservice.web.grpc.stub.ImmatriculationService.EmptyObject deletVehicule(ma.enset.immatriculationservice.web.grpc.stub.ImmatriculationService.VehiculeIdRequest request) {
       return blockingUnaryCall(
           getChannel(), getDeletVehiculeMethod(), getCallOptions(), request);
     }
@@ -681,7 +681,7 @@ public final class ImmatriculationGrpcServiceGrpc {
 
     /**
      */
-    public ma.enset.immatriculationservice.web.grpc.stub.ImmatriculationService.ProprietairesList getAllProprietaire(ma.enset.immatriculationservice.web.grpc.stub.ImmatriculationService.emptyObject request) {
+    public ma.enset.immatriculationservice.web.grpc.stub.ImmatriculationService.ProprietairesList getAllProprietaire(ma.enset.immatriculationservice.web.grpc.stub.ImmatriculationService.EmptyObject request) {
       return blockingUnaryCall(
           getChannel(), getGetAllProprietaireMethod(), getCallOptions(), request);
     }
@@ -702,7 +702,7 @@ public final class ImmatriculationGrpcServiceGrpc {
 
     /**
      */
-    public ma.enset.immatriculationservice.web.grpc.stub.ImmatriculationService.emptyObject deletProprietaire(ma.enset.immatriculationservice.web.grpc.stub.ImmatriculationService.ProprietaireIdRequest request) {
+    public ma.enset.immatriculationservice.web.grpc.stub.ImmatriculationService.EmptyObject deletProprietaire(ma.enset.immatriculationservice.web.grpc.stub.ImmatriculationService.ProprietaireIdRequest request) {
       return blockingUnaryCall(
           getChannel(), getDeletProprietaireMethod(), getCallOptions(), request);
     }
@@ -729,7 +729,7 @@ public final class ImmatriculationGrpcServiceGrpc {
     /**
      */
     public com.google.common.util.concurrent.ListenableFuture<ma.enset.immatriculationservice.web.grpc.stub.ImmatriculationService.VehiculesList> getAllVehicule(
-        ma.enset.immatriculationservice.web.grpc.stub.ImmatriculationService.emptyObject request) {
+        ma.enset.immatriculationservice.web.grpc.stub.ImmatriculationService.EmptyObject request) {
       return futureUnaryCall(
           getChannel().newCall(getGetAllVehiculeMethod(), getCallOptions()), request);
     }
@@ -752,7 +752,7 @@ public final class ImmatriculationGrpcServiceGrpc {
 
     /**
      */
-    public com.google.common.util.concurrent.ListenableFuture<ma.enset.immatriculationservice.web.grpc.stub.ImmatriculationService.emptyObject> deletVehicule(
+    public com.google.common.util.concurrent.ListenableFuture<ma.enset.immatriculationservice.web.grpc.stub.ImmatriculationService.EmptyObject> deletVehicule(
         ma.enset.immatriculationservice.web.grpc.stub.ImmatriculationService.VehiculeIdRequest request) {
       return futureUnaryCall(
           getChannel().newCall(getDeletVehiculeMethod(), getCallOptions()), request);
@@ -777,7 +777,7 @@ public final class ImmatriculationGrpcServiceGrpc {
     /**
      */
     public com.google.common.util.concurrent.ListenableFuture<ma.enset.immatriculationservice.web.grpc.stub.ImmatriculationService.ProprietairesList> getAllProprietaire(
-        ma.enset.immatriculationservice.web.grpc.stub.ImmatriculationService.emptyObject request) {
+        ma.enset.immatriculationservice.web.grpc.stub.ImmatriculationService.EmptyObject request) {
       return futureUnaryCall(
           getChannel().newCall(getGetAllProprietaireMethod(), getCallOptions()), request);
     }
@@ -800,7 +800,7 @@ public final class ImmatriculationGrpcServiceGrpc {
 
     /**
      */
-    public com.google.common.util.concurrent.ListenableFuture<ma.enset.immatriculationservice.web.grpc.stub.ImmatriculationService.emptyObject> deletProprietaire(
+    public com.google.common.util.concurrent.ListenableFuture<ma.enset.immatriculationservice.web.grpc.stub.ImmatriculationService.EmptyObject> deletProprietaire(
         ma.enset.immatriculationservice.web.grpc.stub.ImmatriculationService.ProprietaireIdRequest request) {
       return futureUnaryCall(
           getChannel().newCall(getDeletProprietaireMethod(), getCallOptions()), request);
@@ -836,7 +836,7 @@ public final class ImmatriculationGrpcServiceGrpc {
     public void invoke(Req request, io.grpc.stub.StreamObserver<Resp> responseObserver) {
       switch (methodId) {
         case METHODID_GET_ALL_VEHICULE:
-          serviceImpl.getAllVehicule((ma.enset.immatriculationservice.web.grpc.stub.ImmatriculationService.emptyObject) request,
+          serviceImpl.getAllVehicule((ma.enset.immatriculationservice.web.grpc.stub.ImmatriculationService.EmptyObject) request,
               (io.grpc.stub.StreamObserver<ma.enset.immatriculationservice.web.grpc.stub.ImmatriculationService.VehiculesList>) responseObserver);
           break;
         case METHODID_GET_VEHICULE_BY_ID:
@@ -849,7 +849,7 @@ public final class ImmatriculationGrpcServiceGrpc {
           break;
         case METHODID_DELET_VEHICULE:
           serviceImpl.deletVehicule((ma.enset.immatriculationservice.web.grpc.stub.ImmatriculationService.VehiculeIdRequest) request,
-              (io.grpc.stub.StreamObserver<ma.enset.immatriculationservice.web.grpc.stub.ImmatriculationService.emptyObject>) responseObserver);
+              (io.grpc.stub.StreamObserver<ma.enset.immatriculationservice.web.grpc.stub.ImmatriculationService.EmptyObject>) responseObserver);
           break;
         case METHODID_GET_VEHICULE_BY_MATRICULE:
           serviceImpl.getVehiculeByMatricule((ma.enset.immatriculationservice.web.grpc.stub.ImmatriculationService.Matricule) request,
@@ -860,7 +860,7 @@ public final class ImmatriculationGrpcServiceGrpc {
               (io.grpc.stub.StreamObserver<ma.enset.immatriculationservice.web.grpc.stub.ImmatriculationService.ProprietaireResponse>) responseObserver);
           break;
         case METHODID_GET_ALL_PROPRIETAIRE:
-          serviceImpl.getAllProprietaire((ma.enset.immatriculationservice.web.grpc.stub.ImmatriculationService.emptyObject) request,
+          serviceImpl.getAllProprietaire((ma.enset.immatriculationservice.web.grpc.stub.ImmatriculationService.EmptyObject) request,
               (io.grpc.stub.StreamObserver<ma.enset.immatriculationservice.web.grpc.stub.ImmatriculationService.ProprietairesList>) responseObserver);
           break;
         case METHODID_GET_PROPRIETAIRE_BY_ID:
@@ -873,7 +873,7 @@ public final class ImmatriculationGrpcServiceGrpc {
           break;
         case METHODID_DELET_PROPRIETAIRE:
           serviceImpl.deletProprietaire((ma.enset.immatriculationservice.web.grpc.stub.ImmatriculationService.ProprietaireIdRequest) request,
-              (io.grpc.stub.StreamObserver<ma.enset.immatriculationservice.web.grpc.stub.ImmatriculationService.emptyObject>) responseObserver);
+              (io.grpc.stub.StreamObserver<ma.enset.immatriculationservice.web.grpc.stub.ImmatriculationService.EmptyObject>) responseObserver);
           break;
         default:
           throw new AssertionError();

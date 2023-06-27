@@ -1,5 +1,5 @@
 syntax ="proto3";
-option java_package="ma.enset.immatriculationservice.web.grpc.stub";
+option java_package="ma.radardemo.stub";
 
 service ImmatriculationGrpcService{
   rpc getAllVehicule(EmptyObject) returns (VehiculesList);

@@ -1,5 +1,5 @@
 syntax = "proto3";
-option java_package="ma.radarservice.web.grpc.stub";
+option java_package="ma.radardemo.stub";
 
 service RadarGrpcService{
   rpc getAllRadars(EmptyRadar) returns (RadarsList);

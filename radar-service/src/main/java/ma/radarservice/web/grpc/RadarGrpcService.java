@@ -50,7 +50,7 @@ public class RadarGrpcService extends RadarGrpcServiceGrpc.RadarGrpcServiceImplB
 
     @Override
     public void generateInfraction(ma.radarservice.web.grpc.stub.RadarService.GenerateInfractionRequest request, StreamObserver<ma.radarservice.web.grpc.stub.RadarService.InfractionResponse> responseObserver) {
-        Infraction infraction = radarService.generateInfraction(request.getMatricule(), radarMapper.fromGrpcToRadar(request.getRadar()));
+        Infraction infraction = radarService.generateInfraction(request.getMatricule(), radarMapper.fromGrpcToRadar(request.getRadar()), request.getVitesseVehicule());
         responseObserver.onNext(radarMapper.fromInfractionToGrpcResponse(infraction));
         responseObserver.onCompleted();
     }

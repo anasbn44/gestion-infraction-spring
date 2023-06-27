@@ -14,5 +14,5 @@ public interface RadarService {
     Radar saveRadar(RadarRequest radarRequest);
     Radar updateRadar(Long id, RadarRequest radarRequest);
     void deleteRadar(Long id);
-    Infraction generateInfraction(String matricule, Radar radarRequest);
+    Infraction generateInfraction(String matricule, Radar radarRequest, double vitesseVehicule);
 }

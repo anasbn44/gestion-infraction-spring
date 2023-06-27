@@ -8,7 +8,6 @@ import lombok.*;
 @Builder
 public class RadarRequest {
     private double vitesseMax;
-    private double vitesseVehicule;
     private int longitude;
     private int latitude;
 }

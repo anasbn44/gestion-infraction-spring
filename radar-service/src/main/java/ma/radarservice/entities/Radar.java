@@ -12,7 +12,6 @@ public class Radar {
     @Id @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     private double vitesseMax;
-    private double vitesseVehicule;
     private int longitude;
     private int latitude;
 }

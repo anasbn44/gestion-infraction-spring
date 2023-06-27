@@ -12,5 +12,4 @@ public class Proprietaire {
     private String nom;
     private Date dateDeNaissance;
     private String email;
-    private List<Vehicule> vehicules;
 }

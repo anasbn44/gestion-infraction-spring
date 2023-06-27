@@ -21,6 +21,7 @@ import org.springframework.web.bind.annotation.*;
 import reactor.core.publisher.Mono;
 
 import java.util.List;
+import java.util.stream.Collectors;
 
 @RestController
 @RequestMapping("/radar-client")
@@ -90,6 +91,15 @@ public class RadarClients {
         ma.enset.immatriculationservice.web.grpc.stub.ImmatriculationService.ProprietaireResponse response =
                 immatriculationGrpcService.getProprietaireOfVehicule(request);
         return radarMapper.fromGrocToProprietaire(response);
+    }
+
+    @GetMapping("/grpc/vehicule")
+    public List<Vehicule> getAllVehicules(){
+        ma.enset.immatriculationservice.web.grpc.stub.ImmatriculationService.EmptyObject request =
+                ma.enset.immatriculationservice.web.grpc.stub.ImmatriculationService.EmptyObject.newBuilder().build();
+        ma.enset.immatriculationservice.web.grpc.stub.ImmatriculationService.VehiculesList response =
+                immatriculationGrpcService.getAllVehicule(request);
+        return response.getVehiculesList().stream().map(radarMapper::fromGrpcToVehicule).collect(Collectors.toList());
     }
 
     @PostMapping("/infraction")

@@ -46,9 +46,6 @@ public class RadarServiceImpl implements RadarService{
         if(radar.getVitesseMax() != radarRequest.getVitesseMax()){
             radar.setVitesseMax(radarRequest.getVitesseMax());
         }
-        if(radar.getVitesseVehicule() != radarRequest.getVitesseVehicule()){
-            radar.setVitesseVehicule(radarRequest.getVitesseVehicule());
-        }
         if (radar.getLongitude() != radarRequest.getLongitude()){
             radar.setLongitude(radarRequest.getLongitude());
         }
@@ -64,7 +61,7 @@ public class RadarServiceImpl implements RadarService{
     }
 
     @Override
-    public Infraction generateInfraction(String matricule, Radar radarRequest) {
+    public Infraction generateInfraction(String matricule, Radar radarRequest, double vitesseVehicule) {
         Vehicule vehicule = radarClients.getVehiculeByMatriculeGrpc(matricule);
         Proprietaire proprietaireOfVehicule = radarClients.getProprietaireOfVehicule(vehicule.getId());
         InfractionRequest infractionRequest = InfractionRequest.builder()
@@ -72,7 +69,7 @@ public class RadarServiceImpl implements RadarService{
                 .matriculeVehicule(matricule)
                 .nomPropietaire(proprietaireOfVehicule.getNom())
                 .vitesseMax(radarRequest.getVitesseMax())
-                .vitesseVehicule(radarRequest.getVitesseVehicule())
+                .vitesseVehicule(vitesseVehicule)
                 .build();
 
         Infraction infraction = radarClients.saveInfractionGrpc(infractionRequest);

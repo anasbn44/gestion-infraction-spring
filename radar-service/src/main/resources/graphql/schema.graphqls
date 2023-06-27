@@ -12,14 +12,12 @@ type Mutation{
 type Radar{
     id : Int,
     vitesseMax : Float,
-    vitesseVehicule : Float,
     longitude: Int,
     latitude : Int
 }
 
 input RadarRequest{
     vitesseMax : Float,
-    vitesseVehicule : Float,
     longitude: Int,
     latitude : Int
 }
