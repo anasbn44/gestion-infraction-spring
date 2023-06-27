@@ -6,10 +6,7 @@ import jakarta.jws.WebService;
 import lombok.AllArgsConstructor;
 import ma.enset.immatriculationservice.dto.ProprietaireResponseDto;
 import ma.enset.immatriculationservice.dto.VehiculeResponseDto;
-import ma.enset.immatriculationservice.entities.Vehicule;
 import ma.enset.immatriculationservice.services.VehiculeService;
-import org.springframework.graphql.data.method.annotation.Argument;
-import org.springframework.graphql.data.method.annotation.QueryMapping;
 import org.springframework.stereotype.Component;
 
 import java.util.List;

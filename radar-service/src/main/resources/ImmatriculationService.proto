@@ -2,26 +2,66 @@ syntax ="proto3";
 option java_package="ma.enset.immatriculationservice.web.grpc.stub";
 
 service ImmatriculationGrpcService{
-  rpc getVehiculeByMatricule(Matricule) returns (Vehicule);
+  rpc getAllVehicule(emptyObject) returns (VehiculesList);
+  rpc getVehiculeById(VehiculeIdRequest) returns (VehiculeResponse);
+  rpc saveVehicule(VehiculeRequest) returns (VehiculeResponse);
+  rpc deletVehicule (VehiculeIdRequest) returns (emptyObject);
+  rpc getVehiculeByMatricule(Matricule) returns (VehiculeResponse);
+  rpc getProprietaireOfVehicule(VehiculeIdRequest) returns (ProprietaireResponse);
+
+  rpc getAllProprietaire(emptyObject) returns (ProprietairesList);
+  rpc getProprietaireById(ProprietaireIdRequest) returns (ProprietaireResponse);
+  rpc saveProprietaire(ProprietaireRequest) returns (ProprietaireResponse);
+  rpc deletProprietaire (ProprietaireIdRequest) returns (emptyObject);
+}
+
+message emptyObject {}
+
+message ProprietairesList{
+  repeated ProprietaireResponse proprietaires = 1;
+}
+
+message ProprietaireIdRequest {
+  int64 id = 1;
+}
+
+message VehiculesList{
+  repeated VehiculeResponse vehicules = 1;
+}
+
+message VehiculeIdRequest{
+  int64 id = 1;
 }
 
 message Matricule{
   string matricule = 1;
 }
 
-message Vehicule{
+message VehiculeResponse{
   int64 id = 1;
   string matricule = 2;
   string marque = 3;
   int32 puissanceFiscale = 4;
   int32 modele = 5;
-  Proprietaire proprietaire = 6;
 }
 
-message Proprietaire {
+message ProprietaireResponse {
   int64 id = 1;
   string nom = 2;
   string dateDeNaissance = 3;
   string email = 4;
-  repeated Vehicule vehicules = 5;
+}
+
+message VehiculeRequest{
+  string matricule = 1;
+  string marque = 2;
+  int32 puissanceFiscale = 3;
+  int32 modele = 4;
+  ProprietaireResponse proprietaire = 5;
+}
+
+message ProprietaireRequest {
+  string nom = 1;
+  string dateDeNaissance = 2;
+  string email = 3;
 }

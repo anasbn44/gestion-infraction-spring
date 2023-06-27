@@ -432,6 +432,1982 @@ public final class RadarService {
 
   }
 
+  public interface GenerateInfractionRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:GenerateInfractionRequest)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>string matricule = 1;</code>
+     * @return The matricule.
+     */
+    java.lang.String getMatricule();
+    /**
+     * <code>string matricule = 1;</code>
+     * @return The bytes for matricule.
+     */
+    com.google.protobuf.ByteString
+        getMatriculeBytes();
+
+    /**
+     * <code>.RadarResponse radar = 2;</code>
+     * @return Whether the radar field is set.
+     */
+    boolean hasRadar();
+    /**
+     * <code>.RadarResponse radar = 2;</code>
+     * @return The radar.
+     */
+    ma.radarservice.web.grpc.stub.RadarService.RadarResponse getRadar();
+    /**
+     * <code>.RadarResponse radar = 2;</code>
+     */
+    ma.radarservice.web.grpc.stub.RadarService.RadarResponseOrBuilder getRadarOrBuilder();
+  }
+  /**
+   * Protobuf type {@code GenerateInfractionRequest}
+   */
+  public  static final class GenerateInfractionRequest extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:GenerateInfractionRequest)
+      GenerateInfractionRequestOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use GenerateInfractionRequest.newBuilder() to construct.
+    private GenerateInfractionRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private GenerateInfractionRequest() {
+      matricule_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new GenerateInfractionRequest();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private GenerateInfractionRequest(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              matricule_ = s;
+              break;
+            }
+            case 18: {
+              ma.radarservice.web.grpc.stub.RadarService.RadarResponse.Builder subBuilder = null;
+              if (radar_ != null) {
+                subBuilder = radar_.toBuilder();
+              }
+              radar_ = input.readMessage(ma.radarservice.web.grpc.stub.RadarService.RadarResponse.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(radar_);
+                radar_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return ma.radarservice.web.grpc.stub.RadarService.internal_static_GenerateInfractionRequest_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return ma.radarservice.web.grpc.stub.RadarService.internal_static_GenerateInfractionRequest_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              ma.radarservice.web.grpc.stub.RadarService.GenerateInfractionRequest.class, ma.radarservice.web.grpc.stub.RadarService.GenerateInfractionRequest.Builder.class);
+    }
+
+    public static final int MATRICULE_FIELD_NUMBER = 1;
+    private volatile java.lang.Object matricule_;
+    /**
+     * <code>string matricule = 1;</code>
+     * @return The matricule.
+     */
+    public java.lang.String getMatricule() {
+      java.lang.Object ref = matricule_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        matricule_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string matricule = 1;</code>
+     * @return The bytes for matricule.
+     */
+    public com.google.protobuf.ByteString
+        getMatriculeBytes() {
+      java.lang.Object ref = matricule_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        matricule_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int RADAR_FIELD_NUMBER = 2;
+    private ma.radarservice.web.grpc.stub.RadarService.RadarResponse radar_;
+    /**
+     * <code>.RadarResponse radar = 2;</code>
+     * @return Whether the radar field is set.
+     */
+    public boolean hasRadar() {
+      return radar_ != null;
+    }
+    /**
+     * <code>.RadarResponse radar = 2;</code>
+     * @return The radar.
+     */
+    public ma.radarservice.web.grpc.stub.RadarService.RadarResponse getRadar() {
+      return radar_ == null ? ma.radarservice.web.grpc.stub.RadarService.RadarResponse.getDefaultInstance() : radar_;
+    }
+    /**
+     * <code>.RadarResponse radar = 2;</code>
+     */
+    public ma.radarservice.web.grpc.stub.RadarService.RadarResponseOrBuilder getRadarOrBuilder() {
+      return getRadar();
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!getMatriculeBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, matricule_);
+      }
+      if (radar_ != null) {
+        output.writeMessage(2, getRadar());
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!getMatriculeBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, matricule_);
+      }
+      if (radar_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(2, getRadar());
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof ma.radarservice.web.grpc.stub.RadarService.GenerateInfractionRequest)) {
+        return super.equals(obj);
+      }
+      ma.radarservice.web.grpc.stub.RadarService.GenerateInfractionRequest other = (ma.radarservice.web.grpc.stub.RadarService.GenerateInfractionRequest) obj;
+
+      if (!getMatricule()
+          .equals(other.getMatricule())) return false;
+      if (hasRadar() != other.hasRadar()) return false;
+      if (hasRadar()) {
+        if (!getRadar()
+            .equals(other.getRadar())) return false;
+      }
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + MATRICULE_FIELD_NUMBER;
+      hash = (53 * hash) + getMatricule().hashCode();
+      if (hasRadar()) {
+        hash = (37 * hash) + RADAR_FIELD_NUMBER;
+        hash = (53 * hash) + getRadar().hashCode();
+      }
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static ma.radarservice.web.grpc.stub.RadarService.GenerateInfractionRequest parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static ma.radarservice.web.grpc.stub.RadarService.GenerateInfractionRequest parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static ma.radarservice.web.grpc.stub.RadarService.GenerateInfractionRequest parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static ma.radarservice.web.grpc.stub.RadarService.GenerateInfractionRequest parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static ma.radarservice.web.grpc.stub.RadarService.GenerateInfractionRequest parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static ma.radarservice.web.grpc.stub.RadarService.GenerateInfractionRequest parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static ma.radarservice.web.grpc.stub.RadarService.GenerateInfractionRequest parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static ma.radarservice.web.grpc.stub.RadarService.GenerateInfractionRequest parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static ma.radarservice.web.grpc.stub.RadarService.GenerateInfractionRequest parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static ma.radarservice.web.grpc.stub.RadarService.GenerateInfractionRequest parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static ma.radarservice.web.grpc.stub.RadarService.GenerateInfractionRequest parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static ma.radarservice.web.grpc.stub.RadarService.GenerateInfractionRequest parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(ma.radarservice.web.grpc.stub.RadarService.GenerateInfractionRequest prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code GenerateInfractionRequest}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:GenerateInfractionRequest)
+        ma.radarservice.web.grpc.stub.RadarService.GenerateInfractionRequestOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return ma.radarservice.web.grpc.stub.RadarService.internal_static_GenerateInfractionRequest_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return ma.radarservice.web.grpc.stub.RadarService.internal_static_GenerateInfractionRequest_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                ma.radarservice.web.grpc.stub.RadarService.GenerateInfractionRequest.class, ma.radarservice.web.grpc.stub.RadarService.GenerateInfractionRequest.Builder.class);
+      }
+
+      // Construct using ma.radarservice.web.grpc.stub.RadarService.GenerateInfractionRequest.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        matricule_ = "";
+
+        if (radarBuilder_ == null) {
+          radar_ = null;
+        } else {
+          radar_ = null;
+          radarBuilder_ = null;
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return ma.radarservice.web.grpc.stub.RadarService.internal_static_GenerateInfractionRequest_descriptor;
+      }
+
+      @java.lang.Override
+      public ma.radarservice.web.grpc.stub.RadarService.GenerateInfractionRequest getDefaultInstanceForType() {
+        return ma.radarservice.web.grpc.stub.RadarService.GenerateInfractionRequest.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public ma.radarservice.web.grpc.stub.RadarService.GenerateInfractionRequest build() {
+        ma.radarservice.web.grpc.stub.RadarService.GenerateInfractionRequest result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public ma.radarservice.web.grpc.stub.RadarService.GenerateInfractionRequest buildPartial() {
+        ma.radarservice.web.grpc.stub.RadarService.GenerateInfractionRequest result = new ma.radarservice.web.grpc.stub.RadarService.GenerateInfractionRequest(this);
+        result.matricule_ = matricule_;
+        if (radarBuilder_ == null) {
+          result.radar_ = radar_;
+        } else {
+          result.radar_ = radarBuilder_.build();
+        }
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof ma.radarservice.web.grpc.stub.RadarService.GenerateInfractionRequest) {
+          return mergeFrom((ma.radarservice.web.grpc.stub.RadarService.GenerateInfractionRequest)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(ma.radarservice.web.grpc.stub.RadarService.GenerateInfractionRequest other) {
+        if (other == ma.radarservice.web.grpc.stub.RadarService.GenerateInfractionRequest.getDefaultInstance()) return this;
+        if (!other.getMatricule().isEmpty()) {
+          matricule_ = other.matricule_;
+          onChanged();
+        }
+        if (other.hasRadar()) {
+          mergeRadar(other.getRadar());
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        ma.radarservice.web.grpc.stub.RadarService.GenerateInfractionRequest parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (ma.radarservice.web.grpc.stub.RadarService.GenerateInfractionRequest) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+
+      private java.lang.Object matricule_ = "";
+      /**
+       * <code>string matricule = 1;</code>
+       * @return The matricule.
+       */
+      public java.lang.String getMatricule() {
+        java.lang.Object ref = matricule_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          matricule_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string matricule = 1;</code>
+       * @return The bytes for matricule.
+       */
+      public com.google.protobuf.ByteString
+          getMatriculeBytes() {
+        java.lang.Object ref = matricule_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          matricule_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string matricule = 1;</code>
+       * @param value The matricule to set.
+       * @return This builder for chaining.
+       */
+      public Builder setMatricule(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        matricule_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string matricule = 1;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearMatricule() {
+        
+        matricule_ = getDefaultInstance().getMatricule();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string matricule = 1;</code>
+       * @param value The bytes for matricule to set.
+       * @return This builder for chaining.
+       */
+      public Builder setMatriculeBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        matricule_ = value;
+        onChanged();
+        return this;
+      }
+
+      private ma.radarservice.web.grpc.stub.RadarService.RadarResponse radar_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          ma.radarservice.web.grpc.stub.RadarService.RadarResponse, ma.radarservice.web.grpc.stub.RadarService.RadarResponse.Builder, ma.radarservice.web.grpc.stub.RadarService.RadarResponseOrBuilder> radarBuilder_;
+      /**
+       * <code>.RadarResponse radar = 2;</code>
+       * @return Whether the radar field is set.
+       */
+      public boolean hasRadar() {
+        return radarBuilder_ != null || radar_ != null;
+      }
+      /**
+       * <code>.RadarResponse radar = 2;</code>
+       * @return The radar.
+       */
+      public ma.radarservice.web.grpc.stub.RadarService.RadarResponse getRadar() {
+        if (radarBuilder_ == null) {
+          return radar_ == null ? ma.radarservice.web.grpc.stub.RadarService.RadarResponse.getDefaultInstance() : radar_;
+        } else {
+          return radarBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.RadarResponse radar = 2;</code>
+       */
+      public Builder setRadar(ma.radarservice.web.grpc.stub.RadarService.RadarResponse value) {
+        if (radarBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          radar_ = value;
+          onChanged();
+        } else {
+          radarBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <code>.RadarResponse radar = 2;</code>
+       */
+      public Builder setRadar(
+          ma.radarservice.web.grpc.stub.RadarService.RadarResponse.Builder builderForValue) {
+        if (radarBuilder_ == null) {
+          radar_ = builderForValue.build();
+          onChanged();
+        } else {
+          radarBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <code>.RadarResponse radar = 2;</code>
+       */
+      public Builder mergeRadar(ma.radarservice.web.grpc.stub.RadarService.RadarResponse value) {
+        if (radarBuilder_ == null) {
+          if (radar_ != null) {
+            radar_ =
+              ma.radarservice.web.grpc.stub.RadarService.RadarResponse.newBuilder(radar_).mergeFrom(value).buildPartial();
+          } else {
+            radar_ = value;
+          }
+          onChanged();
+        } else {
+          radarBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <code>.RadarResponse radar = 2;</code>
+       */
+      public Builder clearRadar() {
+        if (radarBuilder_ == null) {
+          radar_ = null;
+          onChanged();
+        } else {
+          radar_ = null;
+          radarBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <code>.RadarResponse radar = 2;</code>
+       */
+      public ma.radarservice.web.grpc.stub.RadarService.RadarResponse.Builder getRadarBuilder() {
+        
+        onChanged();
+        return getRadarFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.RadarResponse radar = 2;</code>
+       */
+      public ma.radarservice.web.grpc.stub.RadarService.RadarResponseOrBuilder getRadarOrBuilder() {
+        if (radarBuilder_ != null) {
+          return radarBuilder_.getMessageOrBuilder();
+        } else {
+          return radar_ == null ?
+              ma.radarservice.web.grpc.stub.RadarService.RadarResponse.getDefaultInstance() : radar_;
+        }
+      }
+      /**
+       * <code>.RadarResponse radar = 2;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          ma.radarservice.web.grpc.stub.RadarService.RadarResponse, ma.radarservice.web.grpc.stub.RadarService.RadarResponse.Builder, ma.radarservice.web.grpc.stub.RadarService.RadarResponseOrBuilder> 
+          getRadarFieldBuilder() {
+        if (radarBuilder_ == null) {
+          radarBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              ma.radarservice.web.grpc.stub.RadarService.RadarResponse, ma.radarservice.web.grpc.stub.RadarService.RadarResponse.Builder, ma.radarservice.web.grpc.stub.RadarService.RadarResponseOrBuilder>(
+                  getRadar(),
+                  getParentForChildren(),
+                  isClean());
+          radar_ = null;
+        }
+        return radarBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:GenerateInfractionRequest)
+    }
+
+    // @@protoc_insertion_point(class_scope:GenerateInfractionRequest)
+    private static final ma.radarservice.web.grpc.stub.RadarService.GenerateInfractionRequest DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new ma.radarservice.web.grpc.stub.RadarService.GenerateInfractionRequest();
+    }
+
+    public static ma.radarservice.web.grpc.stub.RadarService.GenerateInfractionRequest getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<GenerateInfractionRequest>
+        PARSER = new com.google.protobuf.AbstractParser<GenerateInfractionRequest>() {
+      @java.lang.Override
+      public GenerateInfractionRequest parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new GenerateInfractionRequest(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<GenerateInfractionRequest> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<GenerateInfractionRequest> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public ma.radarservice.web.grpc.stub.RadarService.GenerateInfractionRequest getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface InfractionResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:InfractionResponse)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>int64 id = 1;</code>
+     * @return The id.
+     */
+    long getId();
+
+    /**
+     * <code>string date = 2;</code>
+     * @return The date.
+     */
+    java.lang.String getDate();
+    /**
+     * <code>string date = 2;</code>
+     * @return The bytes for date.
+     */
+    com.google.protobuf.ByteString
+        getDateBytes();
+
+    /**
+     * <code>int64 nuneroRadar = 3;</code>
+     * @return The nuneroRadar.
+     */
+    long getNuneroRadar();
+
+    /**
+     * <code>string matriculeVehicule = 4;</code>
+     * @return The matriculeVehicule.
+     */
+    java.lang.String getMatriculeVehicule();
+    /**
+     * <code>string matriculeVehicule = 4;</code>
+     * @return The bytes for matriculeVehicule.
+     */
+    com.google.protobuf.ByteString
+        getMatriculeVehiculeBytes();
+
+    /**
+     * <code>string nomPropietaire = 5;</code>
+     * @return The nomPropietaire.
+     */
+    java.lang.String getNomPropietaire();
+    /**
+     * <code>string nomPropietaire = 5;</code>
+     * @return The bytes for nomPropietaire.
+     */
+    com.google.protobuf.ByteString
+        getNomPropietaireBytes();
+
+    /**
+     * <code>double vitesseMax = 6;</code>
+     * @return The vitesseMax.
+     */
+    double getVitesseMax();
+
+    /**
+     * <code>double vitesseVehicule = 7;</code>
+     * @return The vitesseVehicule.
+     */
+    double getVitesseVehicule();
+
+    /**
+     * <code>double montant = 8;</code>
+     * @return The montant.
+     */
+    double getMontant();
+  }
+  /**
+   * Protobuf type {@code InfractionResponse}
+   */
+  public  static final class InfractionResponse extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:InfractionResponse)
+      InfractionResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use InfractionResponse.newBuilder() to construct.
+    private InfractionResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private InfractionResponse() {
+      date_ = "";
+      matriculeVehicule_ = "";
+      nomPropietaire_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new InfractionResponse();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private InfractionResponse(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 8: {
+
+              id_ = input.readInt64();
+              break;
+            }
+            case 18: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              date_ = s;
+              break;
+            }
+            case 24: {
+
+              nuneroRadar_ = input.readInt64();
+              break;
+            }
+            case 34: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              matriculeVehicule_ = s;
+              break;
+            }
+            case 42: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              nomPropietaire_ = s;
+              break;
+            }
+            case 49: {
+
+              vitesseMax_ = input.readDouble();
+              break;
+            }
+            case 57: {
+
+              vitesseVehicule_ = input.readDouble();
+              break;
+            }
+            case 65: {
+
+              montant_ = input.readDouble();
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return ma.radarservice.web.grpc.stub.RadarService.internal_static_InfractionResponse_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return ma.radarservice.web.grpc.stub.RadarService.internal_static_InfractionResponse_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              ma.radarservice.web.grpc.stub.RadarService.InfractionResponse.class, ma.radarservice.web.grpc.stub.RadarService.InfractionResponse.Builder.class);
+    }
+
+    public static final int ID_FIELD_NUMBER = 1;
+    private long id_;
+    /**
+     * <code>int64 id = 1;</code>
+     * @return The id.
+     */
+    public long getId() {
+      return id_;
+    }
+
+    public static final int DATE_FIELD_NUMBER = 2;
+    private volatile java.lang.Object date_;
+    /**
+     * <code>string date = 2;</code>
+     * @return The date.
+     */
+    public java.lang.String getDate() {
+      java.lang.Object ref = date_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        date_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string date = 2;</code>
+     * @return The bytes for date.
+     */
+    public com.google.protobuf.ByteString
+        getDateBytes() {
+      java.lang.Object ref = date_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        date_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int NUNERORADAR_FIELD_NUMBER = 3;
+    private long nuneroRadar_;
+    /**
+     * <code>int64 nuneroRadar = 3;</code>
+     * @return The nuneroRadar.
+     */
+    public long getNuneroRadar() {
+      return nuneroRadar_;
+    }
+
+    public static final int MATRICULEVEHICULE_FIELD_NUMBER = 4;
+    private volatile java.lang.Object matriculeVehicule_;
+    /**
+     * <code>string matriculeVehicule = 4;</code>
+     * @return The matriculeVehicule.
+     */
+    public java.lang.String getMatriculeVehicule() {
+      java.lang.Object ref = matriculeVehicule_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        matriculeVehicule_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string matriculeVehicule = 4;</code>
+     * @return The bytes for matriculeVehicule.
+     */
+    public com.google.protobuf.ByteString
+        getMatriculeVehiculeBytes() {
+      java.lang.Object ref = matriculeVehicule_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        matriculeVehicule_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int NOMPROPIETAIRE_FIELD_NUMBER = 5;
+    private volatile java.lang.Object nomPropietaire_;
+    /**
+     * <code>string nomPropietaire = 5;</code>
+     * @return The nomPropietaire.
+     */
+    public java.lang.String getNomPropietaire() {
+      java.lang.Object ref = nomPropietaire_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        nomPropietaire_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string nomPropietaire = 5;</code>
+     * @return The bytes for nomPropietaire.
+     */
+    public com.google.protobuf.ByteString
+        getNomPropietaireBytes() {
+      java.lang.Object ref = nomPropietaire_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        nomPropietaire_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int VITESSEMAX_FIELD_NUMBER = 6;
+    private double vitesseMax_;
+    /**
+     * <code>double vitesseMax = 6;</code>
+     * @return The vitesseMax.
+     */
+    public double getVitesseMax() {
+      return vitesseMax_;
+    }
+
+    public static final int VITESSEVEHICULE_FIELD_NUMBER = 7;
+    private double vitesseVehicule_;
+    /**
+     * <code>double vitesseVehicule = 7;</code>
+     * @return The vitesseVehicule.
+     */
+    public double getVitesseVehicule() {
+      return vitesseVehicule_;
+    }
+
+    public static final int MONTANT_FIELD_NUMBER = 8;
+    private double montant_;
+    /**
+     * <code>double montant = 8;</code>
+     * @return The montant.
+     */
+    public double getMontant() {
+      return montant_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (id_ != 0L) {
+        output.writeInt64(1, id_);
+      }
+      if (!getDateBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, date_);
+      }
+      if (nuneroRadar_ != 0L) {
+        output.writeInt64(3, nuneroRadar_);
+      }
+      if (!getMatriculeVehiculeBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 4, matriculeVehicule_);
+      }
+      if (!getNomPropietaireBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 5, nomPropietaire_);
+      }
+      if (vitesseMax_ != 0D) {
+        output.writeDouble(6, vitesseMax_);
+      }
+      if (vitesseVehicule_ != 0D) {
+        output.writeDouble(7, vitesseVehicule_);
+      }
+      if (montant_ != 0D) {
+        output.writeDouble(8, montant_);
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (id_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt64Size(1, id_);
+      }
+      if (!getDateBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, date_);
+      }
+      if (nuneroRadar_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt64Size(3, nuneroRadar_);
+      }
+      if (!getMatriculeVehiculeBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, matriculeVehicule_);
+      }
+      if (!getNomPropietaireBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(5, nomPropietaire_);
+      }
+      if (vitesseMax_ != 0D) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeDoubleSize(6, vitesseMax_);
+      }
+      if (vitesseVehicule_ != 0D) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeDoubleSize(7, vitesseVehicule_);
+      }
+      if (montant_ != 0D) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeDoubleSize(8, montant_);
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof ma.radarservice.web.grpc.stub.RadarService.InfractionResponse)) {
+        return super.equals(obj);
+      }
+      ma.radarservice.web.grpc.stub.RadarService.InfractionResponse other = (ma.radarservice.web.grpc.stub.RadarService.InfractionResponse) obj;
+
+      if (getId()
+          != other.getId()) return false;
+      if (!getDate()
+          .equals(other.getDate())) return false;
+      if (getNuneroRadar()
+          != other.getNuneroRadar()) return false;
+      if (!getMatriculeVehicule()
+          .equals(other.getMatriculeVehicule())) return false;
+      if (!getNomPropietaire()
+          .equals(other.getNomPropietaire())) return false;
+      if (java.lang.Double.doubleToLongBits(getVitesseMax())
+          != java.lang.Double.doubleToLongBits(
+              other.getVitesseMax())) return false;
+      if (java.lang.Double.doubleToLongBits(getVitesseVehicule())
+          != java.lang.Double.doubleToLongBits(
+              other.getVitesseVehicule())) return false;
+      if (java.lang.Double.doubleToLongBits(getMontant())
+          != java.lang.Double.doubleToLongBits(
+              other.getMontant())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + ID_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getId());
+      hash = (37 * hash) + DATE_FIELD_NUMBER;
+      hash = (53 * hash) + getDate().hashCode();
+      hash = (37 * hash) + NUNERORADAR_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getNuneroRadar());
+      hash = (37 * hash) + MATRICULEVEHICULE_FIELD_NUMBER;
+      hash = (53 * hash) + getMatriculeVehicule().hashCode();
+      hash = (37 * hash) + NOMPROPIETAIRE_FIELD_NUMBER;
+      hash = (53 * hash) + getNomPropietaire().hashCode();
+      hash = (37 * hash) + VITESSEMAX_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          java.lang.Double.doubleToLongBits(getVitesseMax()));
+      hash = (37 * hash) + VITESSEVEHICULE_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          java.lang.Double.doubleToLongBits(getVitesseVehicule()));
+      hash = (37 * hash) + MONTANT_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          java.lang.Double.doubleToLongBits(getMontant()));
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static ma.radarservice.web.grpc.stub.RadarService.InfractionResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static ma.radarservice.web.grpc.stub.RadarService.InfractionResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static ma.radarservice.web.grpc.stub.RadarService.InfractionResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static ma.radarservice.web.grpc.stub.RadarService.InfractionResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static ma.radarservice.web.grpc.stub.RadarService.InfractionResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static ma.radarservice.web.grpc.stub.RadarService.InfractionResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static ma.radarservice.web.grpc.stub.RadarService.InfractionResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static ma.radarservice.web.grpc.stub.RadarService.InfractionResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static ma.radarservice.web.grpc.stub.RadarService.InfractionResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static ma.radarservice.web.grpc.stub.RadarService.InfractionResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static ma.radarservice.web.grpc.stub.RadarService.InfractionResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static ma.radarservice.web.grpc.stub.RadarService.InfractionResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(ma.radarservice.web.grpc.stub.RadarService.InfractionResponse prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code InfractionResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:InfractionResponse)
+        ma.radarservice.web.grpc.stub.RadarService.InfractionResponseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return ma.radarservice.web.grpc.stub.RadarService.internal_static_InfractionResponse_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return ma.radarservice.web.grpc.stub.RadarService.internal_static_InfractionResponse_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                ma.radarservice.web.grpc.stub.RadarService.InfractionResponse.class, ma.radarservice.web.grpc.stub.RadarService.InfractionResponse.Builder.class);
+      }
+
+      // Construct using ma.radarservice.web.grpc.stub.RadarService.InfractionResponse.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        id_ = 0L;
+
+        date_ = "";
+
+        nuneroRadar_ = 0L;
+
+        matriculeVehicule_ = "";
+
+        nomPropietaire_ = "";
+
+        vitesseMax_ = 0D;
+
+        vitesseVehicule_ = 0D;
+
+        montant_ = 0D;
+
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return ma.radarservice.web.grpc.stub.RadarService.internal_static_InfractionResponse_descriptor;
+      }
+
+      @java.lang.Override
+      public ma.radarservice.web.grpc.stub.RadarService.InfractionResponse getDefaultInstanceForType() {
+        return ma.radarservice.web.grpc.stub.RadarService.InfractionResponse.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public ma.radarservice.web.grpc.stub.RadarService.InfractionResponse build() {
+        ma.radarservice.web.grpc.stub.RadarService.InfractionResponse result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public ma.radarservice.web.grpc.stub.RadarService.InfractionResponse buildPartial() {
+        ma.radarservice.web.grpc.stub.RadarService.InfractionResponse result = new ma.radarservice.web.grpc.stub.RadarService.InfractionResponse(this);
+        result.id_ = id_;
+        result.date_ = date_;
+        result.nuneroRadar_ = nuneroRadar_;
+        result.matriculeVehicule_ = matriculeVehicule_;
+        result.nomPropietaire_ = nomPropietaire_;
+        result.vitesseMax_ = vitesseMax_;
+        result.vitesseVehicule_ = vitesseVehicule_;
+        result.montant_ = montant_;
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof ma.radarservice.web.grpc.stub.RadarService.InfractionResponse) {
+          return mergeFrom((ma.radarservice.web.grpc.stub.RadarService.InfractionResponse)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(ma.radarservice.web.grpc.stub.RadarService.InfractionResponse other) {
+        if (other == ma.radarservice.web.grpc.stub.RadarService.InfractionResponse.getDefaultInstance()) return this;
+        if (other.getId() != 0L) {
+          setId(other.getId());
+        }
+        if (!other.getDate().isEmpty()) {
+          date_ = other.date_;
+          onChanged();
+        }
+        if (other.getNuneroRadar() != 0L) {
+          setNuneroRadar(other.getNuneroRadar());
+        }
+        if (!other.getMatriculeVehicule().isEmpty()) {
+          matriculeVehicule_ = other.matriculeVehicule_;
+          onChanged();
+        }
+        if (!other.getNomPropietaire().isEmpty()) {
+          nomPropietaire_ = other.nomPropietaire_;
+          onChanged();
+        }
+        if (other.getVitesseMax() != 0D) {
+          setVitesseMax(other.getVitesseMax());
+        }
+        if (other.getVitesseVehicule() != 0D) {
+          setVitesseVehicule(other.getVitesseVehicule());
+        }
+        if (other.getMontant() != 0D) {
+          setMontant(other.getMontant());
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        ma.radarservice.web.grpc.stub.RadarService.InfractionResponse parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (ma.radarservice.web.grpc.stub.RadarService.InfractionResponse) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+
+      private long id_ ;
+      /**
+       * <code>int64 id = 1;</code>
+       * @return The id.
+       */
+      public long getId() {
+        return id_;
+      }
+      /**
+       * <code>int64 id = 1;</code>
+       * @param value The id to set.
+       * @return This builder for chaining.
+       */
+      public Builder setId(long value) {
+        
+        id_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>int64 id = 1;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearId() {
+        
+        id_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object date_ = "";
+      /**
+       * <code>string date = 2;</code>
+       * @return The date.
+       */
+      public java.lang.String getDate() {
+        java.lang.Object ref = date_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          date_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string date = 2;</code>
+       * @return The bytes for date.
+       */
+      public com.google.protobuf.ByteString
+          getDateBytes() {
+        java.lang.Object ref = date_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          date_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string date = 2;</code>
+       * @param value The date to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDate(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        date_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string date = 2;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearDate() {
+        
+        date_ = getDefaultInstance().getDate();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string date = 2;</code>
+       * @param value The bytes for date to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDateBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        date_ = value;
+        onChanged();
+        return this;
+      }
+
+      private long nuneroRadar_ ;
+      /**
+       * <code>int64 nuneroRadar = 3;</code>
+       * @return The nuneroRadar.
+       */
+      public long getNuneroRadar() {
+        return nuneroRadar_;
+      }
+      /**
+       * <code>int64 nuneroRadar = 3;</code>
+       * @param value The nuneroRadar to set.
+       * @return This builder for chaining.
+       */
+      public Builder setNuneroRadar(long value) {
+        
+        nuneroRadar_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>int64 nuneroRadar = 3;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearNuneroRadar() {
+        
+        nuneroRadar_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object matriculeVehicule_ = "";
+      /**
+       * <code>string matriculeVehicule = 4;</code>
+       * @return The matriculeVehicule.
+       */
+      public java.lang.String getMatriculeVehicule() {
+        java.lang.Object ref = matriculeVehicule_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          matriculeVehicule_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string matriculeVehicule = 4;</code>
+       * @return The bytes for matriculeVehicule.
+       */
+      public com.google.protobuf.ByteString
+          getMatriculeVehiculeBytes() {
+        java.lang.Object ref = matriculeVehicule_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          matriculeVehicule_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string matriculeVehicule = 4;</code>
+       * @param value The matriculeVehicule to set.
+       * @return This builder for chaining.
+       */
+      public Builder setMatriculeVehicule(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        matriculeVehicule_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string matriculeVehicule = 4;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearMatriculeVehicule() {
+        
+        matriculeVehicule_ = getDefaultInstance().getMatriculeVehicule();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string matriculeVehicule = 4;</code>
+       * @param value The bytes for matriculeVehicule to set.
+       * @return This builder for chaining.
+       */
+      public Builder setMatriculeVehiculeBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        matriculeVehicule_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object nomPropietaire_ = "";
+      /**
+       * <code>string nomPropietaire = 5;</code>
+       * @return The nomPropietaire.
+       */
+      public java.lang.String getNomPropietaire() {
+        java.lang.Object ref = nomPropietaire_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          nomPropietaire_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string nomPropietaire = 5;</code>
+       * @return The bytes for nomPropietaire.
+       */
+      public com.google.protobuf.ByteString
+          getNomPropietaireBytes() {
+        java.lang.Object ref = nomPropietaire_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          nomPropietaire_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string nomPropietaire = 5;</code>
+       * @param value The nomPropietaire to set.
+       * @return This builder for chaining.
+       */
+      public Builder setNomPropietaire(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        nomPropietaire_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string nomPropietaire = 5;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearNomPropietaire() {
+        
+        nomPropietaire_ = getDefaultInstance().getNomPropietaire();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string nomPropietaire = 5;</code>
+       * @param value The bytes for nomPropietaire to set.
+       * @return This builder for chaining.
+       */
+      public Builder setNomPropietaireBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        nomPropietaire_ = value;
+        onChanged();
+        return this;
+      }
+
+      private double vitesseMax_ ;
+      /**
+       * <code>double vitesseMax = 6;</code>
+       * @return The vitesseMax.
+       */
+      public double getVitesseMax() {
+        return vitesseMax_;
+      }
+      /**
+       * <code>double vitesseMax = 6;</code>
+       * @param value The vitesseMax to set.
+       * @return This builder for chaining.
+       */
+      public Builder setVitesseMax(double value) {
+        
+        vitesseMax_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>double vitesseMax = 6;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearVitesseMax() {
+        
+        vitesseMax_ = 0D;
+        onChanged();
+        return this;
+      }
+
+      private double vitesseVehicule_ ;
+      /**
+       * <code>double vitesseVehicule = 7;</code>
+       * @return The vitesseVehicule.
+       */
+      public double getVitesseVehicule() {
+        return vitesseVehicule_;
+      }
+      /**
+       * <code>double vitesseVehicule = 7;</code>
+       * @param value The vitesseVehicule to set.
+       * @return This builder for chaining.
+       */
+      public Builder setVitesseVehicule(double value) {
+        
+        vitesseVehicule_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>double vitesseVehicule = 7;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearVitesseVehicule() {
+        
+        vitesseVehicule_ = 0D;
+        onChanged();
+        return this;
+      }
+
+      private double montant_ ;
+      /**
+       * <code>double montant = 8;</code>
+       * @return The montant.
+       */
+      public double getMontant() {
+        return montant_;
+      }
+      /**
+       * <code>double montant = 8;</code>
+       * @param value The montant to set.
+       * @return This builder for chaining.
+       */
+      public Builder setMontant(double value) {
+        
+        montant_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>double montant = 8;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearMontant() {
+        
+        montant_ = 0D;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:InfractionResponse)
+    }
+
+    // @@protoc_insertion_point(class_scope:InfractionResponse)
+    private static final ma.radarservice.web.grpc.stub.RadarService.InfractionResponse DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new ma.radarservice.web.grpc.stub.RadarService.InfractionResponse();
+    }
+
+    public static ma.radarservice.web.grpc.stub.RadarService.InfractionResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<InfractionResponse>
+        PARSER = new com.google.protobuf.AbstractParser<InfractionResponse>() {
+      @java.lang.Override
+      public InfractionResponse parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new InfractionResponse(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<InfractionResponse> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<InfractionResponse> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public ma.radarservice.web.grpc.stub.RadarService.InfractionResponse getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
   public interface RadarRequestOrBuilder extends
       // @@protoc_insertion_point(interface_extends:RadarRequest)
       com.google.protobuf.MessageOrBuilder {
@@ -3857,6 +5833,16 @@ public final class RadarService {
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_EmptyRadar_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_GenerateInfractionRequest_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_GenerateInfractionRequest_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_InfractionResponse_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_InfractionResponse_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_RadarRequest_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
@@ -3890,24 +5876,32 @@ public final class RadarService {
       descriptor;
   static {
     java.lang.String[] descriptorData = {
-      "\n\022RadarService.proto\"\014\n\nEmptyRadar\"`\n\014Ra" +
-      "darRequest\022\022\n\nvitesseMax\030\001 \001(\001\022\027\n\017vitess" +
-      "eVehicule\030\002 \001(\001\022\021\n\tlongitude\030\003 \001(\005\022\020\n\010la" +
-      "titude\030\004 \001(\005\"\034\n\016RadarIdRequest\022\n\n\002id\030\001 \001" +
-      "(\003\"E\n\022UpdateRadarRequest\022\n\n\002id\030\001 \001(\003\022#\n\014" +
-      "radarRequest\030\002 \001(\0132\r.RadarRequest\"m\n\rRad" +
-      "arResponse\022\n\n\002id\030\001 \001(\003\022\022\n\nvitesseMax\030\002 \001" +
-      "(\001\022\027\n\017vitesseVehicule\030\003 \001(\001\022\021\n\tlongitude" +
-      "\030\004 \001(\005\022\020\n\010latitude\030\005 \001(\005\"0\n\nRadarsList\022\"" +
-      "\n\nradarsList\030\001 \003(\0132\016.RadarResponse2\372\001\n\020R" +
-      "adarGrpcService\022(\n\014getAllRadars\022\013.EmptyR" +
-      "adar\032\013.RadarsList\022/\n\014getRadarById\022\017.Rada" +
-      "rIdRequest\032\016.RadarResponse\022*\n\tsaveRadar\022" +
-      "\r.RadarRequest\032\016.RadarResponse\0222\n\013update" +
-      "Radar\022\023.UpdateRadarRequest\032\016.RadarRespon" +
-      "se\022+\n\013deleteRadar\022\017.RadarIdRequest\032\013.Emp" +
-      "tyRadarB\037\n\035ma.radarservice.web.grpc.stub" +
-      "b\006proto3"
+      "\n\022RadarService.proto\"\014\n\nEmptyRadar\"M\n\031Ge" +
+      "nerateInfractionRequest\022\021\n\tmatricule\030\001 \001" +
+      "(\t\022\035\n\005radar\030\002 \001(\0132\016.RadarResponse\"\264\001\n\022In" +
+      "fractionResponse\022\n\n\002id\030\001 \001(\003\022\014\n\004date\030\002 \001" +
+      "(\t\022\023\n\013nuneroRadar\030\003 \001(\003\022\031\n\021matriculeVehi" +
+      "cule\030\004 \001(\t\022\026\n\016nomPropietaire\030\005 \001(\t\022\022\n\nvi" +
+      "tesseMax\030\006 \001(\001\022\027\n\017vitesseVehicule\030\007 \001(\001\022" +
+      "\017\n\007montant\030\010 \001(\001\"`\n\014RadarRequest\022\022\n\nvite" +
+      "sseMax\030\001 \001(\001\022\027\n\017vitesseVehicule\030\002 \001(\001\022\021\n" +
+      "\tlongitude\030\003 \001(\005\022\020\n\010latitude\030\004 \001(\005\"\034\n\016Ra" +
+      "darIdRequest\022\n\n\002id\030\001 \001(\003\"E\n\022UpdateRadarR" +
+      "equest\022\n\n\002id\030\001 \001(\003\022#\n\014radarRequest\030\002 \001(\013" +
+      "2\r.RadarRequest\"m\n\rRadarResponse\022\n\n\002id\030\001" +
+      " \001(\003\022\022\n\nvitesseMax\030\002 \001(\001\022\027\n\017vitesseVehic" +
+      "ule\030\003 \001(\001\022\021\n\tlongitude\030\004 \001(\005\022\020\n\010latitude" +
+      "\030\005 \001(\005\"0\n\nRadarsList\022\"\n\nradarsList\030\001 \003(\013" +
+      "2\016.RadarResponse2\301\002\n\020RadarGrpcService\022(\n" +
+      "\014getAllRadars\022\013.EmptyRadar\032\013.RadarsList\022" +
+      "/\n\014getRadarById\022\017.RadarIdRequest\032\016.Radar" +
+      "Response\022*\n\tsaveRadar\022\r.RadarRequest\032\016.R" +
+      "adarResponse\0222\n\013updateRadar\022\023.UpdateRada" +
+      "rRequest\032\016.RadarResponse\022+\n\013deleteRadar\022" +
+      "\017.RadarIdRequest\032\013.EmptyRadar\022E\n\022generat" +
+      "eInfraction\022\032.GenerateInfractionRequest\032" +
+      "\023.InfractionResponseB\037\n\035ma.radarservice." +
+      "web.grpc.stubb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -3919,32 +5913,44 @@ public final class RadarService {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_EmptyRadar_descriptor,
         new java.lang.String[] { });
-    internal_static_RadarRequest_descriptor =
+    internal_static_GenerateInfractionRequest_descriptor =
       getDescriptor().getMessageTypes().get(1);
+    internal_static_GenerateInfractionRequest_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_GenerateInfractionRequest_descriptor,
+        new java.lang.String[] { "Matricule", "Radar", });
+    internal_static_InfractionResponse_descriptor =
+      getDescriptor().getMessageTypes().get(2);
+    internal_static_InfractionResponse_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_InfractionResponse_descriptor,
+        new java.lang.String[] { "Id", "Date", "NuneroRadar", "MatriculeVehicule", "NomPropietaire", "VitesseMax", "VitesseVehicule", "Montant", });
+    internal_static_RadarRequest_descriptor =
+      getDescriptor().getMessageTypes().get(3);
     internal_static_RadarRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_RadarRequest_descriptor,
         new java.lang.String[] { "VitesseMax", "VitesseVehicule", "Longitude", "Latitude", });
     internal_static_RadarIdRequest_descriptor =
-      getDescriptor().getMessageTypes().get(2);
+      getDescriptor().getMessageTypes().get(4);
     internal_static_RadarIdRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_RadarIdRequest_descriptor,
         new java.lang.String[] { "Id", });
     internal_static_UpdateRadarRequest_descriptor =
-      getDescriptor().getMessageTypes().get(3);
+      getDescriptor().getMessageTypes().get(5);
     internal_static_UpdateRadarRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_UpdateRadarRequest_descriptor,
         new java.lang.String[] { "Id", "RadarRequest", });
     internal_static_RadarResponse_descriptor =
-      getDescriptor().getMessageTypes().get(4);
+      getDescriptor().getMessageTypes().get(6);
     internal_static_RadarResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_RadarResponse_descriptor,
         new java.lang.String[] { "Id", "VitesseMax", "VitesseVehicule", "Longitude", "Latitude", });
     internal_static_RadarsList_descriptor =
-      getDescriptor().getMessageTypes().get(5);
+      getDescriptor().getMessageTypes().get(7);
     internal_static_RadarsList_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_RadarsList_descriptor,

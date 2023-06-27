@@ -45,6 +45,8 @@ public class InfractionServiceImpl implements InfractionService{
             infraction.setNuneroRadar(infractionRequest.getNuneroRadar());
         if(infraction.getMatriculeVehicule().equals(infractionRequest.getMatriculeVehicule()))
             infraction.setMatriculeVehicule(infractionRequest.getMatriculeVehicule());
+        if(infraction.getNomPropietaire().equals(infractionRequest.getNomPropietaire()))
+            infraction.setNomPropietaire(infractionRequest.getNomPropietaire());
         return infraction;
     }
 

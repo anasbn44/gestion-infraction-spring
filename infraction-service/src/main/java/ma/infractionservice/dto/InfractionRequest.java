@@ -10,6 +10,7 @@ import java.util.Date;
 public class InfractionRequest {
     private Long nuneroRadar;
     private String matriculeVehicule;
+    private String nomPropietaire;
     private double vitesseMax;
     private double vitesseVehicule;
 }

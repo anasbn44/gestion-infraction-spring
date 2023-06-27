@@ -2,6 +2,7 @@ package ma.radarservice.web.grpc;
 
 import io.grpc.stub.StreamObserver;
 import lombok.AllArgsConstructor;
+import ma.radarservice.entities.Infraction;
 import ma.radarservice.entities.Radar;
 import ma.radarservice.mappers.RadarMapper;
 import ma.radarservice.services.RadarService;
@@ -44,6 +45,13 @@ public class RadarGrpcService extends RadarGrpcServiceGrpc.RadarGrpcServiceImplB
     @Override
     public void deleteRadar(ma.radarservice.web.grpc.stub.RadarService.RadarIdRequest request, StreamObserver<ma.radarservice.web.grpc.stub.RadarService.EmptyRadar> responseObserver) {
         radarService.deleteRadar(request.getId());
+        responseObserver.onCompleted();
+    }
+
+    @Override
+    public void generateInfraction(ma.radarservice.web.grpc.stub.RadarService.GenerateInfractionRequest request, StreamObserver<ma.radarservice.web.grpc.stub.RadarService.InfractionResponse> responseObserver) {
+        Infraction infraction = radarService.generateInfraction(request.getMatricule(), radarMapper.fromGrpcToRadar(request.getRadar()));
+        responseObserver.onNext(radarMapper.fromInfractionToGrpcResponse(infraction));
         responseObserver.onCompleted();
     }
 }

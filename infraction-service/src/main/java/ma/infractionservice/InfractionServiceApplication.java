@@ -25,6 +25,7 @@ public class InfractionServiceApplication {
                     .nuneroRadar(1234L)
                     .vitesseMax(120.0)
                     .matriculeVehicule("1a123456")
+                    .nomPropietaire("yassir")
                     .build();
             Infraction infraction2 = Infraction.builder()
                     .date(new Date())
@@ -32,6 +33,7 @@ public class InfractionServiceApplication {
                     .nuneroRadar(12345L)
                     .vitesseMax(60.0)
                     .matriculeVehicule("1a978556")
+                    .nomPropietaire("yassir")
                     .build();
             infractionRepository.save(infraction1);
             infractionRepository.save(infraction2);

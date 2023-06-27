@@ -19,8 +19,9 @@ message InfractionIdRequest{
 message InfractionRequest{
   int64 nuneroRadar = 1;
   string matriculeVehicule = 2;
-  double vitesseMax = 3;
-  double vitesseVehicule = 4;
+  string nomPropietaire = 3;
+  double vitesseMax = 4;
+  double vitesseVehicule = 5;
 }
 
 message InfractionResponse{
@@ -28,7 +29,8 @@ message InfractionResponse{
   string date = 2;
   int64 nuneroRadar = 3;
   string matriculeVehicule = 4;
-  double vitesseMax = 5;
-  double vitesseVehicule = 6;
-  double montant = 7;
+  string nomPropietaire = 5;
+  double vitesseMax = 6;
+  double vitesseVehicule = 7;
+  double montant = 8;
 }

@@ -8,6 +8,7 @@ import ma.infractionservice.web.grpc.stub.InfractionSefvice;
 import ma.infractionservice.web.soap.InfractionService;
 import ma.radarservice.dto.InfractionRequest;
 import ma.radarservice.entities.Infraction;
+import ma.radarservice.entities.Proprietaire;
 import ma.radarservice.entities.Vehicule;
 import ma.radarservice.feign.InfractionRestClient;
 import ma.radarservice.feign.VehiculeRestClient;
@@ -51,10 +52,10 @@ public class RadarClients {
                 .url("http://localhost:1997/graphql")
                 .build();
         var httpRequestDocument = """
-                query($id:Int) {
-                    getVehiculeByMatricule(matricule : $matricule){
-                        id, modele, matricule, marque, puissanceFiscale, proprietaire
-                    }
+                query($matricule:String){
+                  getVehiculeByMatricule(matricule:$matricule){
+                    id, marque, matricule, modele, puissanceFiscale
+                  }
                 }
                 """;
         Mono<Vehicule> vehiculeMono = graphQlClient.document(httpRequestDocument)
@@ -75,9 +76,20 @@ public class RadarClients {
                 ma.enset.immatriculationservice.web.grpc.stub.ImmatriculationService.Matricule.newBuilder()
                         .setMatricule(matricule)
                         .build();
-        ma.enset.immatriculationservice.web.grpc.stub.ImmatriculationService.Vehicule response =
+        ma.enset.immatriculationservice.web.grpc.stub.ImmatriculationService.VehiculeResponse response =
                 immatriculationGrpcService.getVehiculeByMatricule(request);
         return radarMapper.fromGrpcToVehicule(response);
+    }
+
+    @GetMapping("/grpc/vehicule/proprietaire/{id}")
+    public Proprietaire getProprietaireOfVehicule(@PathVariable(name = "id") Long idVehicule){
+        ma.enset.immatriculationservice.web.grpc.stub.ImmatriculationService.VehiculeIdRequest request =
+                ma.enset.immatriculationservice.web.grpc.stub.ImmatriculationService.VehiculeIdRequest.newBuilder()
+                .setId(idVehicule)
+                .build();
+        ma.enset.immatriculationservice.web.grpc.stub.ImmatriculationService.ProprietaireResponse response =
+                immatriculationGrpcService.getProprietaireOfVehicule(request);
+        return radarMapper.fromGrocToProprietaire(response);
     }
 
     @PostMapping("/infraction")

@@ -193,7 +193,7 @@
                             <sourceRoot>${basedir}/src/main/java</sourceRoot>
                             <wsdlOptions>
                                 <wsdlOption>
-                                    <wsdl>${basedir}/src/main/resources/ImmatriculationService.wsdl</wsdl>
+                                    <wsdl>${basedir}/src/main/resources/InfractionService.wsdl</wsdl>
                                 </wsdlOption>
                             </wsdlOptions>
                         </configuration>

@@ -22,6 +22,7 @@ import jakarta.xml.bind.annotation.XmlType;
  *         &lt;element name="id" type="{http://www.w3.org/2001/XMLSchema}long" minOccurs="0"/&gt;
  *         &lt;element name="matriculeVehicule" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/&gt;
  *         &lt;element name="montant" type="{http://www.w3.org/2001/XMLSchema}double"/&gt;
+ *         &lt;element name="nomPropietaire" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/&gt;
  *         &lt;element name="nuneroRadar" type="{http://www.w3.org/2001/XMLSchema}long" minOccurs="0"/&gt;
  *         &lt;element name="vitesseMax" type="{http://www.w3.org/2001/XMLSchema}double"/&gt;
  *         &lt;element name="vitesseVehicule" type="{http://www.w3.org/2001/XMLSchema}double"/&gt;
@@ -39,6 +40,7 @@ import jakarta.xml.bind.annotation.XmlType;
     "id",
     "matriculeVehicule",
     "montant",
+    "nomPropietaire",
     "nuneroRadar",
     "vitesseMax",
     "vitesseVehicule"
@@ -50,6 +52,7 @@ public class Infraction {
     protected Long id;
     protected String matriculeVehicule;
     protected double montant;
+    protected String nomPropietaire;
     protected Long nuneroRadar;
     protected double vitesseMax;
     protected double vitesseVehicule;
@@ -140,6 +143,30 @@ public class Infraction {
      */
     public void setMontant(double value) {
         this.montant = value;
+    }
+
+    /**
+     * Gets the value of the nomPropietaire property.
+     * 
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
+     */
+    public String getNomPropietaire() {
+        return nomPropietaire;
+    }
+
+    /**
+     * Sets the value of the nomPropietaire property.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
+     */
+    public void setNomPropietaire(String value) {
+        this.nomPropietaire = value;
     }
 
     /**

@@ -12,8 +12,9 @@ import java.util.Date;
 @AllArgsConstructor
 @Builder
 public class InfractionRequest {
-    private Long numeroRadar;
+    private Long nuneroRadar;
     private String matriculeVehicule;
+    private String nomPropietaire;
     private double vitesseMax;
     private double vitesseVehicule;
 }

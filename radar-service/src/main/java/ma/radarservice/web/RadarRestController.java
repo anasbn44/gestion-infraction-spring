@@ -41,4 +41,9 @@ public class RadarRestController {
     public void deleteRadar(@PathVariable Long id){
         radarService.deleteRadar(id);
     }
+
+    @PostMapping("/radars/infraction/{matricule}")
+    public Infraction generateInfraction(@PathVariable(name = "matricule") String matricule, @RequestBody Radar radar){
+        return radarService.generateInfraction(matricule, radar);
+    }
 }

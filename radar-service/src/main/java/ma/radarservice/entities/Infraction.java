@@ -10,8 +10,9 @@ import java.util.Date;
 public class Infraction {
     private Long id;
     private Date date;
-    private Long numeroRadar;
+    private Long nuneroRadar;
     private String matriculeVehicule;
+    private String nomPropietaire;
     private double vitesseMax;
     private double vitesseVehicule;
     private double montant;

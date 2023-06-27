@@ -187,6 +187,38 @@ public final class RadarGrpcServiceGrpc {
      return getDeleteRadarMethod;
   }
 
+  private static volatile io.grpc.MethodDescriptor<ma.radarservice.web.grpc.stub.RadarService.GenerateInfractionRequest,
+      ma.radarservice.web.grpc.stub.RadarService.InfractionResponse> getGenerateInfractionMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "generateInfraction",
+      requestType = ma.radarservice.web.grpc.stub.RadarService.GenerateInfractionRequest.class,
+      responseType = ma.radarservice.web.grpc.stub.RadarService.InfractionResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<ma.radarservice.web.grpc.stub.RadarService.GenerateInfractionRequest,
+      ma.radarservice.web.grpc.stub.RadarService.InfractionResponse> getGenerateInfractionMethod() {
+    io.grpc.MethodDescriptor<ma.radarservice.web.grpc.stub.RadarService.GenerateInfractionRequest, ma.radarservice.web.grpc.stub.RadarService.InfractionResponse> getGenerateInfractionMethod;
+    if ((getGenerateInfractionMethod = RadarGrpcServiceGrpc.getGenerateInfractionMethod) == null) {
+      synchronized (RadarGrpcServiceGrpc.class) {
+        if ((getGenerateInfractionMethod = RadarGrpcServiceGrpc.getGenerateInfractionMethod) == null) {
+          RadarGrpcServiceGrpc.getGenerateInfractionMethod = getGenerateInfractionMethod = 
+              io.grpc.MethodDescriptor.<ma.radarservice.web.grpc.stub.RadarService.GenerateInfractionRequest, ma.radarservice.web.grpc.stub.RadarService.InfractionResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(
+                  "RadarGrpcService", "generateInfraction"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  ma.radarservice.web.grpc.stub.RadarService.GenerateInfractionRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  ma.radarservice.web.grpc.stub.RadarService.InfractionResponse.getDefaultInstance()))
+                  .setSchemaDescriptor(new RadarGrpcServiceMethodDescriptorSupplier("generateInfraction"))
+                  .build();
+          }
+        }
+     }
+     return getGenerateInfractionMethod;
+  }
+
   /**
    * Creates a new async stub that supports all call types for the service
    */
@@ -249,6 +281,13 @@ public final class RadarGrpcServiceGrpc {
       asyncUnimplementedUnaryCall(getDeleteRadarMethod(), responseObserver);
     }
 
+    /**
+     */
+    public void generateInfraction(ma.radarservice.web.grpc.stub.RadarService.GenerateInfractionRequest request,
+        io.grpc.stub.StreamObserver<ma.radarservice.web.grpc.stub.RadarService.InfractionResponse> responseObserver) {
+      asyncUnimplementedUnaryCall(getGenerateInfractionMethod(), responseObserver);
+    }
+
     @java.lang.Override public final io.grpc.ServerServiceDefinition bindService() {
       return io.grpc.ServerServiceDefinition.builder(getServiceDescriptor())
           .addMethod(
@@ -286,6 +325,13 @@ public final class RadarGrpcServiceGrpc {
                 ma.radarservice.web.grpc.stub.RadarService.RadarIdRequest,
                 ma.radarservice.web.grpc.stub.RadarService.EmptyRadar>(
                   this, METHODID_DELETE_RADAR)))
+          .addMethod(
+            getGenerateInfractionMethod(),
+            asyncUnaryCall(
+              new MethodHandlers<
+                ma.radarservice.web.grpc.stub.RadarService.GenerateInfractionRequest,
+                ma.radarservice.web.grpc.stub.RadarService.InfractionResponse>(
+                  this, METHODID_GENERATE_INFRACTION)))
           .build();
     }
   }
@@ -347,6 +393,14 @@ public final class RadarGrpcServiceGrpc {
       asyncUnaryCall(
           getChannel().newCall(getDeleteRadarMethod(), getCallOptions()), request, responseObserver);
     }
+
+    /**
+     */
+    public void generateInfraction(ma.radarservice.web.grpc.stub.RadarService.GenerateInfractionRequest request,
+        io.grpc.stub.StreamObserver<ma.radarservice.web.grpc.stub.RadarService.InfractionResponse> responseObserver) {
+      asyncUnaryCall(
+          getChannel().newCall(getGenerateInfractionMethod(), getCallOptions()), request, responseObserver);
+    }
   }
 
   /**
@@ -400,6 +454,13 @@ public final class RadarGrpcServiceGrpc {
     public ma.radarservice.web.grpc.stub.RadarService.EmptyRadar deleteRadar(ma.radarservice.web.grpc.stub.RadarService.RadarIdRequest request) {
       return blockingUnaryCall(
           getChannel(), getDeleteRadarMethod(), getCallOptions(), request);
+    }
+
+    /**
+     */
+    public ma.radarservice.web.grpc.stub.RadarService.InfractionResponse generateInfraction(ma.radarservice.web.grpc.stub.RadarService.GenerateInfractionRequest request) {
+      return blockingUnaryCall(
+          getChannel(), getGenerateInfractionMethod(), getCallOptions(), request);
     }
   }
 
@@ -460,6 +521,14 @@ public final class RadarGrpcServiceGrpc {
       return futureUnaryCall(
           getChannel().newCall(getDeleteRadarMethod(), getCallOptions()), request);
     }
+
+    /**
+     */
+    public com.google.common.util.concurrent.ListenableFuture<ma.radarservice.web.grpc.stub.RadarService.InfractionResponse> generateInfraction(
+        ma.radarservice.web.grpc.stub.RadarService.GenerateInfractionRequest request) {
+      return futureUnaryCall(
+          getChannel().newCall(getGenerateInfractionMethod(), getCallOptions()), request);
+    }
   }
 
   private static final int METHODID_GET_ALL_RADARS = 0;
@@ -467,6 +536,7 @@ public final class RadarGrpcServiceGrpc {
   private static final int METHODID_SAVE_RADAR = 2;
   private static final int METHODID_UPDATE_RADAR = 3;
   private static final int METHODID_DELETE_RADAR = 4;
+  private static final int METHODID_GENERATE_INFRACTION = 5;
 
   private static final class MethodHandlers<Req, Resp> implements
       io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
@@ -504,6 +574,10 @@ public final class RadarGrpcServiceGrpc {
         case METHODID_DELETE_RADAR:
           serviceImpl.deleteRadar((ma.radarservice.web.grpc.stub.RadarService.RadarIdRequest) request,
               (io.grpc.stub.StreamObserver<ma.radarservice.web.grpc.stub.RadarService.EmptyRadar>) responseObserver);
+          break;
+        case METHODID_GENERATE_INFRACTION:
+          serviceImpl.generateInfraction((ma.radarservice.web.grpc.stub.RadarService.GenerateInfractionRequest) request,
+              (io.grpc.stub.StreamObserver<ma.radarservice.web.grpc.stub.RadarService.InfractionResponse>) responseObserver);
           break;
         default:
           throw new AssertionError();
@@ -571,6 +645,7 @@ public final class RadarGrpcServiceGrpc {
               .addMethod(getSaveRadarMethod())
               .addMethod(getUpdateRadarMethod())
               .addMethod(getDeleteRadarMethod())
+              .addMethod(getGenerateInfractionMethod())
               .build();
         }
       }

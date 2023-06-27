@@ -1,10 +1,15 @@
 package ma.radarservice.services;
 
 import lombok.AllArgsConstructor;
+import ma.radarservice.dto.InfractionRequest;
 import ma.radarservice.dto.RadarRequest;
+import ma.radarservice.entities.Infraction;
+import ma.radarservice.entities.Proprietaire;
 import ma.radarservice.entities.Radar;
+import ma.radarservice.entities.Vehicule;
 import ma.radarservice.mappers.RadarMapper;
 import ma.radarservice.repository.RadarRepository;
+import ma.radarservice.webClient.RadarClients;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
@@ -16,6 +21,7 @@ import java.util.List;
 public class RadarServiceImpl implements RadarService{
     private RadarRepository radarRepository;
     private RadarMapper radarMapper;
+    private RadarClients radarClients;
 
     @Override
     public List<Radar> getAllRadars() {
@@ -55,5 +61,21 @@ public class RadarServiceImpl implements RadarService{
     @Override
     public void deleteRadar(Long id) {
         radarRepository.deleteById(id);
+    }
+
+    @Override
+    public Infraction generateInfraction(String matricule, Radar radarRequest) {
+        Vehicule vehicule = radarClients.getVehiculeByMatriculeGrpc(matricule);
+        Proprietaire proprietaireOfVehicule = radarClients.getProprietaireOfVehicule(vehicule.getId());
+        InfractionRequest infractionRequest = InfractionRequest.builder()
+                .nuneroRadar(radarRequest.getId())
+                .matriculeVehicule(matricule)
+                .nomPropietaire(proprietaireOfVehicule.getNom())
+                .vitesseMax(radarRequest.getVitesseMax())
+                .vitesseVehicule(radarRequest.getVitesseVehicule())
+                .build();
+
+        Infraction infraction = radarClients.saveInfractionGrpc(infractionRequest);
+        return infraction;
     }
 }

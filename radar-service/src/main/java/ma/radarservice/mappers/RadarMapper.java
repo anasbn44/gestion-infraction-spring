@@ -6,6 +6,7 @@ import ma.infractionservice.web.grpc.stub.InfractionSefvice;
 import ma.infractionservice.web.soap.InfractionRequest;
 import ma.radarservice.dto.RadarRequest;
 import ma.radarservice.entities.Infraction;
+import ma.radarservice.entities.Proprietaire;
 import ma.radarservice.entities.Radar;
 import ma.radarservice.entities.Vehicule;
 import ma.radarservice.web.grpc.stub.RadarService;
@@ -36,6 +37,14 @@ public class RadarMapper {
         return modelMapper.map(radar, RadarService.RadarResponse.Builder.class).build();
     }
 
+    public Radar fromGrpcToRadar (RadarService.RadarResponse radarRequest){
+        return modelMapper.map(radarRequest, Radar.class);
+    }
+
+    public RadarService.InfractionResponse fromInfractionToGrpcResponse (Infraction infraction){
+        return modelMapper.map(infraction, RadarService.InfractionResponse.Builder.class).build();
+    }
+
     public RadarRequest fromGrpcToRadarRequest (RadarService.RadarRequest radarRequest){
         return modelMapper.map(radarRequest, RadarRequest.class);
     }
@@ -52,7 +61,7 @@ public class RadarMapper {
         return modelMapper.map(vehicule, Vehicule.class);
     }
 
-    public Vehicule fromGrpcToVehicule(ImmatriculationService.Vehicule vehicule){
+    public Vehicule fromGrpcToVehicule(ImmatriculationService.VehiculeResponse vehicule){
         return modelMapper.map(vehicule, Vehicule.class);
     }
 
@@ -62,5 +71,9 @@ public class RadarMapper {
 
     public InfractionSefvice.InfractionRequest fromInfractionRequestToGrpc(ma.radarservice.dto.InfractionRequest infractionRequest){
         return modelMapper.map(infractionRequest, InfractionSefvice.InfractionRequest.Builder.class).build();
+    }
+
+    public Proprietaire fromGrocToProprietaire(ImmatriculationService.ProprietaireResponse proprietaire){
+        return modelMapper.map(proprietaire, Proprietaire.class);
     }
 }

@@ -32,6 +32,7 @@
   <xs:complexType name="infractionRequest">
     <xs:sequence>
       <xs:element minOccurs="0" name="matriculeVehicule" type="xs:string"/>
+      <xs:element minOccurs="0" name="nomPropietaire" type="xs:string"/>
       <xs:element minOccurs="0" name="nuneroRadar" type="xs:long"/>
       <xs:element name="vitesseMax" type="xs:double"/>
       <xs:element name="vitesseVehicule" type="xs:double"/>
@@ -50,6 +51,7 @@
       <xs:element minOccurs="0" name="id" type="xs:long"/>
       <xs:element minOccurs="0" name="matriculeVehicule" type="xs:string"/>
       <xs:element name="montant" type="xs:double"/>
+      <xs:element minOccurs="0" name="nomPropietaire" type="xs:string"/>
       <xs:element minOccurs="0" name="nuneroRadar" type="xs:long"/>
       <xs:element name="vitesseMax" type="xs:double"/>
       <xs:element name="vitesseVehicule" type="xs:double"/>

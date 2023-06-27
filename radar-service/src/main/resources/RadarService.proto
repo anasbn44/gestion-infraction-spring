@@ -7,9 +7,26 @@ service RadarGrpcService{
   rpc saveRadar(RadarRequest) returns (RadarResponse);
   rpc updateRadar(UpdateRadarRequest) returns (RadarResponse);
   rpc deleteRadar(RadarIdRequest) returns (EmptyRadar);
+  rpc generateInfraction(GenerateInfractionRequest) returns (InfractionResponse);
 }
 
 message EmptyRadar{}
+
+message GenerateInfractionRequest{
+  string matricule = 1;
+  RadarResponse radar = 2;
+}
+
+message InfractionResponse{
+  int64 id = 1;
+  string date = 2;
+  int64 nuneroRadar = 3;
+  string matriculeVehicule = 4;
+  string nomPropietaire = 5;
+  double vitesseMax = 6;
+  double vitesseVehicule = 7;
+  double montant = 8;
+}
 
 message RadarRequest{
   double vitesseMax = 1;

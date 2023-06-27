@@ -24,6 +24,8 @@ import jakarta.xml.bind.annotation.XmlRegistry;
 @XmlRegistry
 public class ObjectFactory {
 
+    private final static QName _GetProprietaireOfVehicule_QNAME = new QName("http://soap.web.immatriculationservice.enset.ma/", "getProprietaireOfVehicule");
+    private final static QName _GetProprietaireOfVehiculeResponse_QNAME = new QName("http://soap.web.immatriculationservice.enset.ma/", "getProprietaireOfVehiculeResponse");
     private final static QName _VehiculeByMatricule_QNAME = new QName("http://soap.web.immatriculationservice.enset.ma/", "vehiculeByMatricule");
     private final static QName _VehiculeByMatriculeResponse_QNAME = new QName("http://soap.web.immatriculationservice.enset.ma/", "vehiculeByMatriculeResponse");
     private final static QName _VehiculeList_QNAME = new QName("http://soap.web.immatriculationservice.enset.ma/", "vehiculeList");
@@ -34,6 +36,22 @@ public class ObjectFactory {
      * 
      */
     public ObjectFactory() {
+    }
+
+    /**
+     * Create an instance of {@link GetProprietaireOfVehicule }
+     * 
+     */
+    public GetProprietaireOfVehicule createGetProprietaireOfVehicule() {
+        return new GetProprietaireOfVehicule();
+    }
+
+    /**
+     * Create an instance of {@link GetProprietaireOfVehiculeResponse }
+     * 
+     */
+    public GetProprietaireOfVehiculeResponse createGetProprietaireOfVehiculeResponse() {
+        return new GetProprietaireOfVehiculeResponse();
     }
 
     /**
@@ -69,6 +87,14 @@ public class ObjectFactory {
     }
 
     /**
+     * Create an instance of {@link ProprietaireResponseDto }
+     * 
+     */
+    public ProprietaireResponseDto createProprietaireResponseDto() {
+        return new ProprietaireResponseDto();
+    }
+
+    /**
      * Create an instance of {@link VehiculeResponseDto }
      * 
      */
@@ -77,19 +103,29 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link Vehicule }
+     * Create an instance of {@link JAXBElement }{@code <}{@link GetProprietaireOfVehicule }{@code >}
      * 
+     * @param value
+     *     Java instance representing xml element's value.
+     * @return
+     *     the new instance of {@link JAXBElement }{@code <}{@link GetProprietaireOfVehicule }{@code >}
      */
-    public Vehicule createVehicule() {
-        return new Vehicule();
+    @XmlElementDecl(namespace = "http://soap.web.immatriculationservice.enset.ma/", name = "getProprietaireOfVehicule")
+    public JAXBElement<GetProprietaireOfVehicule> createGetProprietaireOfVehicule(GetProprietaireOfVehicule value) {
+        return new JAXBElement<GetProprietaireOfVehicule>(_GetProprietaireOfVehicule_QNAME, GetProprietaireOfVehicule.class, null, value);
     }
 
     /**
-     * Create an instance of {@link Proprietaire }
+     * Create an instance of {@link JAXBElement }{@code <}{@link GetProprietaireOfVehiculeResponse }{@code >}
      * 
+     * @param value
+     *     Java instance representing xml element's value.
+     * @return
+     *     the new instance of {@link JAXBElement }{@code <}{@link GetProprietaireOfVehiculeResponse }{@code >}
      */
-    public Proprietaire createProprietaire() {
-        return new Proprietaire();
+    @XmlElementDecl(namespace = "http://soap.web.immatriculationservice.enset.ma/", name = "getProprietaireOfVehiculeResponse")
+    public JAXBElement<GetProprietaireOfVehiculeResponse> createGetProprietaireOfVehiculeResponse(GetProprietaireOfVehiculeResponse value) {
+        return new JAXBElement<GetProprietaireOfVehiculeResponse>(_GetProprietaireOfVehiculeResponse_QNAME, GetProprietaireOfVehiculeResponse.class, null, value);
     }
 
     /**
