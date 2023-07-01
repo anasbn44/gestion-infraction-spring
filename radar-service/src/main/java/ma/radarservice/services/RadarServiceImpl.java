@@ -1,6 +1,7 @@
 package ma.radarservice.services;
 
 import lombok.AllArgsConstructor;
+import ma.infractionservice.web.grpc.stub.InfractionSefvice;
 import ma.radarservice.dto.InfractionRequest;
 import ma.radarservice.dto.RadarRequest;
 import ma.radarservice.entities.Infraction;
@@ -63,14 +64,19 @@ public class RadarServiceImpl implements RadarService{
     @Override
     public Infraction generateInfraction(String matricule, Radar radarRequest, double vitesseVehicule) {
         Vehicule vehicule = radarClients.getVehiculeByMatriculeGrpc(matricule);
-        Proprietaire proprietaireOfVehicule = radarClients.getProprietaireOfVehicule(vehicule.getId());
-        InfractionRequest infractionRequest = InfractionRequest.builder()
-                .nuneroRadar(radarRequest.getId())
-                .matriculeVehicule(matricule)
-                .nomPropietaire(proprietaireOfVehicule.getNom())
-                .vitesseMax(radarRequest.getVitesseMax())
-                .vitesseVehicule(vitesseVehicule)
+        Proprietaire proprietaireOfVehicule = radarClients.getProprietaireOfVehiculeGrpc(vehicule.getId());
+        InfractionSefvice.InfractionRequest infractionRequest = InfractionSefvice.InfractionRequest.newBuilder()
+                .setNuneroRadar(radarRequest.getId())
+                .setMatriculeVehicule(matricule)
+                .setNomPropietaire(proprietaireOfVehicule.getNom())
+                .setVitesseMax(radarRequest.getVitesseMax())
+                .setVitesseVehicule(vitesseVehicule)
                 .build();
+//                .nuneroRadar(radarRequest.getId())
+//                .matriculeVehicule(matricule)
+//                .nomPropietaire(proprietaireOfVehicule.getNom())
+//                .vitesseMax(radarRequest.getVitesseMax())
+//                .vitesseVehicule(vitesseVehicule)
 
         Infraction infraction = radarClients.saveInfractionGrpc(infractionRequest);
         return infraction;

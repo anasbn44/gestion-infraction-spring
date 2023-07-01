@@ -83,7 +83,7 @@ public class RadarClients {
     }
 
     @GetMapping("/grpc/vehicule/proprietaire/{id}")
-    public Proprietaire getProprietaireOfVehicule(@PathVariable(name = "id") Long idVehicule){
+    public Proprietaire getProprietaireOfVehiculeGrpc(@PathVariable(name = "id") Long idVehicule){
         ma.enset.immatriculationservice.web.grpc.stub.ImmatriculationService.VehiculeIdRequest request =
                 ma.enset.immatriculationservice.web.grpc.stub.ImmatriculationService.VehiculeIdRequest.newBuilder()
                 .setId(idVehicule)
@@ -94,7 +94,7 @@ public class RadarClients {
     }
 
     @GetMapping("/grpc/vehicule")
-    public List<Vehicule> getAllVehicules(){
+    public List<Vehicule> getAllVehiculesGrpc(){
         ma.enset.immatriculationservice.web.grpc.stub.ImmatriculationService.EmptyObject request =
                 ma.enset.immatriculationservice.web.grpc.stub.ImmatriculationService.EmptyObject.newBuilder().build();
         ma.enset.immatriculationservice.web.grpc.stub.ImmatriculationService.VehiculesList response =
@@ -136,8 +136,8 @@ public class RadarClients {
         return radarMapper.fromSoapToInfraction(infractionSoapService.infractionById(id));
     }
     @PostMapping("/grpc/infraction")
-    public Infraction saveInfractionGrpc(@RequestBody InfractionRequest infractionRequest){
-        InfractionSefvice.InfractionResponse response = infractionGrpcService.saveInfraction(radarMapper.fromInfractionRequestToGrpc(infractionRequest));
+    public Infraction saveInfractionGrpc(@RequestBody InfractionSefvice.InfractionRequest infractionRequest){
+        InfractionSefvice.InfractionResponse response = infractionGrpcService.saveInfraction(infractionRequest);
         return radarMapper.fromGrpcToInfraction(response);
     }
 

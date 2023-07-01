@@ -5,7 +5,6 @@ import ma.radardemo.entities.Infraction;
 import ma.radardemo.entities.Radar;
 import ma.radardemo.entities.Vehicule;
 import ma.radardemo.services.RadarGrpcService;
-import ma.radardemo.services.RestTempServices;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -18,12 +17,10 @@ import java.util.stream.Collectors;
 
 @SpringBootApplication @AllArgsConstructor
 public class RadarDemoApplication implements CommandLineRunner {
-    private RestTempServices restTempServices;
     private RadarGrpcService radarGrpcService;
     public static void main(String[] args) {
         SpringApplication.run(RadarDemoApplication.class, args);
     }
-
 
     @Override
     public void run(String... args) throws Exception {
@@ -43,6 +40,8 @@ public class RadarDemoApplication implements CommandLineRunner {
         //getting radom vehicule speed
         double vitesseVehicle =
                 random.nextDouble(randomRadar.getVitesseMax(),randomRadar.getVitesseMax() + random.nextInt(1,100));
+        System.out.println(randomRadar);
+        System.out.println(randomMatricule);
         //generating new infraction
         Infraction infraction = radarGrpcService.generateInfraction(randomMatricule, vitesseVehicle, randomRadar);
 

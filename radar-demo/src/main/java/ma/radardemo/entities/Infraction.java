@@ -8,7 +8,7 @@ import java.util.Date;
 @Data @NoArgsConstructor @AllArgsConstructor @Builder @ToString
 public class Infraction {
     private Long id;
-    private Date date;
+    private String date;
     private Long numeroRadar;
     private String matriculeVehicule;
     private String nomPropietaire;
